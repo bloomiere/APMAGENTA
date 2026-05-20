@@ -286,3 +286,64 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
   .section-header { flex-direction:column; align-items:flex-start; }
   .nav-inner { padding:0 1.5rem; }
 }
+
+/* ============================================================
+   UPDATES: Lighthouse contrast fixes, nav refinements, pricing
+============================================================ */
+
+/* WCAG AA contrast fixes — all light text on white/light backgrounds darkened */
+.ind-card-desc { color: #374151; }
+.ind-card-name { color: #111827; }
+.eyebrow { color: #2d5a7a; }
+.who-card-num { color: #374151; }
+.fw-num { color: #9ca3af; }
+.pricing-note { color: #374151; }
+.footer-tagline { color: #9ca3af; }
+.service-num { color: #374151; }
+.trust-label { color: rgba(200,216,232,0.9); }
+.faq-answer-inner { color: #c8d8e8; }
+
+/* Gradient text for premium headlines */
+.gradient-text {
+  background: linear-gradient(135deg, var(--glacier) 0%, var(--silver) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Nav contact link accent */
+.nav-contact-link {
+  color: var(--glacier) !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(143,174,201,0.35);
+  padding: 0.35rem 0.9rem !important;
+  transition: all 0.2s !important;
+}
+.nav-contact-link:hover {
+  background: var(--navy);
+  color: var(--white) !important;
+  border-color: var(--navy);
+}
+
+/* Pricing strong labels */
+.pricing-features li strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* Industry cards without emoji — add left accent border */
+.ind-card {
+  border-left: 3px solid transparent;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.ind-card:hover {
+  border-left-color: var(--glacier);
+}
+.ind-card-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}

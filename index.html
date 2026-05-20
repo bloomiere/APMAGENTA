@@ -3,21 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="APM Agenta baut automatisierte Marketing-Pipelines für KMU, Kliniken und Unternehmen. Recruitment Marketing, Employer Branding, Paid Media und BAFA-Beratung.">
+<meta name="description" content="APM Agenta baut automatisierte Marketing-Pipelines für KMU, Kliniken und Unternehmen in Deutschland. Recruitment Marketing, Employer Branding, Paid Media und BAFA-Beratung.">
 <meta property="og:title" content="APM Agenta | Marketing. Strategie. Wachstum.">
-<meta property="og:description" content="Wir bauen automatisierte Patienten-Gewinnungs-Pipelines für moderne Kliniken und Unternehmen. Kein Halbwissen. Messbarer Erfolg.">
+<meta property="og:description" content="Wir bauen automatisierte Marketing-Pipelines für moderne Unternehmen. Kein Halbwissen. Messbarer Erfolg.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://apmagenta.com">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://apmagenta.com">
+<!-- CSP: clickjacking mitigation for GitHub Pages -->
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self'">
 <title>APM Agenta | Marketing. Strategie. Wachstum.</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+<!-- Performance: async font loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- COOKIE BANNER -->
-<div id="cookie-banner" class="cookie-banner" role="dialog">
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="ck-title">
   <div class="cookie-inner">
     <div class="cookie-text">
       <strong id="ck-title">Wir verwenden Cookies</strong>
@@ -34,41 +41,36 @@
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="assets/logo.png" alt="APM Agenta Logo" class="nav-logo-img" onerror="this.style.display='none'">
+      <img src="assets/logo.png" alt="APM Agenta Logo" class="nav-logo-img" width="150" height="50" onerror="this.style.display='none'">
       <div class="nav-logo-text">
         <span class="nav-logo-main">APM</span>
         <span class="nav-logo-sub">Agenta</span>
       </div>
     </a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="services.html" id="nav-services">Leistungen</a></li>
-      <li><a href="industries.html" id="nav-industries">Branchen</a></li>
-      <li><a href="about.html" id="nav-about">Über uns</a></li>
-      <li><a href="index.html#pricing" id="nav-pricing">Preise</a></li>
-      <li><a href="index.html#faq" id="nav-faq">FAQ</a></li>
+      <li><a href="#framework">Unser Framework</a></li>
+      <li><a href="services.html">Leistungen</a></li>
+      <li><a href="industries.html">Branchen</a></li>
+      <li><a href="#pricing">Investment</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-contact-link">Kontakt</a></li>
     </ul>
-    <div class="nav-actions">
-      <a href="tel:+491772950662" class="nav-phone" id="nav-phone">+49 177 295 0662</a>
-      <button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button>
-      <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="nav-cta" id="nav-cta">Gespräch buchen</a>
-      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <div class="mobile-menu-inner">
     <ul>
-      <li><a href="services.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
-      <li><a href="industries.html" onclick="closeMobile()" id="mob-industries">Branchen</a></li>
-      <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
-      <li><a href="index.html#pricing" onclick="closeMobile()" id="mob-pricing">Preise</a></li>
-      <li><a href="index.html#faq" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
-      <li><a href="tel:+491772950662" class="mob-phone">+49 177 295 0662</a></li>
-      <li><a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" onclick="closeMobile()" class="mobile-cta" id="mob-cta">Gespräch buchen</a></li>
+      <li><a href="#framework" onclick="closeMobile()">Unser Framework</a></li>
+      <li><a href="services.html" onclick="closeMobile()">Leistungen</a></li>
+      <li><a href="industries.html" onclick="closeMobile()">Branchen</a></li>
+      <li><a href="#pricing" onclick="closeMobile()">Investment</a></li>
+      <li><a href="#faq" onclick="closeMobile()">FAQ</a></li>
+      <li><a href="#contact" onclick="closeMobile()" class="mobile-cta">Kontakt</a></li>
     </ul>
   </div>
 </div>
@@ -87,7 +89,7 @@
     <h1 class="hero-headline" id="hero-headline">Wir bauen automatisierte<br><em>Marketing-Pipelines</em><br>für Unternehmen die wachsen wollen.</h1>
     <p class="hero-sub" id="hero-sub">Kein Halbwissen. Kein Aufschlag auf Werbebudget. Messbarer Erfolg für KMU, Kliniken und lokale Unternehmen in Deutschland.</p>
     <div class="hero-btns">
-      <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="btn-primary" id="hero-book">Strategie-Gespräch buchen</a>
+      <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" rel="noopener" class="btn-primary" id="hero-book">Strategie-Gespräch buchen</a>
       <a href="services.html" class="btn-ghost" id="hero-services">Unsere Leistungen</a>
     </div>
     <div class="hero-trust">
@@ -102,28 +104,6 @@
   </div>
   <div class="scroll-indicator"><div class="scroll-line"></div></div>
 </section>
-
-<!-- TICKER -->
-<div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker">
-    <span>Recruitment Marketing</span><span class="dot">·</span>
-    <span>Employer Branding</span><span class="dot">·</span>
-    <span>Paid Media</span><span class="dot">·</span>
-    <span>Social Media</span><span class="dot">·</span>
-    <span>Content Produktion</span><span class="dot">·</span>
-    <span>BAFA Beratung</span><span class="dot">·</span>
-    <span>Markenstrategie</span><span class="dot">·</span>
-    <span>Performance Marketing</span><span class="dot">·</span>
-    <span>Recruitment Marketing</span><span class="dot">·</span>
-    <span>Employer Branding</span><span class="dot">·</span>
-    <span>Paid Media</span><span class="dot">·</span>
-    <span>Social Media</span><span class="dot">·</span>
-    <span>Content Produktion</span><span class="dot">·</span>
-    <span>BAFA Beratung</span><span class="dot">·</span>
-    <span>Markenstrategie</span><span class="dot">·</span>
-    <span>Performance Marketing</span><span class="dot">·</span>
-  </div>
-</div>
 
 <!-- WHO WE ARE -->
 <section class="who" id="who">
@@ -169,32 +149,26 @@
     </div>
     <div class="ind-grid-large">
       <a href="industries.html#health" class="ind-card">
-        <div class="ind-card-icon">🏥</div>
         <div class="ind-card-name" id="ic1">Gesundheitswesen</div>
         <div class="ind-card-desc" id="ic1d">Patienten-Gewinnungs-Pipelines für Kliniken und Praxen</div>
       </a>
       <a href="industries.html#trades" class="ind-card">
-        <div class="ind-card-icon">🔧</div>
         <div class="ind-card-name" id="ic2">Handwerk und Industrie</div>
         <div class="ind-card-desc" id="ic2d">Mitarbeitergewinnung und Recruiting-Kampagnen</div>
       </a>
       <a href="industries.html#tech" class="ind-card">
-        <div class="ind-card-icon">💻</div>
         <div class="ind-card-name" id="ic3">Tech und Start-ups</div>
         <div class="ind-card-desc" id="ic3d">Performance Marketing und Growth Hacking</div>
       </a>
       <a href="industries.html#retail" class="ind-card">
-        <div class="ind-card-icon">🛍</div>
         <div class="ind-card-name" id="ic4">Einzelhandel und Gastronomie</div>
         <div class="ind-card-desc" id="ic4d">Lokale Sichtbarkeit und Kundenbindung</div>
       </a>
       <a href="industries.html#care" class="ind-card">
-        <div class="ind-card-icon">❤️</div>
         <div class="ind-card-name" id="ic5">Pflege und Soziales</div>
         <div class="ind-card-desc" id="ic5d">Fachkräftegewinnung für Pflegeeinrichtungen</div>
       </a>
       <a href="industries.html#sme" class="ind-card">
-        <div class="ind-card-icon">🏢</div>
         <div class="ind-card-name" id="ic6">KMU und Mittelstand</div>
         <div class="ind-card-desc" id="ic6d">Ganzheitliche Marketing-Strategie für etablierte Unternehmen</div>
       </a>
@@ -202,7 +176,7 @@
   </div>
 </section>
 
-<!-- FRAMEWORK / HOW WE WORK -->
+<!-- FRAMEWORK -->
 <section class="framework" id="framework">
   <div class="container">
     <div class="eyebrow tc" id="fw-eyebrow">Unser Framework</div>
@@ -243,55 +217,61 @@
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- PRICING / INVESTMENT -->
 <section class="pricing" id="pricing">
   <div class="container">
-    <div class="eyebrow tc" id="price-eyebrow">Transparente Preise</div>
-    <h2 class="section-title tc"><span id="price-title">Klare Pakete.</span> <em id="price-title-em">Keine Überraschungen.</em></h2>
-    <p class="pricing-sub" id="price-sub">Alle Preise sind Nettopreise und beinhalten kein Werbebudget. Werbebudget für Meta, Instagram oder Google Ads wird immer separat und ohne Aufschlag weitergeleitet.</p>
+    <div class="eyebrow tc" id="price-eyebrow">Investment und Frameworks</div>
+    <h2 class="section-title tc"><span id="price-title">Skalierbare Programme für Ihren</span> <em id="price-title-em">Marktdurchbruch.</em></h2>
+    <p class="pricing-sub" id="price-sub">Keine starren Dienstleistungen, sondern maßgeschneiderte Wachstums-Pipelines. Wählen Sie das Fundament, das zu Ihren aktuellen Unternehmenszielen passt. Alle Preise sind Nettopreise ohne Werbebudget.</p>
     <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="pricing-tag">Starter</div>
+
+      <div class="pricing-card" id="card-starter">
+        <div class="pricing-badge" style="visibility:hidden">Beliebt</div>
+        <div class="pricing-tag">APM Scale Catalyst&#8482;</div>
         <div class="pricing-price">199 <span>EUR/Mo</span></div>
-        <p class="pricing-desc" id="p1-desc">Für Unternehmen die ihre erste professionelle Online-Präsenz aufbauen möchten.</p>
+        <p class="pricing-desc" id="p1-desc">Die digitale Infrastruktur für planbare Anfragen und messbare Markenpräsenz.</p>
         <ul class="pricing-features">
-          <li>Social Media Management</li>
-          <li>Monatlicher Content-Plan</li>
-          <li>3 Beiträge pro Monat</li>
-          <li>Monatliches Reporting</li>
-          <li>4 bis 5 Stunden pro Monat</li>
+          <li><strong>Premium Tracking Setup:</strong> Datenschutzkonforme Server-Side-Attribution für exakte Daten.</li>
+          <li><strong>Paid Media Grundstein:</strong> Konzeption und Launch Ihrer ersten High-Converting Werbekampagnen.</li>
+          <li><strong>Creative Copywriting:</strong> Zielgruppenspezifische Werbetexte mit psychologischer Verkaufsstruktur.</li>
+          <li><strong>Monatliches Reporting:</strong> Transparente Performance-Dashboards direkt auf Ihre KPIs ausgelegt.</li>
+          <li><strong>Direkter Support:</strong> Kurze Kommunikationswege mit Ihrem dedizierten Strategen.</li>
         </ul>
-        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="pricing-cta" id="p1-cta">Jetzt starten</a>
+        <a href="#contact" class="pricing-cta" id="p1-cta">Catalyst anfordern</a>
       </div>
-      <div class="pricing-card featured">
-        <div class="pricing-badge" id="p2-badge">Beliebtestes Paket</div>
-        <div class="pricing-tag">Growth</div>
+
+      <div class="pricing-card featured" id="card-growth">
+        <div class="pricing-badge" id="p2-badge">Meistgewählt</div>
+        <div class="pricing-tag">The Market Velocity Engine&#8482;</div>
         <div class="pricing-price">399 <span>EUR/Mo</span></div>
-        <p class="pricing-desc" id="p2-desc">Für Unternehmen die regelmäßig Inhalte veröffentlichen und strukturiert kommunizieren möchten.</p>
+        <p class="pricing-desc" id="p2-desc">Die Omnichannel-Wachstumsmaschine für ambitionierte KMU, die den Markt dominieren wollen.</p>
         <ul class="pricing-features">
-          <li>Social Media Management</li>
-          <li>6 Beiträge und 1 Premium-Beitrag</li>
-          <li>Monatliches Reporting</li>
-          <li>1 Strategie-Call pro Monat</li>
-          <li>WhatsApp und E-Mail-Support</li>
-          <li>8 bis 10 Stunden pro Monat</li>
+          <li><strong>Inklusive aller Leistungen</strong> aus dem Scale Catalyst&#8482; Programm.</li>
+          <li><strong>High-Performance Video Content:</strong> Skripting und Post-Produktion für konvertierende Video-Ads.</li>
+          <li><strong>Cross-Channel Skalierung:</strong> Simultane Kampagnenführung auf Meta, Google, LinkedIn und TikTok.</li>
+          <li><strong>A/B Creative Testing:</strong> Kontinuierliche Optimierung von Bild- und Videomaterial zur CPA-Senkung.</li>
+          <li><strong>Funnel-Optimierung:</strong> UX-Analyse Ihrer Landingpages zur Maximierung der Conversion-Rate.</li>
+          <li><strong>Bi-Wöchentliche Strategie-Calls:</strong> Proaktive Anpassungen an Markttrends und Performance.</li>
         </ul>
-        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="pricing-cta featured-cta" id="p2-cta">Jetzt starten</a>
+        <a href="#contact" class="pricing-cta featured-cta" id="p2-cta">Velocity Engine starten</a>
       </div>
-      <div class="pricing-card">
-        <div class="pricing-tag">Campaign</div>
+
+      <div class="pricing-card" id="card-campaign">
+        <div class="pricing-badge" style="visibility:hidden">Exklusiv</div>
+        <div class="pricing-tag">The Market Domination Suite&#8482;</div>
         <div class="pricing-price">649 <span>EUR/Mo</span></div>
-        <p class="pricing-desc" id="p3-desc">Für Unternehmen die Recruiting-Kampagnen oder Lead-Generierung benötigen.</p>
+        <p class="pricing-desc" id="p3-desc">Das Rundum-Sorglos-Paket für maximale Marktanteile, Omnipräsenz und Employer Branding.</p>
         <ul class="pricing-features">
-          <li>Zielgruppenanalyse</li>
-          <li>Kampagnenkonzept und Creatives</li>
-          <li>Meta Ads Setup und Management</li>
-          <li>Lead und Kandidaten-Weiterleitung</li>
-          <li>Monatliches Reporting und Strategie-Call</li>
-          <li>13 bis 15 Stunden pro Monat</li>
+          <li><strong>Inklusive aller Leistungen</strong> aus der Velocity Engine&#8482;.</li>
+          <li><strong>Automated Recruitment Pipeline:</strong> Rekrutierung von Spitzenfachkräften über Social-First Kampagnen.</li>
+          <li><strong>Employer Branding Kampagne:</strong> Positionierung Ihres Unternehmens als Top-Arbeitgeber der Region.</li>
+          <li><strong>BAFA-Förderungsfähig:</strong> Bis zu 50% staatlicher Zuschuss auf strategische Beratung möglich.</li>
+          <li><strong>Predictive Lead Analytics:</strong> Datengestützte Vorhersagemodelle zur Skalierung Ihres Budgets.</li>
+          <li><strong>Priorisierter VIP-Support:</strong> Höchste Priorität bei allen Asset-Erstellungen und Änderungen.</li>
         </ul>
-        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="pricing-cta" id="p3-cta">Jetzt starten</a>
+        <a href="#contact" class="pricing-cta" id="p3-cta">Gespräch vereinbaren</a>
       </div>
+
     </div>
     <p class="pricing-note" id="price-note">Werbebudget für Meta, Instagram oder Google Ads wird immer separat und ohne Aufschlag berechnet. APM Agenta verdient nie am Werbebudget unserer Kunden.</p>
   </div>
@@ -334,73 +314,60 @@
             <div class="ci-val" id="ci3-v">Kostenloser 30-minütiger Strategie-Call</div>
           </div>
         </div>
-        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="book-btn" id="con-book">Strategie-Gespräch buchen</a>
+        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" rel="noopener" class="book-btn" id="con-book">Strategie-Gespräch buchen</a>
       </div>
-     <div class="contact-right">
-        <div id="form-success" class="form-success" data-fs-success style="display:none">
-          Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.
-        </div>
-        <div id="form-error-msg" class="form-error-msg" data-fs-error style="display:none">
-          Etwas ist schiefgelaufen. Bitte schreiben Sie uns direkt an <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a> oder rufen Sie uns an: <a href="tel:+491772950662">+49 177 295 0662</a>
-        </div>
-
-        <form id="contact-form" class="contact-form" novalidate
-          action="https://formspree.io/f/xykvekev"
-          method="POST">
+      <div class="contact-right">
+        <div id="form-success" class="form-success" style="display:none">Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.</div>
+        <div id="form-error-msg" class="form-error-msg" style="display:none">Etwas ist schiefgelaufen. Bitte schreiben Sie uns direkt an <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a> oder rufen Sie uns an: <a href="tel:+491772950662">+49 177 295 0662</a></div>
+        <form id="contact-form" class="contact-form" novalidate action="https://formspree.io/f/xykvekev" method="POST">
           <input type="hidden" name="_subject" value="Neue Anfrage von apmagenta.com">
           <input type="hidden" name="_replyto" id="reply-email">
-          
           <div class="form-row">
             <div class="form-group">
               <label for="fname" id="lbl-name">Name</label>
-              <input type="text" id="fname" name="name" required placeholder="Ihr Name" autocomplete="name" data-fs-field>
-              <span class="ferr" id="name-error" data-fs-error="name"></span>
+              <input type="text" id="fname" name="name" required placeholder="Ihr Name" autocomplete="name">
+              <span class="ferr" id="name-error"></span>
             </div>
             <div class="form-group">
               <label for="fcompany" id="lbl-company">Unternehmen</label>
-              <input type="text" id="fcompany" name="company" placeholder="Ihr Unternehmen" autocomplete="organization" data-fs-field>
+              <input type="text" id="fcompany" name="company" placeholder="Ihr Unternehmen" autocomplete="organization">
             </div>
           </div>
-          
           <div class="form-row">
             <div class="form-group">
               <label for="femail" id="lbl-email">E-Mail Adresse</label>
-              <input type="email" id="femail" name="email" required placeholder="ihre@email.de" autocomplete="email" oninput="document.getElementById('reply-email').value=this.value" data-fs-field>
-              <span class="ferr" id="email-error" data-fs-error="email"></span>
+              <input type="email" id="femail" name="email" required placeholder="ihre@email.de" autocomplete="email" oninput="document.getElementById('reply-email').value=this.value">
+              <span class="ferr" id="email-error"></span>
             </div>
             <div class="form-group">
               <label for="fphone" id="lbl-phone">Telefon</label>
-              <input type="tel" id="fphone" name="phone" placeholder="+49 ..." autocomplete="tel" data-fs-field>
+              <input type="tel" id="fphone" name="phone" placeholder="+49 ..." autocomplete="tel">
             </div>
           </div>
-          
           <div class="form-group">
-            <label for="fservice" id="lbl-service">Gewünschtes Paket</label>
-            <select id="fservice" name="service" data-fs-field>
+            <label for="fservice" id="lbl-service">Gewünschtes Programm</label>
+            <select id="fservice" name="service">
               <option value="">Bitte wählen</option>
-              <option value="starter">APM Starter (199 EUR/Monat)</option>
-              <option value="growth">APM Growth (399 EUR/Monat)</option>
-              <option value="campaign">APM Campaign (649 EUR/Monat)</option>
+              <option value="catalyst">APM Scale Catalyst (199 EUR/Monat)</option>
+              <option value="velocity">Market Velocity Engine (399 EUR/Monat)</option>
+              <option value="domination">Market Domination Suite (649 EUR/Monat)</option>
               <option value="bafa">BAFA-geförderte Beratung</option>
               <option value="custom">Individuelles Angebot</option>
             </select>
           </div>
-          
           <div class="form-group">
             <label for="fmessage" id="lbl-message">Ihre Nachricht</label>
-            <textarea id="fmessage" name="message" required placeholder="Erzählen Sie uns von Ihrem Projekt und Ihren Zielen..." rows="5" data-fs-field></textarea>
-            <span class="ferr" id="message-error" data-fs-error="message"></span>
+            <textarea id="fmessage" name="message" required placeholder="Erzählen Sie uns von Ihrem Projekt und Ihren Zielen..." rows="5"></textarea>
+            <span class="ferr" id="message-error"></span>
           </div>
-          
           <div class="form-group">
             <label class="checkbox-label">
-              <input type="checkbox" id="fconsent" name="consent" required data-fs-field>
+              <input type="checkbox" id="fconsent" name="consent" required>
               <span class="consent-text" id="consent-text">Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span>
             </label>
-            <span class="ferr" id="consent-error" data-fs-error="consent"></span>
+            <span class="ferr" id="consent-error"></span>
           </div>
-          
-          <button type="submit" class="form-submit" id="submit-btn" data-fs-submit-btn>Nachricht senden</button>
+          <button type="submit" class="form-submit" id="submit-btn">Nachricht senden</button>
         </form>
       </div>
     </div>
@@ -438,9 +405,9 @@
         <ul class="footer-links">
           <li><a href="about.html">Über APM Agenta</a></li>
           <li><a href="industries.html">Branchen</a></li>
-          <li><a href="index.html#pricing">Preise</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
-          <li><a href="index.html#contact">Kontakt</a></li>
+          <li><a href="#pricing">Investment</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Kontakt</a></li>
         </ul>
       </div>
       <div>
@@ -463,15 +430,7 @@
     </div>
   </div>
 </footer>
-<script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#contact-form', formId: 'xykvekev' });
-</script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
-<script src="js/main.js"></script>
-</body>
-</html>
 <script src="js/main.js"></script>
 </body>
 </html>
