@@ -336,37 +336,47 @@
         </div>
         <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="book-btn" id="con-book">Strategie-Gespräch buchen</a>
       </div>
-      <div class="contact-right">
+     <div class="contact-right">
+        <div id="form-success" class="form-success" data-fs-success style="display:none">
+          Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.
+        </div>
+        <div id="form-error-msg" class="form-error-msg" data-fs-error style="display:none">
+          Etwas ist schiefgelaufen. Bitte schreiben Sie uns direkt an <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a> oder rufen Sie uns an: <a href="tel:+491772950662">+49 177 295 0662</a>
+        </div>
+
         <form id="contact-form" class="contact-form" novalidate
           action="https://formspree.io/f/xykvekev"
           method="POST">
           <input type="hidden" name="_subject" value="Neue Anfrage von apmagenta.com">
           <input type="hidden" name="_replyto" id="reply-email">
+          
           <div class="form-row">
             <div class="form-group">
               <label for="fname" id="lbl-name">Name</label>
-              <input type="text" id="fname" name="name" required placeholder="Ihr Name" autocomplete="name">
-              <span class="ferr" id="name-error"></span>
+              <input type="text" id="fname" name="name" required placeholder="Ihr Name" autocomplete="name" data-fs-field>
+              <span class="ferr" id="name-error" data-fs-error="name"></span>
             </div>
             <div class="form-group">
               <label for="fcompany" id="lbl-company">Unternehmen</label>
-              <input type="text" id="fcompany" name="company" placeholder="Ihr Unternehmen" autocomplete="organization">
+              <input type="text" id="fcompany" name="company" placeholder="Ihr Unternehmen" autocomplete="organization" data-fs-field>
             </div>
           </div>
+          
           <div class="form-row">
             <div class="form-group">
               <label for="femail" id="lbl-email">E-Mail Adresse</label>
-              <input type="email" id="femail" name="email" required placeholder="ihre@email.de" autocomplete="email" oninput="document.getElementById('reply-email').value=this.value">
-              <span class="ferr" id="email-error"></span>
+              <input type="email" id="femail" name="email" required placeholder="ihre@email.de" autocomplete="email" oninput="document.getElementById('reply-email').value=this.value" data-fs-field>
+              <span class="ferr" id="email-error" data-fs-error="email"></span>
             </div>
             <div class="form-group">
               <label for="fphone" id="lbl-phone">Telefon</label>
-              <input type="tel" id="fphone" name="phone" placeholder="+49 ..." autocomplete="tel">
+              <input type="tel" id="fphone" name="phone" placeholder="+49 ..." autocomplete="tel" data-fs-field>
             </div>
           </div>
+          
           <div class="form-group">
             <label for="fservice" id="lbl-service">Gewünschtes Paket</label>
-            <select id="fservice" name="service">
+            <select id="fservice" name="service" data-fs-field>
               <option value="">Bitte wählen</option>
               <option value="starter">APM Starter (199 EUR/Monat)</option>
               <option value="growth">APM Growth (399 EUR/Monat)</option>
@@ -375,21 +385,22 @@
               <option value="custom">Individuelles Angebot</option>
             </select>
           </div>
+          
           <div class="form-group">
             <label for="fmessage" id="lbl-message">Ihre Nachricht</label>
-            <textarea id="fmessage" name="message" required placeholder="Erzählen Sie uns von Ihrem Projekt und Ihren Zielen..." rows="5"></textarea>
-            <span class="ferr" id="message-error"></span>
+            <textarea id="fmessage" name="message" required placeholder="Erzählen Sie uns von Ihrem Projekt und Ihren Zielen..." rows="5" data-fs-field></textarea>
+            <span class="ferr" id="message-error" data-fs-error="message"></span>
           </div>
+          
           <div class="form-group">
             <label class="checkbox-label">
-              <input type="checkbox" id="fconsent" name="consent" required>
+              <input type="checkbox" id="fconsent" name="consent" required data-fs-field>
               <span class="consent-text" id="consent-text">Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span>
             </label>
-            <span class="ferr" id="consent-error"></span>
+            <span class="ferr" id="consent-error" data-fs-error="consent"></span>
           </div>
-          <button type="submit" class="form-submit" id="submit-btn">Nachricht senden</button>
-          <div id="form-success" class="form-success" style="display:none">Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.</div>
-          <div id="form-error-msg" class="form-error-msg" style="display:none">Etwas ist schiefgelaufen. Bitte schreiben Sie uns direkt an <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a> oder rufen Sie uns an: <a href="tel:+491772950662">+49 177 295 0662</a></div>
+          
+          <button type="submit" class="form-submit" id="submit-btn" data-fs-submit-btn>Nachricht senden</button>
         </form>
       </div>
     </div>
