@@ -8,11 +8,13 @@
 <meta property="og:description" content="Wir bauen automatisierte Patienten-Gewinnungs-Pipelines für moderne Kliniken und Unternehmen. Kein Halbwissen. Messbarer Erfolg.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://apmagenta.com">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://apmagenta.com">
-<title>APM Agenta | Marketing. Strategie. Wachstum.</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<meta name="twitter:card" content="summary_large_image"> 
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self';">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" media="print" onload="this.media='all'">
 </head>
 <body>
 
@@ -35,6 +37,7 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="assets/logo.png" alt="APM Agenta Logo" class="nav-logo-img" onerror="this.style.display='none'">
+      <img src="assets/logo.png" alt="APM Agenta Logo" class="nav-logo-img" width="150" height="50" onerror="this.style.display='none'">
       <div class="nav-logo-text">
         <span class="nav-logo-main">APM</span>
         <span class="nav-logo-sub">Agenta</span>
@@ -76,6 +79,7 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-overlay"></div>
+  <div class="eyebrow" style="color:var(--glacier)" id="con-eyebrow">Kontakt</div>
   <svg class="hero-mountain" viewBox="0 0 700 500" fill="none" aria-hidden="true">
     <path d="M350 20 L140 480 L270 480 L350 200 L430 480 L560 480 Z" fill="white"/>
     <path d="M480 100 L360 480 L560 480 L620 280 Z" fill="white" opacity="0.6"/>
@@ -102,28 +106,6 @@
   </div>
   <div class="scroll-indicator"><div class="scroll-line"></div></div>
 </section>
-
-<!-- TICKER -->
-<div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker">
-    <span>Recruitment Marketing</span><span class="dot">·</span>
-    <span>Employer Branding</span><span class="dot">·</span>
-    <span>Paid Media</span><span class="dot">·</span>
-    <span>Social Media</span><span class="dot">·</span>
-    <span>Content Produktion</span><span class="dot">·</span>
-    <span>BAFA Beratung</span><span class="dot">·</span>
-    <span>Markenstrategie</span><span class="dot">·</span>
-    <span>Performance Marketing</span><span class="dot">·</span>
-    <span>Recruitment Marketing</span><span class="dot">·</span>
-    <span>Employer Branding</span><span class="dot">·</span>
-    <span>Paid Media</span><span class="dot">·</span>
-    <span>Social Media</span><span class="dot">·</span>
-    <span>Content Produktion</span><span class="dot">·</span>
-    <span>BAFA Beratung</span><span class="dot">·</span>
-    <span>Markenstrategie</span><span class="dot">·</span>
-    <span>Performance Marketing</span><span class="dot">·</span>
-  </div>
-</div>
 
 <!-- WHO WE ARE -->
 <section class="who" id="who">
@@ -303,7 +285,7 @@
     <div class="faq-inner">
       <div class="eyebrow tc" style="color:var(--glacier)">FAQ</div>
       <h2 class="faq-title" id="faq-title">Häufig gestellte Fragen</h2>
-      <div id="faq-list"></div>
+      <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="ck-title">
     </div>
   </div>
 </section>
