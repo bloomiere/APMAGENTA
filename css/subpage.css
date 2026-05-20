@@ -1,0 +1,74 @@
+/* APM Agenta — subpage.css */
+
+/* SERVICES LIST on sub-pages */
+.sub-content { padding: 6rem 0; }
+.services-list { display: flex; flex-direction: column; }
+.service-row { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); }
+.service-row:last-child { border-bottom: 1px solid var(--border); }
+.service-left { padding: 3.5rem 3.5rem 3.5rem 0; border-right: 1px solid var(--border); }
+.service-row.reverse .service-left { padding: 3.5rem 0 3.5rem 3.5rem; border-right: none; order: 2; }
+.service-row.reverse .service-right { order: 1; border-right: 1px solid var(--border); }
+.service-right { display: flex; }
+.service-visual { width: 100%; background: linear-gradient(135deg, var(--off) 0%, #eaeff5 100%); display: flex; align-items: center; justify-content: center; min-height: 240px; }
+.sv-num { font-size: 6rem; font-weight: 200; color: var(--silver); opacity: 0.7; user-select: none; }
+.service-num { font-size: 0.6rem; letter-spacing: 0.3em; color: var(--muted); margin-bottom: 1rem; font-weight: 600; }
+.service-name { font-size: 1.8rem; font-weight: 400; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.01em; }
+.service-desc { font-size: 0.82rem; color: #4a5568; line-height: 1.9; font-weight: 300; }
+.service-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.5rem; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy); font-weight: 700; border-bottom: 1px solid var(--navy); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+.service-link:hover { color: var(--steel); border-color: var(--steel); }
+
+/* CTA BAND */
+.sub-cta-band { padding: 6rem 0; background: var(--off); border-top: 1px solid var(--border); }
+
+/* INDUSTRIES DETAIL */
+.industry-detail { padding: 4rem 0; border-top: 1px solid var(--border); }
+.industry-detail:last-child { border-bottom: 1px solid var(--border); }
+.ind-detail-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+.ind-detail-icon { font-size: 2.5rem; flex-shrink: 0; }
+.ind-detail-title { font-size: 1.6rem; font-weight: 400; letter-spacing: -0.01em; color: var(--navy); margin-bottom: 0.3rem; }
+.ind-detail-sub { font-size: 0.75rem; color: var(--muted); font-weight: 400; letter-spacing: 0.06em; }
+.ind-detail-desc { font-size: 0.85rem; color: #4a5568; line-height: 1.9; font-weight: 300; max-width: 760px; margin-bottom: 1.5rem; }
+.ind-detail-services { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.ind-detail-services span { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; background: var(--navy); color: var(--glacier); padding: 0.3rem 0.85rem; }
+
+/* ABOUT PAGE */
+.about-mission { padding: 5rem 0; border-bottom: 1px solid var(--border); max-width: 760px; }
+.about-mission-text { font-size: 0.88rem; color: #4a5568; line-height: 1.95; font-weight: 300; margin-bottom: 1rem; }
+.about-values { padding: 5rem 0; border-bottom: 1px solid var(--border); }
+.values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+.value-card { padding: 2rem; border: 1px solid var(--border); transition: border-color 0.3s, transform 0.3s; }
+.value-card:hover { border-color: var(--glacier); transform: translateY(-4px); }
+.value-num { font-size: 0.6rem; letter-spacing: 0.3em; color: var(--muted); margin-bottom: 0.75rem; font-weight: 600; }
+.value-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.75rem; }
+.value-desc { font-size: 0.78rem; color: #4a5568; line-height: 1.8; font-weight: 300; }
+
+/* TEAM */
+.about-team { padding: 5rem 0; }
+.team-sub { font-size: 0.88rem; color: #4a5568; line-height: 1.9; font-weight: 300; max-width: 640px; margin-bottom: 3.5rem; }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.team-card { padding: 2.5rem; border: 1px solid var(--border); transition: border-color 0.3s; }
+.team-card:hover { border-color: var(--glacier); }
+.team-avatar { margin-bottom: 1.5rem; }
+.team-avatar-placeholder { width: 80px; height: 80px; background: var(--off); border: 2px dashed var(--glacier); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.team-avatar-placeholder span { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); font-weight: 600; line-height: 1.4; }
+.team-avatar-hint { color: var(--glacier) !important; }
+.team-name { font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 0.25rem; }
+.team-role { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--steel); font-weight: 600; margin-bottom: 0.75rem; }
+.team-bio { font-size: 0.78rem; color: #4a5568; line-height: 1.8; font-weight: 300; margin-bottom: 1rem; }
+.team-linkedin { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--glacier); font-weight: 700; border-bottom: 1px solid var(--glacier); padding-bottom: 2px; transition: opacity 0.2s; }
+.team-linkedin:hover { opacity: 0.7; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .service-row, .service-row.reverse { grid-template-columns: 1fr; }
+  .service-left, .service-row.reverse .service-left { padding: 2.5rem 0; border-right: none; order: 1; }
+  .service-right, .service-row.reverse .service-right { order: 2; border-right: none; }
+  .service-visual { min-height: 120px; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .ind-detail-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+}

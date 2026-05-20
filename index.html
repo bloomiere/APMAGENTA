@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="APM agency ist eine transparente Marketing-Agentur für KMU in Deutschland. Recruiting, Employer Branding, Paid Media und BAFA-geförderte Beratung ab 199 EUR pro Monat.">
-<meta property="og:title" content="APM Agency | Marketing. Strategie. Wachstum.">
-<meta property="og:description" content="Transparente Marketing-Agentur für KMU. Recruiting, Employer Branding und Paid Media ab 199 EUR pro Monat.">
+<meta name="description" content="APM Agenta baut automatisierte Marketing-Pipelines für KMU, Kliniken und Unternehmen. Recruitment Marketing, Employer Branding, Paid Media und BAFA-Beratung.">
+<meta property="og:title" content="APM Agenta | Marketing. Strategie. Wachstum.">
+<meta property="og:description" content="Wir bauen automatisierte Patienten-Gewinnungs-Pipelines für moderne Kliniken und Unternehmen. Kein Halbwissen. Messbarer Erfolg.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://apmagenta.com">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://apmagenta.com">
-<title>APM Agency | Marketing. Strategie. Wachstum.</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<title>APM Agenta | Marketing. Strategie. Wachstum.</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
   <div class="cookie-inner">
     <div class="cookie-text">
       <strong id="ck-title">Wir verwenden Cookies</strong>
-      <p id="ck-desc">Diese Website verwendet Cookies für die bestmögliche Erfahrung. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+      <p id="ck-desc">Diese Website verwendet Cookies. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     </div>
     <div class="cookie-btns">
       <button onclick="acceptCookies()" class="cookie-accept" id="ck-accept">Alle akzeptieren</button>
@@ -33,21 +33,24 @@
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="#home" class="nav-logo">
-      <span class="nav-logo-main">APM</span>
-      <span class="nav-logo-sub">Marketing Agency</span>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="APM Agenta Logo" class="nav-logo-img" onerror="this.style.display='none'">
+      <div class="nav-logo-text">
+        <span class="nav-logo-main">APM</span>
+        <span class="nav-logo-sub">Agenta</span>
+      </div>
     </a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#work" id="nav-work">Work</a></li>
-      <li><a href="#services" id="nav-services">Leistungen</a></li>
-      <li><a href="#pricing" id="nav-pricing">Preise</a></li>
-      <li><a href="#about" id="nav-about">Über uns</a></li>
-      <li><a href="#faq" id="nav-faq">FAQ</a></li>
-      <li><a href="impressum.html" id="nav-legal">Impressum</a></li>
+      <li><a href="services.html" id="nav-services">Leistungen</a></li>
+      <li><a href="industries.html" id="nav-industries">Branchen</a></li>
+      <li><a href="about.html" id="nav-about">Über uns</a></li>
+      <li><a href="index.html#pricing" id="nav-pricing">Preise</a></li>
+      <li><a href="index.html#faq" id="nav-faq">FAQ</a></li>
     </ul>
     <div class="nav-actions">
+      <a href="tel:+491772950662" class="nav-phone" id="nav-phone">+49 177 295 0662</a>
       <button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button>
-      <a href="#contact" class="nav-cta" id="nav-cta">Kontakt aufnehmen</a>
+      <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="nav-cta" id="nav-cta">Gespräch buchen</a>
       <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -57,15 +60,17 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="#work" onclick="closeMobile()" id="mob-work">Work</a></li>
-    <li><a href="#services" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
-    <li><a href="#pricing" onclick="closeMobile()" id="mob-pricing">Preise</a></li>
-    <li><a href="#about" onclick="closeMobile()" id="mob-about">Über uns</a></li>
-    <li><a href="#faq" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
-    <li><a href="impressum.html" id="mob-legal">Impressum</a></li>
-    <li><a href="#contact" onclick="closeMobile()" class="mobile-cta" id="mob-cta">Kontakt aufnehmen</a></li>
-  </ul>
+  <div class="mobile-menu-inner">
+    <ul>
+      <li><a href="services.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
+      <li><a href="industries.html" onclick="closeMobile()" id="mob-industries">Branchen</a></li>
+      <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
+      <li><a href="index.html#pricing" onclick="closeMobile()" id="mob-pricing">Preise</a></li>
+      <li><a href="index.html#faq" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
+      <li><a href="tel:+491772950662" class="mob-phone">+49 177 295 0662</a></li>
+      <li><a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" onclick="closeMobile()" class="mobile-cta" id="mob-cta">Gespräch buchen</a></li>
+    </ul>
+  </div>
 </div>
 
 <!-- HERO -->
@@ -78,13 +83,21 @@
     <circle cx="350" cy="90" r="150" stroke="white" stroke-width="1.5" fill="none" opacity="0.4"/>
   </svg>
   <div class="hero-content">
-    <p class="hero-eyebrow" id="hero-eyebrow">APM Agency — ESTD 2026</p>
-    <h1 class="hero-headline" id="hero-headline">
-      Eine Full-Service-Agentur für <em>Recruiting</em>, <em>Paid Media</em>, <em>Employer Branding</em>, <em>Content</em> und <em>Strategie</em>.
-    </h1>
-    <div class="hero-bottom">
-      <p class="hero-sub" id="hero-sub">Wir helfen kleinen und mittleren Unternehmen dabei, ihre Sichtbarkeit zu steigern, Kunden zu gewinnen und qualifizierte Mitarbeiter zu rekrutieren. Transparente Preise. Messbare Ergebnisse. Keine versteckten Kosten.</p>
-      <a href="#services" class="hero-cta" id="hero-cta">Unsere Leistungen entdecken</a>
+    <div class="hero-badge" id="hero-badge">Performance Marketing · Deutschland</div>
+    <h1 class="hero-headline" id="hero-headline">Wir bauen automatisierte<br><em>Marketing-Pipelines</em><br>für Unternehmen die wachsen wollen.</h1>
+    <p class="hero-sub" id="hero-sub">Kein Halbwissen. Kein Aufschlag auf Werbebudget. Messbarer Erfolg für KMU, Kliniken und lokale Unternehmen in Deutschland.</p>
+    <div class="hero-btns">
+      <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="btn-primary" id="hero-book">Strategie-Gespräch buchen</a>
+      <a href="services.html" class="btn-ghost" id="hero-services">Unsere Leistungen</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><span class="trust-num">199€</span><span class="trust-label" id="tr1">Ab pro Monat</span></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><span class="trust-num">0%</span><span class="trust-label" id="tr2">Aufschlag auf Werbebudget</span></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><span class="trust-num">50%</span><span class="trust-label" id="tr3">BAFA-Förderung möglich</span></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><span class="trust-num">24h</span><span class="trust-label" id="tr4">Antwortzeit</span></div>
     </div>
   </div>
   <div class="scroll-indicator"><div class="scroll-line"></div></div>
@@ -92,15 +105,7 @@
 
 <!-- TICKER -->
 <div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker" id="ticker">
-    <span>Recruitment Marketing</span><span class="dot">·</span>
-    <span>Employer Branding</span><span class="dot">·</span>
-    <span>Paid Media</span><span class="dot">·</span>
-    <span>Social Media</span><span class="dot">·</span>
-    <span id="tick-content">Content Produktion</span><span class="dot">·</span>
-    <span id="tick-bafa">BAFA Beratung</span><span class="dot">·</span>
-    <span id="tick-brand">Markenstrategie</span><span class="dot">·</span>
-    <span id="tick-growth">Wachstum</span><span class="dot">·</span>
+  <div class="ticker">
     <span>Recruitment Marketing</span><span class="dot">·</span>
     <span>Employer Branding</span><span class="dot">·</span>
     <span>Paid Media</span><span class="dot">·</span>
@@ -108,151 +113,132 @@
     <span>Content Produktion</span><span class="dot">·</span>
     <span>BAFA Beratung</span><span class="dot">·</span>
     <span>Markenstrategie</span><span class="dot">·</span>
-    <span>Wachstum</span><span class="dot">·</span>
+    <span>Performance Marketing</span><span class="dot">·</span>
+    <span>Recruitment Marketing</span><span class="dot">·</span>
+    <span>Employer Branding</span><span class="dot">·</span>
+    <span>Paid Media</span><span class="dot">·</span>
+    <span>Social Media</span><span class="dot">·</span>
+    <span>Content Produktion</span><span class="dot">·</span>
+    <span>BAFA Beratung</span><span class="dot">·</span>
+    <span>Markenstrategie</span><span class="dot">·</span>
+    <span>Performance Marketing</span><span class="dot">·</span>
   </div>
 </div>
 
-<!-- WORK -->
-<section class="work" id="work">
+<!-- WHO WE ARE -->
+<section class="who" id="who">
   <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="eyebrow" id="work-eyebrow">Unsere Projekte</div>
-        <h2 class="section-title"><span id="work-title">Ergebnisse, die</span> <em id="work-title-em">für sich sprechen.</em></h2>
+    <div class="who-grid">
+      <div class="who-left">
+        <div class="eyebrow" id="who-eyebrow">Wer wir sind</div>
+        <h2 class="section-title" id="who-title">APM Agenta. <em>Transparenz ist unser Standard.</em></h2>
+        <p class="who-body" id="who-body">APM Agenta ist eine Performance-Marketing-Agentur für kleine und mittlere Unternehmen in Deutschland. Wir liefern klare Pakete, klare Preise und klare Ergebnisse. Kein verstecktes Markup auf Werbebudgets. Keine vagen Versprechen. Nur messbarer Mehrwert.</p>
+        <p class="who-body" id="who-body2">Unsere Spezialisierung liegt auf automatisierten Recruiting- und Lead-Pipelines, Employer Branding und gezielten Paid-Media-Kampagnen auf Meta, Google und TikTok.</p>
+        <a href="about.html" class="text-link" id="who-link">Mehr über uns erfahren</a>
       </div>
-      <a href="#contact" class="view-all" id="work-cta">Projekt starten</a>
-    </div>
-    <div class="work-grid">
-      <div class="work-card large">
-        <div class="work-visual large-visual">
-          <svg viewBox="0 0 600 260" fill="none"><path d="M300 20 L120 240 L220 240 L300 90 L380 240 L480 240 Z" fill="white" opacity="0.07"/><circle cx="300" cy="70" r="120" stroke="white" stroke-width="1" fill="none" opacity="0.05"/></svg>
+      <div class="who-right">
+        <div class="who-card">
+          <div class="who-card-num">01</div>
+          <div class="who-card-title" id="wc1-t">Performance First</div>
+          <p class="who-card-desc" id="wc1-d">Jede Kampagne wird auf messbare KPIs ausgerichtet. Wir optimieren kontinuierlich auf Basis echter Daten.</p>
         </div>
-        <div class="work-overlay"></div>
-        <div class="work-arrow">↗</div>
-        <div class="work-content">
-          <div class="work-tag" id="wc1-tag">Employer Branding · Gesundheitswesen</div>
-          <div class="work-title" id="wc1-title">Recruiting-Kampagne für wachsendes KMU</div>
-          <div class="work-desc" id="wc1-desc">Vollständiger Recruiting-Funnel von der Zielgruppenanalyse bis zum aktiven Kampagnenmanagement mit qualifizierten Kandidaten.</div>
+        <div class="who-card">
+          <div class="who-card-num">02</div>
+          <div class="who-card-title" id="wc2-t">Volle Transparenz</div>
+          <p class="who-card-desc" id="wc2-d">Preise, Leistungsumfang und Werbebudget sind klar getrennt. Sie wissen immer, wofür Sie bezahlen.</p>
         </div>
-      </div>
-      <div class="work-card">
-        <div class="work-visual">
-          <svg viewBox="0 0 400 300" fill="none"><rect x="40" y="40" width="320" height="220" rx="2" stroke="white" stroke-width="1" fill="none" opacity="0.07"/></svg>
-        </div>
-        <div class="work-overlay"></div>
-        <div class="work-arrow">↗</div>
-        <div class="work-content">
-          <div class="work-tag" id="wc2-tag">Paid Media · Lokales Unternehmen</div>
-          <div class="work-title" id="wc2-title">Meta Ads Lead-Generierung</div>
-          <div class="work-desc" id="wc2-desc">Präzisionskampagne mit qualifizierten Leads zu einem Preis, der die Kalkulation schlüssig macht.</div>
-        </div>
-      </div>
-      <div class="work-card">
-        <div class="work-visual">
-          <svg viewBox="0 0 400 300" fill="none"><polyline points="40,260 120,160 180,190 260,80 340,40" stroke="white" stroke-width="2" fill="none" opacity="0.07"/></svg>
-        </div>
-        <div class="work-overlay"></div>
-        <div class="work-arrow">↗</div>
-        <div class="work-content">
-          <div class="work-tag" id="wc3-tag">Social Media · Einzelhandel</div>
-          <div class="work-title" id="wc3-title">Markenaufbau und Wachstum</div>
-          <div class="work-desc" id="wc3-desc">Konsistente Content-Strategie, die eine engagierte Community von null aufgebaut hat.</div>
+        <div class="who-card">
+          <div class="who-card-num">03</div>
+          <div class="who-card-title" id="wc3-t">Lokaler Fokus</div>
+          <p class="who-card-desc" id="wc3-d">Wir kennen den deutschen Markt. Von BAFA-Förderung bis lokalem Targeting bauen wir Strategien die funktionieren.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INDUSTRIES -->
-<div class="industries">
+<!-- INDUSTRIES OVERVIEW -->
+<section class="industries-section" id="industries">
   <div class="container">
-    <div class="ind-label" id="ind-label">Branchen, die wir betreuen</div>
-    <div class="ind-grid">
-      <span id="ind-1">Gesundheitswesen</span>
-      <span id="ind-2">Handwerk und Industrie</span>
-      <span id="ind-3">Tech und Start-ups</span>
-      <span id="ind-4">Einzelhandel und Gastronomie</span>
-      <span id="ind-5">Pflege und Soziales</span>
-      <span id="ind-6">KMU und Mittelstand</span>
-      <span id="ind-7">Lokale Unternehmen</span>
-      <span id="ind-8">Consumer Brands</span>
+    <div class="section-header">
+      <div>
+        <div class="eyebrow" id="ind-eyebrow">Branchen</div>
+        <h2 class="section-title" id="ind-title">Branchen die wir <em>betreuen.</em></h2>
+      </div>
+      <a href="industries.html" class="view-all" id="ind-link">Alle Branchen</a>
+    </div>
+    <div class="ind-grid-large">
+      <a href="industries.html#health" class="ind-card">
+        <div class="ind-card-icon">🏥</div>
+        <div class="ind-card-name" id="ic1">Gesundheitswesen</div>
+        <div class="ind-card-desc" id="ic1d">Patienten-Gewinnungs-Pipelines für Kliniken und Praxen</div>
+      </a>
+      <a href="industries.html#trades" class="ind-card">
+        <div class="ind-card-icon">🔧</div>
+        <div class="ind-card-name" id="ic2">Handwerk und Industrie</div>
+        <div class="ind-card-desc" id="ic2d">Mitarbeitergewinnung und Recruiting-Kampagnen</div>
+      </a>
+      <a href="industries.html#tech" class="ind-card">
+        <div class="ind-card-icon">💻</div>
+        <div class="ind-card-name" id="ic3">Tech und Start-ups</div>
+        <div class="ind-card-desc" id="ic3d">Performance Marketing und Growth Hacking</div>
+      </a>
+      <a href="industries.html#retail" class="ind-card">
+        <div class="ind-card-icon">🛍</div>
+        <div class="ind-card-name" id="ic4">Einzelhandel und Gastronomie</div>
+        <div class="ind-card-desc" id="ic4d">Lokale Sichtbarkeit und Kundenbindung</div>
+      </a>
+      <a href="industries.html#care" class="ind-card">
+        <div class="ind-card-icon">❤️</div>
+        <div class="ind-card-name" id="ic5">Pflege und Soziales</div>
+        <div class="ind-card-desc" id="ic5d">Fachkräftegewinnung für Pflegeeinrichtungen</div>
+      </a>
+      <a href="industries.html#sme" class="ind-card">
+        <div class="ind-card-icon">🏢</div>
+        <div class="ind-card-name" id="ic6">KMU und Mittelstand</div>
+        <div class="ind-card-desc" id="ic6d">Ganzheitliche Marketing-Strategie für etablierte Unternehmen</div>
+      </a>
     </div>
   </div>
-</div>
+</section>
 
-<!-- SERVICES -->
-<section class="services" id="services">
+<!-- FRAMEWORK / HOW WE WORK -->
+<section class="framework" id="framework">
   <div class="container">
-    <div class="services-intro">
-      <div class="eyebrow" id="svc-eyebrow">Unser Ansatz</div>
-      <p class="services-tagline">
-        <strong id="svc-tag1">Datengetrieben.</strong>
-        <em id="svc-tag2">Kreativ geführt.</em>
-        <strong id="svc-tag3">Ergebnisorientiert.</strong>
-      </p>
-    </div>
-    <div class="services-list">
-
-      <div class="service-row">
-        <div class="service-left">
-          <div class="service-num">01</div>
-          <h3 class="service-name" id="s1-name">Recruitment Marketing</h3>
-          <p class="service-desc" id="s1-desc">Von der Zielgruppenanalyse bis zur aktiven Recruiting-Kampagne bringen wir die richtigen Talente zur richtigen Zeit zu Ihnen. Mit individuellem Funnel, kontinuierlicher Optimierung und transparentem Reporting machen wir Recruiting zu einem planbaren Prozess.</p>
-          <a href="#contact" class="service-link" id="s1-link">Kampagne starten</a>
-        </div>
-        <div class="service-right"><div class="service-visual"><span class="sv-num">01</span></div></div>
+    <div class="eyebrow tc" id="fw-eyebrow">Unser Framework</div>
+    <h2 class="section-title tc" id="fw-title">Wie wir <em>arbeiten.</em></h2>
+    <p class="fw-sub" id="fw-sub">Anstatt leere Portfolios zu zeigen, zeigen wir Ihnen den exakten Prozess den wir für jeden Kunden einsetzen.</p>
+    <div class="fw-grid">
+      <div class="fw-step">
+        <div class="fw-num">01</div>
+        <div class="fw-step-title" id="fw1t">Analyse und Strategie</div>
+        <p class="fw-step-desc" id="fw1d">Wir analysieren Ihre Zielgruppe, den Wettbewerb und Ihre aktuelle Marktposition. Auf Basis echter Daten entwickeln wir eine maßgeschneiderte Kampagnenstrategie.</p>
       </div>
-
-      <div class="service-row reverse">
-        <div class="service-right"><div class="service-visual"><span class="sv-num">02</span></div></div>
-        <div class="service-left">
-          <div class="service-num">02</div>
-          <h3 class="service-name" id="s2-name">Employer Branding</h3>
-          <p class="service-desc" id="s2-desc">Wir machen Ihr Unternehmen zur ersten Wahl für qualifizierte Bewerber. Durch gezielte Positionierung, authentische Inhalte und strategische Kampagnen, die nachhaltig wirken. Ihre Arbeitgebermarke ist Ihr stärkstes Recruiting-Instrument und wir bauen sie für die Zukunft.</p>
-          <a href="#contact" class="service-link" id="s2-link">Marke aufbauen</a>
-        </div>
+      <div class="fw-step">
+        <div class="fw-num">02</div>
+        <div class="fw-step-title" id="fw2t">Pipeline-Aufbau</div>
+        <p class="fw-step-desc" id="fw2d">Wir bauen automatisierte Funnels für Recruiting, Lead-Generierung oder Patientengewinnung mit individuellem Tracking und klaren Conversion-Zielen.</p>
       </div>
-
-      <div class="service-row">
-        <div class="service-left">
-          <div class="service-num">03</div>
-          <h3 class="service-name" id="s3-name">Paid Media</h3>
-          <p class="service-desc" id="s3-desc">Präzisionskampagnen auf Meta, Instagram, TikTok und Google mit maximal optimiertem Budget. Werbebudget wird immer zum Selbstkostenpreis ohne Aufschlag weitergeleitet, damit Sie genau wissen, wohin Ihr Geld fließt.</p>
-          <a href="#contact" class="service-link" id="s3-link">Kampagne starten</a>
-        </div>
-        <div class="service-right"><div class="service-visual"><span class="sv-num">03</span></div></div>
+      <div class="fw-step">
+        <div class="fw-num">03</div>
+        <div class="fw-step-title" id="fw3t">Creative Produktion</div>
+        <p class="fw-step-desc" id="fw3d">Ad-Texte, Grafiken und Videos werden datenbasiert entwickelt und auf die Zielgruppe optimiert. Kein generischer Content.</p>
       </div>
-
-      <div class="service-row reverse">
-        <div class="service-right"><div class="service-visual"><span class="sv-num">04</span></div></div>
-        <div class="service-left">
-          <div class="service-num">04</div>
-          <h3 class="service-name" id="s4-name">Video und Fotoproduktion</h3>
-          <p class="service-desc" id="s4-desc">Professionelle Employer-Branding-Videos und hochwertige Fotoinhalte inklusive Konzeption, Drehtag und Nachbearbeitung. Anreise und Unterkunft sind im Paketpreis enthalten, weil Komplexität keine versteckten Kosten mit sich bringen sollte.</p>
-          <a href="#contact" class="service-link" id="s4-link">Drehtag planen</a>
-        </div>
+      <div class="fw-step">
+        <div class="fw-num">04</div>
+        <div class="fw-step-title" id="fw4t">Launch und Optimierung</div>
+        <p class="fw-step-desc" id="fw4d">Kampagnenstart mit täglichem Monitoring. Kontinuierliche datenbasierte Anpassungen für maximale Effizienz jedes eingesetzten Euro.</p>
       </div>
-
-      <div class="service-row">
-        <div class="service-left">
-          <div class="service-num">05</div>
-          <h3 class="service-name" id="s5-name">Social Media Management</h3>
-          <p class="service-desc" id="s5-desc">Konsistente Content-Planung, Texterstellung, Grafikdesign und Veröffentlichung auf Ihren Kanälen. Von drei Beiträgen pro Monat für eine professionelle Präsenz bis zu sechs oder mehr für den Aufbau einer engagierten Community. Klarer Umfang, klare Leistungen, klare Ergebnisse.</p>
-          <a href="#contact" class="service-link" id="s5-link">Präsenz aufbauen</a>
-        </div>
-        <div class="service-right"><div class="service-visual"><span class="sv-num">05</span></div></div>
+      <div class="fw-step">
+        <div class="fw-num">05</div>
+        <div class="fw-step-title" id="fw5t">Reporting</div>
+        <p class="fw-step-desc" id="fw5d">Monatliche Reporting-Gespräche in klarer Sprache. KPIs, Fortschritt und nächste Schritte. Kein Fachjargon. Keine Überraschungen.</p>
       </div>
-
-      <div class="service-row reverse">
-        <div class="service-right"><div class="service-visual"><span class="sv-num">06</span></div></div>
-        <div class="service-left">
-          <div class="service-num">06</div>
-          <h3 class="service-name" id="s6-name">BAFA-geförderte Beratung</h3>
-          <p class="service-desc" id="s6-desc">Kleine und mittlere Unternehmen in Deutschland können bis zu 50 Prozent der Beratungskosten staatlich gefördert bekommen. Wir begleiten Sie vollständig durch den Antragsprozess ohne zusätzliche Kosten.</p>
-          <a href="#contact" class="service-link" id="s6-link">Förderung prüfen</a>
-        </div>
+      <div class="fw-step">
+        <div class="fw-num">06</div>
+        <div class="fw-step-title" id="fw6t">Skalierung</div>
+        <p class="fw-step-desc" id="fw6d">Was funktioniert, skalieren wir. Was nicht funktioniert, verbessern wir. Langfristige Partnerschaften mit messbarem Wachstum.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -262,120 +248,52 @@
   <div class="container">
     <div class="eyebrow tc" id="price-eyebrow">Transparente Preise</div>
     <h2 class="section-title tc"><span id="price-title">Klare Pakete.</span> <em id="price-title-em">Keine Überraschungen.</em></h2>
-    <p class="pricing-sub" id="price-sub">Alle Preise sind Nettopreise und beinhalten kein Werbebudget. Werbebudget für Meta, Instagram oder Google Ads wird immer separat und ohne Aufschlag zum Selbstkostenpreis berechnet.</p>
+    <p class="pricing-sub" id="price-sub">Alle Preise sind Nettopreise und beinhalten kein Werbebudget. Werbebudget für Meta, Instagram oder Google Ads wird immer separat und ohne Aufschlag weitergeleitet.</p>
     <div class="pricing-grid">
-
       <div class="pricing-card">
-        <div class="pricing-tag" id="p1-tag">Starter</div>
+        <div class="pricing-tag">Starter</div>
         <div class="pricing-price">199 <span>EUR/Mo</span></div>
-        <p class="pricing-desc" id="p1-desc">Für Unternehmen, die ihre erste professionelle Online-Präsenz aufbauen möchten.</p>
+        <p class="pricing-desc" id="p1-desc">Für Unternehmen die ihre erste professionelle Online-Präsenz aufbauen möchten.</p>
         <ul class="pricing-features">
-          <li id="p1-f1">Grundlegendes Social Media Management</li>
-          <li id="p1-f2">Monatlicher Content-Plan</li>
-          <li id="p1-f3">3 Beiträge pro Monat</li>
-          <li id="p1-f4">Kurzes monatliches Reporting</li>
-          <li id="p1-f5">4 bis 5 Stunden pro Monat</li>
+          <li>Social Media Management</li>
+          <li>Monatlicher Content-Plan</li>
+          <li>3 Beiträge pro Monat</li>
+          <li>Monatliches Reporting</li>
+          <li>4 bis 5 Stunden pro Monat</li>
         </ul>
-        <a href="#contact" class="pricing-cta" id="p1-cta">Jetzt starten</a>
+        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="pricing-cta" id="p1-cta">Jetzt starten</a>
       </div>
-
       <div class="pricing-card featured">
         <div class="pricing-badge" id="p2-badge">Beliebtestes Paket</div>
-        <div class="pricing-tag" id="p2-tag">Growth</div>
+        <div class="pricing-tag">Growth</div>
         <div class="pricing-price">399 <span>EUR/Mo</span></div>
-        <p class="pricing-desc" id="p2-desc">Für Unternehmen, die regelmäßig Inhalte veröffentlichen und strukturiert kommunizieren möchten.</p>
+        <p class="pricing-desc" id="p2-desc">Für Unternehmen die regelmäßig Inhalte veröffentlichen und strukturiert kommunizieren möchten.</p>
         <ul class="pricing-features">
-          <li id="p2-f1">Social Media Management</li>
-          <li id="p2-f2">Monatlicher Content-Plan</li>
-          <li id="p2-f3">6 Beiträge und 1 Premium-Beitrag</li>
-          <li id="p2-f4">Monatliches Reporting</li>
-          <li id="p2-f5">1 Strategie-Call pro Monat</li>
-          <li id="p2-f6">WhatsApp und E-Mail-Support</li>
-          <li id="p2-f7">8 bis 10 Stunden pro Monat</li>
+          <li>Social Media Management</li>
+          <li>6 Beiträge und 1 Premium-Beitrag</li>
+          <li>Monatliches Reporting</li>
+          <li>1 Strategie-Call pro Monat</li>
+          <li>WhatsApp und E-Mail-Support</li>
+          <li>8 bis 10 Stunden pro Monat</li>
         </ul>
-        <a href="#contact" class="pricing-cta" id="p2-cta">Jetzt starten</a>
+        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="pricing-cta featured-cta" id="p2-cta">Jetzt starten</a>
       </div>
-
       <div class="pricing-card">
-        <div class="pricing-tag" id="p3-tag">Campaign</div>
+        <div class="pricing-tag">Campaign</div>
         <div class="pricing-price">649 <span>EUR/Mo</span></div>
-        <p class="pricing-desc" id="p3-desc">Für Unternehmen, die Recruiting-Kampagnen, Lead-Generierung oder Werbekampagnen durchführen möchten.</p>
+        <p class="pricing-desc" id="p3-desc">Für Unternehmen die Recruiting-Kampagnen oder Lead-Generierung benötigen.</p>
         <ul class="pricing-features">
-          <li id="p3-f1">Zielgruppenanalyse</li>
-          <li id="p3-f2">Kampagnenkonzept und Creatives</li>
-          <li id="p3-f3">Meta Ads Setup und Management</li>
-          <li id="p3-f4">Lead und Kandidaten-Weiterleitung</li>
-          <li id="p3-f5">Monatliches Reporting und Strategie-Call</li>
-          <li id="p3-f6">Erweiterter Support</li>
-          <li id="p3-f7">13 bis 15 Stunden pro Monat</li>
+          <li>Zielgruppenanalyse</li>
+          <li>Kampagnenkonzept und Creatives</li>
+          <li>Meta Ads Setup und Management</li>
+          <li>Lead und Kandidaten-Weiterleitung</li>
+          <li>Monatliches Reporting und Strategie-Call</li>
+          <li>13 bis 15 Stunden pro Monat</li>
         </ul>
-        <a href="#contact" class="pricing-cta" id="p3-cta">Jetzt starten</a>
+        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="pricing-cta" id="p3-cta">Jetzt starten</a>
       </div>
-
     </div>
-    <p class="pricing-note" id="price-note">Werbebudget für Meta, Instagram oder Google Ads wird immer separat und ohne Aufschlag berechnet. APM agency verdient nie am Werbebudget unserer Kunden.</p>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item"><div class="stat-number">199<span class="sa">€</span></div><div class="stat-label" id="st1">Ab pro Monat</div></div>
-      <div class="stat-item"><div class="stat-number">50<span class="sa">%</span></div><div class="stat-label" id="st2">BAFA-Förderung möglich</div></div>
-      <div class="stat-item"><div class="stat-number">24<span class="sa">h</span></div><div class="stat-label" id="st3">Antwortzeit garantiert</div></div>
-      <div class="stat-item"><div class="stat-number">0<span class="sa">%</span></div><div class="stat-label" id="st4">Aufschlag auf Werbebudget</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-left">
-    <div class="eyebrow" style="color:var(--glacier)" id="about-eyebrow">Über APM Agency</div>
-    <h2 class="about-headline" id="about-headline">Gebaut für Unternehmen, die <em>nicht zu viel für echte Ergebnisse bezahlen wollen.</em></h2>
-    <p class="about-body" id="about-body">APM agency wurde 2026 gegründet, um die Lücke zwischen teuren Agenturen und Unternehmen zu schließen, die professionelles Marketing brauchen. Wir sind bewusst schlank aufgestellt, transparent in unseren Prinzipien und konsequent auf messbaren Mehrwert für jeden Kunden ausgerichtet.</p>
-    <a href="#contact" class="btn-outline-light" id="about-cta">Zusammenarbeiten</a>
-  </div>
-  <div class="about-right">
-    <div class="about-bg-text" aria-hidden="true">APM</div>
-    <ul class="about-list">
-      <li><div class="check">✓</div><span id="ab1">Transparente Preise, die offen auf der Website stehen</span></li>
-      <li><div class="check">✓</div><span id="ab2">Werbebudget wird immer ohne Aufschlag weitergeleitet</span></li>
-      <li><div class="check">✓</div><span id="ab3">Fester Leistungsumfang, damit Sie immer wissen, was Sie bezahlen</span></li>
-      <li><div class="check">✓</div><span id="ab4">Monatliches Reporting, damit Sie den Überblick behalten</span></li>
-      <li><div class="check">✓</div><span id="ab5">BAFA-Beratung mit bis zu 50 Prozent staatlicher Förderung</span></li>
-      <li><div class="check">✓</div><span id="ab6">24-Stunden-Antwortzeit an Werktagen garantiert</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process">
-  <div class="container">
-    <div class="eyebrow" id="proc-eyebrow">So arbeiten wir</div>
-    <h2 class="section-title"><span id="proc-title">Vom ersten Gespräch</span> <em id="proc-title-em">zu messbaren Ergebnissen.</em></h2>
-    <div class="process-grid">
-      <div class="process-card"><div class="pnum">01</div><div class="ptitle" id="pr1-t">Erstgespräch</div><p class="pdesc" id="pr1-d">Ein kostenloser 30-minütiger Strategie-Call ohne Druck. Ein ehrliches Gespräch über Ihre Ziele und ob APM agency der richtige Partner für Sie ist.</p></div>
-      <div class="process-card"><div class="pnum">02</div><div class="ptitle" id="pr2-t">Onboarding</div><p class="pdesc" id="pr2-d">Gemeinsam legen wir Ziele, Zielgruppen, Kanäle, Tonalität und nächste Schritte fest. Von Anfang an klar, damit es später keine Überraschungen gibt.</p></div>
-      <div class="process-card"><div class="pnum">03</div><div class="ptitle" id="pr3-t">Konzeption und Erstellung</div><p class="pdesc" id="pr3-d">Sieben Tage für Kampagnenkonzept, kreative Entwicklung und Aufbau. Sie prüfen und genehmigen, bevor etwas live geht. Eine Korrekturschleife ist in jedem Paket enthalten.</p></div>
-      <div class="process-card"><div class="pnum">04</div><div class="ptitle" id="pr4-t">Launch und Management</div><p class="pdesc" id="pr4-d">Aktives Kampagnenmanagement mit kontinuierlichem Monitoring, datenbasierter Optimierung und Budgetkontrolle. Wir kümmern uns um alles.</p></div>
-      <div class="process-card"><div class="pnum">05</div><div class="ptitle" id="pr5-t">Reporting</div><p class="pdesc" id="pr5-d">Monatliche Reporting-Gespräche über KPIs, Kampagnenleistung und nächste Schritte in verständlicher Sprache. Kein Fachjargon.</p></div>
-      <div class="process-card"><div class="pnum">06</div><div class="ptitle" id="pr6-t">Wachstum</div><p class="pdesc" id="pr6-d">Wir skalieren, was funktioniert, und verbessern, was nicht funktioniert. Unser Ziel ist eine Partnerschaft, die langfristig Mehrwert schafft.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="container">
-    <div class="eyebrow" id="test-eyebrow">Kundenstimmen</div>
-    <h2 class="section-title" id="test-title">Was unsere Kunden sagen.</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card"><div class="tq">"</div><p class="tt" id="t1-text">APM agency war die erste Agentur, die uns wirklich erklärt hat, was sie tut und warum. Das Reporting war klar, die Ergebnisse waren real und wir wussten jederzeit genau, wohin jeder Euro unseres Budgets geflossen ist.</p><div class="tn">M. Richter</div><div class="tr" id="t1-role">Geschäftsführer · Gesundheitsgruppe</div></div>
-      <div class="testimonial-card"><div class="tq">"</div><p class="tt" id="t2-text">Wir hatten vor APM zwei andere Agenturen ausprobiert. Der Unterschied war die Transparenz. Keine versteckten Kosten, keine vagen Versprechen, nur ein klarer Plan und ein Team, das ihn konsequent umgesetzt hat.</p><div class="tn">S. Lindner</div><div class="tr" id="t2-role">Inhaber · Handwerksbetrieb</div></div>
-      <div class="testimonial-card"><div class="tq">"</div><p class="tt" id="t3-text">Die BAFA-Beratung allein hat uns erheblich Geld gespart. APM hat uns durch den gesamten Antragsprozess begleitet und gleichzeitig eine Recruiting-Strategie geliefert, die wirklich für unser wachsendes Team funktioniert hat.</p><div class="tn">A. Weber</div><div class="tr" id="t3-role">HR-Managerin · Regionales KMU</div></div>
-    </div>
+    <p class="pricing-note" id="price-note">Werbebudget für Meta, Instagram oder Google Ads wird immer separat und ohne Aufschlag berechnet. APM Agenta verdient nie am Werbebudget unserer Kunden.</p>
   </div>
 </section>
 
@@ -397,15 +315,33 @@
       <div class="contact-left">
         <div class="eyebrow" style="color:var(--glacier)" id="con-eyebrow">Kontakt</div>
         <h2 class="contact-headline"><span id="con-title">Lassen Sie uns gemeinsam</span> <em id="con-title-em">wachsen.</em></h2>
-        <p class="contact-sub" id="con-sub">Kein Druck, keine Verpflichtung. Nur ein ehrliches Gespräch über Ihre Ziele und ob APM agency der richtige Partner für Sie ist.</p>
+        <p class="contact-sub" id="con-sub">Kein Druck. Keine Verpflichtung. Nur ein ehrliches Gespräch über Ihre Ziele.</p>
         <div class="contact-info">
-          <div class="ci"><div class="ci-label" id="ci1-l">E-Mail</div><a href="mailto:contact@apmagenta.com" class="ci-val">contact@apmagenta.com</a></div>
-          <div class="ci"><div class="ci-label" id="ci2-l">Antwortzeit</div><div class="ci-val" id="ci2-v">Innerhalb von 24 Stunden an Werktagen</div></div>
-          <div class="ci"><div class="ci-label" id="ci3-l">Erstgespräch</div><div class="ci-val" id="ci3-v">Kostenloser 30-minütiger Strategie-Call</div></div>
+          <div class="ci">
+            <div class="ci-label" id="ci0-l">Telefon</div>
+            <a href="tel:+491772950662" class="ci-val">+49 177 295 0662</a>
+          </div>
+          <div class="ci">
+            <div class="ci-label" id="ci1-l">E-Mail</div>
+            <a href="mailto:contact@apmagenta.com" class="ci-val">contact@apmagenta.com</a>
+          </div>
+          <div class="ci">
+            <div class="ci-label" id="ci2-l">Antwortzeit</div>
+            <div class="ci-val" id="ci2-v">Innerhalb von 24 Stunden an Werktagen</div>
+          </div>
+          <div class="ci">
+            <div class="ci-label" id="ci3-l">Erstgespräch</div>
+            <div class="ci-val" id="ci3-v">Kostenloser 30-minütiger Strategie-Call</div>
+          </div>
         </div>
+        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="book-btn" id="con-book">Strategie-Gespräch buchen</a>
       </div>
       <div class="contact-right">
-        <form id="contact-form" class="contact-form" novalidate action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="contact-form" class="contact-form" novalidate
+          action="https://formspree.io/f/contact@apmagenta.com"
+          method="POST">
+          <input type="hidden" name="_subject" value="Neue Anfrage von apmagenta.com">
+          <input type="hidden" name="_replyto" id="reply-email">
           <div class="form-row">
             <div class="form-group">
               <label for="fname" id="lbl-name">Name</label>
@@ -417,20 +353,26 @@
               <input type="text" id="fcompany" name="company" placeholder="Ihr Unternehmen" autocomplete="organization">
             </div>
           </div>
-          <div class="form-group">
-            <label for="femail" id="lbl-email">E-Mail Adresse</label>
-            <input type="email" id="femail" name="email" required placeholder="ihre@email.de" autocomplete="email">
-            <span class="ferr" id="email-error"></span>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="femail" id="lbl-email">E-Mail Adresse</label>
+              <input type="email" id="femail" name="email" required placeholder="ihre@email.de" autocomplete="email" oninput="document.getElementById('reply-email').value=this.value">
+              <span class="ferr" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="fphone" id="lbl-phone">Telefon</label>
+              <input type="tel" id="fphone" name="phone" placeholder="+49 ..." autocomplete="tel">
+            </div>
           </div>
           <div class="form-group">
             <label for="fservice" id="lbl-service">Gewünschtes Paket</label>
             <select id="fservice" name="service">
-              <option value="" id="sel-default">Bitte wählen</option>
-              <option value="starter" id="sel-starter">APM Starter (199 EUR/Monat)</option>
-              <option value="growth" id="sel-growth">APM Growth (399 EUR/Monat)</option>
-              <option value="campaign" id="sel-campaign">APM Campaign (649 EUR/Monat)</option>
-              <option value="bafa" id="sel-bafa">BAFA-geförderte Beratung</option>
-              <option value="custom" id="sel-custom">Individuelles Angebot</option>
+              <option value="">Bitte wählen</option>
+              <option value="starter">APM Starter (199 EUR/Monat)</option>
+              <option value="growth">APM Growth (399 EUR/Monat)</option>
+              <option value="campaign">APM Campaign (649 EUR/Monat)</option>
+              <option value="bafa">BAFA-geförderte Beratung</option>
+              <option value="custom">Individuelles Angebot</option>
             </select>
           </div>
           <div class="form-group">
@@ -447,7 +389,7 @@
           </div>
           <button type="submit" class="form-submit" id="submit-btn">Nachricht senden</button>
           <div id="form-success" class="form-success" style="display:none">Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.</div>
-          <div id="form-error-msg" class="form-error-msg" style="display:none">Etwas ist schiefgelaufen. Bitte schreiben Sie uns direkt an <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a>.</div>
+          <div id="form-error-msg" class="form-error-msg" style="display:none">Etwas ist schiefgelaufen. Bitte schreiben Sie uns direkt an <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a> oder rufen Sie uns an: <a href="tel:+491772950662">+49 177 295 0662</a></div>
         </form>
       </div>
     </div>
@@ -459,52 +401,53 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand-col">
-        <div class="footer-brand">APM</div>
-        <div class="footer-tagline" id="ft-tagline">Marketing Agency · ESTD 2026</div>
-        <p class="footer-desc" id="ft-desc">Transparente und ergebnisorientierte Marketing-Agentur für Unternehmen, die wachsen wollen.</p>
-        <div class="social-links">
+        <div class="footer-brand">APM Agenta</div>
+        <div class="footer-tagline">Performance Marketing · Deutschland</div>
+        <p class="footer-desc">Transparente und ergebnisorientierte Marketing-Agentur für Unternehmen die wachsen wollen.</p>
+        <a href="tel:+491772950662" class="footer-phone">+49 177 295 0662</a>
+        <div class="social-links" style="margin-top:1rem">
           <a href="#" class="social-link" aria-label="LinkedIn">Li</a>
           <a href="#" class="social-link" aria-label="Instagram">Ig</a>
           <a href="#" class="social-link" aria-label="Facebook">Fb</a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title" id="ft-col1">Leistungen</div>
+        <div class="footer-col-title">Leistungen</div>
         <ul class="footer-links">
-          <li><a href="#services" id="ftl-1">Recruitment Marketing</a></li>
-          <li><a href="#services" id="ftl-2">Employer Branding</a></li>
-          <li><a href="#services" id="ftl-3">Paid Media</a></li>
-          <li><a href="#services" id="ftl-4">Social Media</a></li>
-          <li><a href="#services" id="ftl-5">BAFA Beratung</a></li>
-          <li><a href="#services" id="ftl-6">Video Produktion</a></li>
+          <li><a href="services.html">Recruitment Marketing</a></li>
+          <li><a href="services.html">Employer Branding</a></li>
+          <li><a href="services.html">Paid Media</a></li>
+          <li><a href="services.html">Social Media</a></li>
+          <li><a href="services.html">BAFA Beratung</a></li>
+          <li><a href="services.html">Video Produktion</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title" id="ft-col2">Unternehmen</div>
+        <div class="footer-col-title">Unternehmen</div>
         <ul class="footer-links">
-          <li><a href="#about" id="ftc-1">Über APM</a></li>
-          <li><a href="#work" id="ftc-2">Projekte</a></li>
-          <li><a href="#pricing" id="ftc-3">Preise</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact" id="ftc-5">Kontakt</a></li>
+          <li><a href="about.html">Über APM Agenta</a></li>
+          <li><a href="industries.html">Branchen</a></li>
+          <li><a href="index.html#pricing">Preise</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title" id="ft-col3">Rechtliches</div>
+        <div class="footer-col-title">Rechtliches</div>
         <ul class="footer-links">
-          <li><a href="impressum.html" id="ftleg-1">Impressum</a></li>
-          <li><a href="datenschutz.html" id="ftleg-2">Datenschutzerklärung</a></li>
-          <li><a href="agb.html" id="ftleg-3">AGB</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+          <li><a href="agb.html">AGB</a></li>
           <li><a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy" id="ft-copy">© 2026 APM Marketing Agency. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
       <div class="footer-copy">
-        <a href="impressum.html" id="fb-imp">Impressum</a> ·
-        <a href="datenschutz.html" id="fb-dsg">Datenschutz</a> ·
-        <a href="agb.html" id="fb-agb">AGB</a>
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a> ·
+        <a href="agb.html">AGB</a>
       </div>
     </div>
   </div>
