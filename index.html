@@ -11,10 +11,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://apmagenta.com">
-<!-- CSP: clickjacking mitigation for GitHub Pages -->
-<meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self'">
 <title>APM Agenta | Marketing. Strategie. Wachstum.</title>
-<!-- Performance: async font loading -->
+<!-- Async font loading — no render blocking -->
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -40,24 +38,40 @@
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="assets/logo.png" alt="APM Agenta Logo" class="nav-logo-img" width="150" height="50" onerror="this.style.display='none'">
-      <div class="nav-logo-text">
-        <span class="nav-logo-main">APM</span>
-        <span class="nav-logo-sub">Agenta</span>
-      </div>
+
+    <!-- LOGO: far left -->
+    <a href="index.html" class="nav-logo" aria-label="APM Agenta Startseite">
+      <img src="assets/logo_dark.png" alt="APM Agenta" class="nav-logo-img" width="120" height="40">
     </a>
+
+    <!-- LINKS: pushed far right -->
     <ul class="nav-links" id="nav-links">
-      <li><a href="#framework">Unser Framework</a></li>
-      <li><a href="services.html">Leistungen</a></li>
-      <li><a href="industries.html">Branchen</a></li>
-      <li><a href="#pricing">Investment</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact" class="nav-contact-link">Kontakt</a></li>
+      <li><a href="about.html" id="nav-about">Über uns</a></li>
+      <li><a href="services.html" id="nav-services">Leistungen</a></li>
+      <li><a href="#framework" id="nav-framework">Framework</a></li>
+      <li><a href="industries.html" id="nav-industries">Branchen</a></li>
+      <li><a href="#pricing" id="nav-pricing">Investment</a></li>
+      <li><a href="#faq" id="nav-faq">FAQ</a></li>
+      <li>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-dropdown-btn" id="langDropBtn" onclick="toggleLangDropdown()" aria-haspopup="listbox" aria-expanded="false">
+            <span id="current-lang-flag">DE</span>
+            <svg class="lang-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <ul class="lang-dropdown-menu" id="langMenu" role="listbox" aria-label="Sprache wählen">
+            <li><button onclick="setLang('de')" class="lang-opt" role="option" aria-selected="true">Deutsch</button></li>
+            <li><button onclick="setLang('en')" class="lang-opt" role="option" aria-selected="false">English</button></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#contact" class="nav-cta-link" id="nav-contact">Kontakt</a></li>
     </ul>
-    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu" aria-expanded="false">
+
+    <!-- HAMBURGER: mobile only -->
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+
   </div>
 </nav>
 
@@ -65,12 +79,17 @@
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <div class="mobile-menu-inner">
     <ul>
-      <li><a href="#framework" onclick="closeMobile()">Unser Framework</a></li>
-      <li><a href="services.html" onclick="closeMobile()">Leistungen</a></li>
-      <li><a href="industries.html" onclick="closeMobile()">Branchen</a></li>
-      <li><a href="#pricing" onclick="closeMobile()">Investment</a></li>
-      <li><a href="#faq" onclick="closeMobile()">FAQ</a></li>
-      <li><a href="#contact" onclick="closeMobile()" class="mobile-cta">Kontakt</a></li>
+      <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
+      <li><a href="services.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
+      <li><a href="#framework" onclick="closeMobile()" id="mob-framework">Framework</a></li>
+      <li><a href="industries.html" onclick="closeMobile()" id="mob-industries">Branchen</a></li>
+      <li><a href="#pricing" onclick="closeMobile()" id="mob-pricing">Investment</a></li>
+      <li><a href="#faq" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
+      <li class="mob-lang-row">
+        <button onclick="setLang('de');closeMobile()" class="mob-lang-btn" id="mob-de">DE — Deutsch</button>
+        <button onclick="setLang('en');closeMobile()" class="mob-lang-btn" id="mob-en">EN — English</button>
+      </li>
+      <li><a href="#contact" onclick="closeMobile()" class="mobile-cta" id="mob-contact">Kontakt</a></li>
     </ul>
   </div>
 </div>
@@ -137,7 +156,7 @@
   </div>
 </section>
 
-<!-- INDUSTRIES OVERVIEW -->
+<!-- INDUSTRIES -->
 <section class="industries-section" id="industries">
   <div class="container">
     <div class="section-header">
@@ -222,7 +241,7 @@
   <div class="container">
     <div class="eyebrow tc" id="price-eyebrow">Investment und Frameworks</div>
     <h2 class="section-title tc"><span id="price-title">Skalierbare Programme für Ihren</span> <em id="price-title-em">Marktdurchbruch.</em></h2>
-    <p class="pricing-sub" id="price-sub">Keine starren Dienstleistungen, sondern maßgeschneiderte Wachstums-Pipelines. Wählen Sie das Fundament, das zu Ihren aktuellen Unternehmenszielen passt. Alle Preise sind Nettopreise ohne Werbebudget.</p>
+    <p class="pricing-sub" id="price-sub">Keine starren Dienstleistungen, sondern maßgeschneiderte Wachstums-Pipelines. Wählen Sie das Fundament das zu Ihren aktuellen Unternehmenszielen passt. Alle Preise sind Nettopreise ohne Werbebudget.</p>
     <div class="pricing-grid">
 
       <div class="pricing-card" id="card-starter">
@@ -281,7 +300,7 @@
 <section class="faq" id="faq">
   <div class="container">
     <div class="faq-inner">
-      <div class="eyebrow tc" style="color:var(--glacier)">FAQ</div>
+      <div class="eyebrow tc" style="color:var(--glacier-dark)">FAQ</div>
       <h2 class="faq-title" id="faq-title">Häufig gestellte Fragen</h2>
       <div id="faq-list"></div>
     </div>
@@ -293,7 +312,7 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-left">
-        <div class="eyebrow" style="color:var(--glacier)" id="con-eyebrow">Kontakt</div>
+        <div class="eyebrow" style="color:var(--glacier-dark)" id="con-eyebrow">Kontakt</div>
         <h2 class="contact-headline"><span id="con-title">Lassen Sie uns gemeinsam</span> <em id="con-title-em">wachsen.</em></h2>
         <p class="contact-sub" id="con-sub">Kein Druck. Keine Verpflichtung. Nur ein ehrliches Gespräch über Ihre Ziele.</p>
         <div class="contact-info">
@@ -379,7 +398,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand-col">
-        <div class="footer-brand">APM Agenta</div>
+        <img src="assets/logo_dark.png" alt="APM Agenta" class="footer-logo-img" width="100" height="33">
         <div class="footer-tagline">Performance Marketing · Deutschland</div>
         <p class="footer-desc">Transparente und ergebnisorientierte Marketing-Agentur für Unternehmen die wachsen wollen.</p>
         <a href="tel:+491772950662" class="footer-phone">+49 177 295 0662</a>
