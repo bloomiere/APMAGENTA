@@ -70,6 +70,7 @@ const T = {
     'err-name':'Bitte geben Sie Ihren Namen ein.',
     'err-email':'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
     'err-message':'Bitte schreiben Sie uns eine kurze Nachricht.',
+    'err-phone':'Bitte geben Sie Ihre Telefonnummer ein.',
     'err-consent':'Bitte stimmen Sie der Datenschutzerklärung zu.',
     'sending':'Wird gesendet...',
     'ph-name':'Ihr Name','ph-company':'Ihr Unternehmen','ph-email':'ihre@email.de',
@@ -138,6 +139,7 @@ const T = {
     'err-name':'Please enter your name.',
     'err-email':'Please enter a valid email address.',
     'err-message':'Please write us a short message.',
+    'err-phone':'Please enter your phone number.',
     'err-consent':'Please agree to the privacy policy.',
     'sending':'Sending...',
     'ph-name':'Your name','ph-company':'Your company','ph-email':'your@email.com',
@@ -327,12 +329,14 @@ function initContactForm() {
     e.preventDefault();
     const t=T[currentLang];
     let valid=true;
-    ['name','email','message','consent'].forEach(f=>clearErr(f));
+    ['name','email','phone','message','consent'].forEach(f=>clearErr(f));
     const name=document.getElementById('fname');
     const email=document.getElementById('femail');
     const msg=document.getElementById('fmessage');
     const consent=document.getElementById('fconsent');
     if(!name?.value.trim()){showErr('name',t['err-name']);valid=false;}
+    const phone=document.getElementById('fphone');
+    if(!phone?.value.trim()){showErr('phone',t['err-phone']);valid=false;}
     if(!email?.value.trim()||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){showErr('email',t['err-email']);valid=false;}
     if(!msg?.value.trim()){showErr('message',t['err-message']);valid=false;}
     if(!consent?.checked){showErr('consent',t['err-consent']);valid=false;}
