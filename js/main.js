@@ -276,16 +276,62 @@ function toggleFaq(i) {
 }
 
 /* ---- COOKIE ---- */
-function acceptCookies() { localStorage.setItem('apm_cookies','accepted'); hideCookieBanner(); }
-function declineCookies() { localStorage.setItem('apm_cookies','declined'); hideCookieBanner(); }
+/* ---- COOKIE CONSENT — DSGVO/GDPR ---- */
+function enableAnalytics() {
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+  }
+  localStorage.setItem('apm_analytics', 'granted');
+}
+
+function disableAnalytics() {
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', { analytics_storage: 'denied' });
+  }
+  localStorage.setItem('apm_analytics', 'denied');
+}
+
+function acceptAll() {
+  localStorage.setItem('apm_cookies', 'accepted');
+  localStorage.setItem('apm_analytics', 'granted');
+  enableAnalytics();
+  hideCookieBanner();
+}
+
+function acceptSelected() {
+  const analyticsOn = document.getElementById('analytics-toggle')?.checked;
+  localStorage.setItem('apm_cookies', 'accepted');
+  if (analyticsOn) { enableAnalytics(); } else { disableAnalytics(); }
+  hideCookieBanner();
+}
+
+function declineCookies() {
+  localStorage.setItem('apm_cookies', 'declined');
+  disableAnalytics();
+  hideCookieBanner();
+}
+
+function acceptCookies() { acceptAll(); }
+
 function hideCookieBanner() {
   const b = document.getElementById('cookie-banner');
-  if (b) { b.classList.remove('visible'); setTimeout(()=>b.remove(),400); }
+  if (b) { b.classList.remove('visible'); setTimeout(() => { b.style.display = 'none'; }, 400); }
 }
+
+function reopenCookieBanner() {
+  const b = document.getElementById('cookie-banner');
+  if (b) { b.style.display = ''; setTimeout(() => b.classList.add('visible'), 50); }
+}
+
 function initCookieBanner() {
-  if (!localStorage.getItem('apm_cookies')) {
+  const status = localStorage.getItem('apm_cookies');
+  // Restore previous analytics consent
+  const analyticsStatus = localStorage.getItem('apm_analytics');
+  if (analyticsStatus === 'granted') { enableAnalytics(); }
+  // Show banner if no decision yet
+  if (!status) {
     const b = document.getElementById('cookie-banner');
-    if (b) setTimeout(()=>b.classList.add('visible'),1400);
+    if (b) setTimeout(() => b.classList.add('visible'), 1200);
   }
 }
 

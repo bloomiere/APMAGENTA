@@ -18,18 +18,56 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css">
+<!-- Google Analytics 4 — loads ONLY after cookie consent -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  // Default: deny all until user consents
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    wait_for_update: 500
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4Q1C85SF9T"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-4Q1C85SF9T', { anonymize_ip: true });
+</script>
 </head>
 <body>
 
-<!-- COOKIE BANNER -->
-<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="ck-title">
-  <div class="cookie-inner">
-    <div class="cookie-text">
-      <strong id="ck-title">Wir verwenden Cookies</strong>
-      <p id="ck-desc">Diese Website verwendet Cookies. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+<!-- COOKIE BANNER — DSGVO/GDPR konform -->
+<div id="cookie-banner" class="cookie-banner cookie-banner-v2" role="dialog" aria-labelledby="ck-title" aria-modal="true">
+  <div class="cookie-box">
+    <div class="cookie-header">
+      <strong id="ck-title">Datenschutzeinstellungen</strong>
+      <p id="ck-desc">Wir verwenden Cookies um Ihnen die beste Nutzererfahrung zu bieten und unsere Website zu verbessern. Analytische Cookies helfen uns zu verstehen wie Besucher unsere Website nutzen. Sie können Ihre Einwilligung jederzeit widerrufen. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     </div>
-    <div class="cookie-btns">
-      <button onclick="acceptCookies()" class="cookie-accept" id="ck-accept">Alle akzeptieren</button>
+    <div class="cookie-options">
+      <div class="cookie-option">
+        <div class="cookie-option-info">
+          <span class="cookie-option-name">Notwendige Cookies</span>
+          <span class="cookie-option-desc">Für die Grundfunktionen der Website erforderlich.</span>
+        </div>
+        <div class="cookie-toggle cookie-toggle-locked" aria-label="Immer aktiv">
+          <span class="cookie-toggle-label">Immer aktiv</span>
+        </div>
+      </div>
+      <div class="cookie-option">
+        <div class="cookie-option-info">
+          <span class="cookie-option-name">Analyse-Cookies</span>
+          <span class="cookie-option-desc">Helfen uns zu verstehen wie Besucher die Website nutzen (Google Analytics).</span>
+        </div>
+        <label class="cookie-switch" aria-label="Analyse-Cookies">
+          <input type="checkbox" id="analytics-toggle" checked>
+          <span class="cookie-switch-slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="cookie-actions">
+      <button onclick="acceptSelected()" class="cookie-accept" id="ck-accept">Auswahl speichern</button>
+      <button onclick="acceptAll()" class="cookie-accept-all" id="ck-accept-all">Alle akzeptieren</button>
       <button onclick="declineCookies()" class="cookie-decline" id="ck-decline">Nur notwendige</button>
     </div>
   </div>
@@ -410,7 +448,8 @@
       <div class="footer-copy">
         <a href="impressum.html">Impressum</a> ·
         <a href="datenschutz.html">Datenschutz</a> ·
-        <a href="agb.html">AGB</a>
+        <a href="agb.html">AGB</a> ·
+        <button class="cookie-settings-link" onclick="reopenCookieBanner()">Cookie-Einstellungen</button>
       </div>
     </div>
   </div>
