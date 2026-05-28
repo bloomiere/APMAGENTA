@@ -405,9 +405,9 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
 
 /* Footer logo same treatment */
 .footer-logo-img {
-  height: auto;
-  width: 280px;
-  max-width: 280px;
+  height: 72px;
+  width: auto;
+  max-width: 220px;
   object-fit: contain;
   display: block;
   filter: brightness(0) invert(1);
