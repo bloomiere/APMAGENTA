@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BAFA-Förderung für Ihr Unternehmen. Bis zu 50% staatlicher Zuschuss auf Marketing-Beratung. APM Agenta begleitet Sie durch den gesamten Antragsprozess.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://apmagenta.com/bafa.html">
+<title>BAFA-Förderung | APM Agenta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/subpage.css">
+<style>
+  .bafa-hero { background: var(--navy); padding: 9rem 4% 5rem; position: relative; overflow: hidden; }
+  .bafa-hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,16,26,0.98) 0%, rgba(26,39,56,0.85) 100%); }
+  .bafa-hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .bafa-hero-left .eyebrow { color: var(--glacier); }
+  .bafa-hero-title { font-size: clamp(2.2rem,4.5vw,3.8rem); font-weight: 200; color: var(--white); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
+  .bafa-hero-title em { font-style: italic; color: var(--glacier); }
+  .bafa-hero-sub { font-size: 0.88rem; color: var(--silver); line-height: 1.85; font-weight: 300; margin-bottom: 2rem; max-width: 480px; }
+  .bafa-hero-right { background: rgba(255,255,255,0.04); border: 1px solid rgba(143,174,201,0.15); padding: 2.5rem; }
+  .bafa-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .bafa-stat { text-align: center; padding: 1.5rem 1rem; border: 1px solid rgba(143,174,201,0.12); }
+  .bafa-stat-num { font-size: 2.8rem; font-weight: 200; color: var(--glacier); line-height: 1; letter-spacing: -0.02em; }
+  .bafa-stat-label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--silver); font-weight: 500; margin-top: 0.4rem; opacity: 0.8; }
+  .bafa-what { padding: 7rem 0; background: #fff; }
+  .bafa-what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; margin-top: 3rem; }
+  .bafa-what-text p { font-size: 0.85rem; color: #374151; line-height: 1.9; font-weight: 300; margin-bottom: 1rem; }
+  .bafa-what-text strong { color: var(--navy); font-weight: 600; }
+  .bafa-criteria { display: flex; flex-direction: column; gap: 1rem; }
+  .bafa-criterion { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem; border: 1px solid var(--border); background: var(--off); }
+  .bafa-criterion-check { width: 28px; height: 28px; background: var(--glacier); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: var(--navy); font-size: 0.75rem; font-weight: 700; }
+  .bafa-criterion-text strong { display: block; font-size: 0.75rem; font-weight: 700; color: var(--navy); letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+  .bafa-criterion-text span { font-size: 0.75rem; color: #374151; font-weight: 300; line-height: 1.6; }
+  .bafa-process { padding: 7rem 0; background: var(--off); }
+  .bafa-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.5rem; position: relative; }
+  .bafa-steps::before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 1px; background: linear-gradient(to right, var(--glacier), transparent); pointer-events: none; }
+  .bafa-step { background: var(--white); border: 1px solid var(--border); padding: 2rem 1.5rem; position: relative; transition: border-color 0.3s, transform 0.3s; }
+  .bafa-step:hover { border-color: var(--glacier); transform: translateY(-4px); }
+  .bafa-step-num { font-size: 2.5rem; font-weight: 200; color: var(--silver); line-height: 1; margin-bottom: 1rem; }
+  .bafa-step-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.6rem; }
+  .bafa-step-desc { font-size: 0.76rem; color: #374151; line-height: 1.75; font-weight: 300; }
+  .bafa-why { padding: 7rem 0; background: var(--navy); }
+  .bafa-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+  .bafa-why-card { padding: 2rem; border: 1px solid rgba(143,174,201,0.12); }
+  .bafa-why-card:hover { border-color: var(--glacier); }
+  .bafa-why-num { font-size: 0.6rem; letter-spacing: 0.3em; color: var(--glacier); font-weight: 600; margin-bottom: 0.75rem; }
+  .bafa-why-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 0.6rem; }
+  .bafa-why-desc { font-size: 0.78rem; color: var(--silver); line-height: 1.8; font-weight: 300; }
+  .bafa-cta { padding: 7rem 0; background: var(--navy2); }
+  .bafa-cta-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; }
+  .bafa-faq { padding: 7rem 0; background: var(--off); }
+  .bafa-faq-list { max-width: 760px; margin: 3rem auto 0; }
+  .bafa-faq-item { border-top: 1px solid var(--border); }
+  .bafa-faq-item:last-child { border-bottom: 1px solid var(--border); }
+  .bafa-faq-btn { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; background: none; border: none; cursor: pointer; text-align: left; gap: 2rem; font-family: 'Montserrat', sans-serif; }
+  .bafa-faq-q { font-size: 0.84rem; color: var(--navy); font-weight: 500; line-height: 1.5; }
+  .bafa-faq-icon { flex-shrink: 0; width: 26px; height: 26px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--glacier-dark); font-size: 1rem; transition: all 0.3s; }
+  .bafa-faq-icon.open { background: var(--navy); color: var(--white); transform: rotate(45deg); }
+  .bafa-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .bafa-faq-answer.open { max-height: 200px; }
+  .bafa-faq-answer-inner { padding: 0 0 1.2rem; font-size: 0.8rem; color: #374151; line-height: 1.85; font-weight: 300; }
+  @media (max-width: 900px) {
+    .bafa-hero-content { grid-template-columns: 1fr; gap: 3rem; }
+    .bafa-what-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .bafa-steps { grid-template-columns: repeat(2, 1fr); }
+    .bafa-steps::before { display: none; }
+    .bafa-why-grid { grid-template-columns: 1fr; }
+    .bafa-cta-grid { grid-template-columns: 1fr; gap: 3rem; }
+  }
+  @media (max-width: 640px) {
+    .bafa-stat-grid { grid-template-columns: 1fr 1fr; }
+    .bafa-steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body data-page="bafa">
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="APM Agenta">
+      <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" id="nav-about">Über uns</a></li>
+      <li><a href="services.html" id="nav-services">Leistungen</a></li>
+      <li><a href="index.html#framework" id="nav-framework">Framework</a></li>
+      <li><a href="industries.html" id="nav-industries">Branchen</a></li>
+      <li><a href="index.html#faq" id="nav-faq">FAQ</a></li>
+      <li class="lang-dropdown" id="langDropdownWrap">
+        <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="lang-current">DE</span>
+          <svg class="lang-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+          <li><button class="lang-opt" role="option" aria-selected="true" onclick="setLang('de')">Deutsch</button></li>
+          <li><button class="lang-opt" role="option" aria-selected="false" onclick="setLang('en')">English</button></li>
+        </ul>
+      </li>
+      <li><a href="index.html#contact" class="nav-cta-link" id="nav-contact">Kontakt</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <ul>
+      <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
+      <li><a href="services.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
+      <li><a href="index.html#framework" onclick="closeMobile()" id="mob-framework">Framework</a></li>
+      <li><a href="industries.html" onclick="closeMobile()" id="mob-industries">Branchen</a></li>
+      <li><a href="index.html#faq" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
+      <li>
+        <div class="mob-lang-row">
+          <button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button>
+          <button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');closeMobile()">EN</button>
+        </div>
+      </li>
+      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta" id="mob-contact">Kontakt</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="bafa-hero">
+  <div class="bafa-hero-overlay"></div>
+  <div class="bafa-hero-content">
+    <div class="bafa-hero-left">
+      <div class="eyebrow" id="bafa-eyebrow">BAFA-Förderung</div>
+      <h1 class="bafa-hero-title" id="bafa-hero-title">Bis zu 50% Ihrer<br>Beratungskosten<br><em>vom Staat erstattet.</em></h1>
+      <p class="bafa-hero-sub" id="bafa-hero-sub">Das BAFA-Förderprogramm ermöglicht kleinen und mittleren Unternehmen in Deutschland einen staatlichen Zuschuss auf strategische Unternehmensberatung. APM Agenta begleitet Sie durch den gesamten Prozess — von der Antragstellung bis zur Auszahlung.</p>
+      <a href="index.html#contact" class="btn-primary" id="bafa-hero-cta">Förderung anfragen</a>
+    </div>
+    <div class="bafa-hero-right">
+      <div class="bafa-stat-grid">
+        <div class="bafa-stat">
+          <div class="bafa-stat-num">50%</div>
+          <div class="bafa-stat-label" id="bs1">Max. Förderquote</div>
+        </div>
+        <div class="bafa-stat">
+          <div class="bafa-stat-num">3.500€</div>
+          <div class="bafa-stat-label" id="bs2">Max. Zuschuss</div>
+        </div>
+        <div class="bafa-stat">
+          <div class="bafa-stat-num">250</div>
+          <div class="bafa-stat-label" id="bs3">Max. Mitarbeiter</div>
+        </div>
+        <div class="bafa-stat">
+          <div class="bafa-stat-num">2J.</div>
+          <div class="bafa-stat-label" id="bs4">Mindest-Unternehmensalter</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS BAFA -->
+<section class="bafa-what">
+  <div class="container">
+    <div class="eyebrow" id="bafa-what-eyebrow">Was ist BAFA?</div>
+    <h2 class="section-title" id="bafa-what-title">Staatliche Förderung für <em>unternehmerische Beratung.</em></h2>
+    <div class="bafa-what-grid">
+      <div class="bafa-what-text">
+        <p id="bafa-what-p1">Das Bundesamt für Wirtschaft und Ausfuhrkontrolle (BAFA) fördert im Rahmen des Programms <strong>„Förderung unternehmerischen Know-hows"</strong> die Inanspruchnahme von Beratungsleistungen durch kleine und mittlere Unternehmen sowie Freiberufler in Deutschland.</p>
+        <p id="bafa-what-p2">Konkret bedeutet das: Wenn Sie als Unternehmen eine externe Beratung in Anspruch nehmen, übernimmt der Staat einen Teil der Kosten. Der Zuschuss beträgt je nach Region <strong>bis zu 50 Prozent</strong> des anerkannten Beraterhonorars, maximal jedoch 3.500 Euro.</p>
+        <p id="bafa-what-p3">Die Förderung gilt für Beratungsleistungen in den Bereichen Strategie, Marketing, Digitalisierung, Personal und weitere Unternehmensthemen. APM Agenta ist als Beratungsunternehmen für BAFA-geförderte Leistungen qualifiziert.</p>
+      </div>
+      <div>
+        <div class="eyebrow" id="bafa-crit-eyebrow">Voraussetzungen</div>
+        <h3 class="section-title" style="font-size:1.4rem;margin-bottom:1.5rem" id="bafa-crit-title">Erfüllen Sie <em>die Kriterien?</em></h3>
+        <div class="bafa-criteria">
+          <div class="bafa-criterion">
+            <div class="bafa-criterion-check">1</div>
+            <div class="bafa-criterion-text">
+              <strong id="bc1-title">Unternehmensgröße</strong>
+              <span id="bc1-desc">Weniger als 250 Mitarbeiter und ein Jahresumsatz unter 50 Millionen EUR oder eine Jahresbilanzsumme unter 43 Millionen EUR.</span>
+            </div>
+          </div>
+          <div class="bafa-criterion">
+            <div class="bafa-criterion-check">2</div>
+            <div class="bafa-criterion-text">
+              <strong id="bc2-title">Unternehmensalter</strong>
+              <span id="bc2-desc">Das Unternehmen besteht seit mindestens zwei Jahren und ist nicht in wirtschaftlichen Schwierigkeiten.</span>
+            </div>
+          </div>
+          <div class="bafa-criterion">
+            <div class="bafa-criterion-check">3</div>
+            <div class="bafa-criterion-text">
+              <strong id="bc3-title">Sitz in Deutschland</strong>
+              <span id="bc3-desc">Das Unternehmen hat seinen Sitz oder seine Betriebsstätte in der Bundesrepublik Deutschland.</span>
+            </div>
+          </div>
+          <div class="bafa-criterion">
+            <div class="bafa-criterion-check">4</div>
+            <div class="bafa-criterion-text">
+              <strong id="bc4-title">Kein Vorförderantrag</strong>
+              <span id="bc4-desc">Für dasselbe Beratungsvorhaben darf kein anderer öffentlicher Zuschuss beantragt oder bewilligt worden sein.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="bafa-process">
+  <div class="container">
+    <div class="eyebrow tc" id="bafa-proc-eyebrow">Der Prozess</div>
+    <h2 class="section-title tc" id="bafa-proc-title">Von der Antragstellung <em>bis zur Auszahlung.</em></h2>
+    <div class="bafa-steps">
+      <div class="bafa-step reveal">
+        <div class="bafa-step-num">01</div>
+        <div class="bafa-step-title" id="bp1-title">Erstgespräch</div>
+        <p class="bafa-step-desc" id="bp1-desc">Wir prüfen gemeinsam ob Ihr Unternehmen die Fördervoraussetzungen erfüllt und welche Beratungsleistungen förderfähig sind.</p>
+      </div>
+      <div class="bafa-step reveal">
+        <div class="bafa-step-num">02</div>
+        <div class="bafa-step-title" id="bp2-title">Antragstellung</div>
+        <p class="bafa-step-desc" id="bp2-desc">Wir begleiten Sie bei der Registrierung im BAFA-Portal und der vollständigen Antragstellung — ohne zusätzliche Kosten.</p>
+      </div>
+      <div class="bafa-step reveal">
+        <div class="bafa-step-num">03</div>
+        <div class="bafa-step-title" id="bp3-title">Beratungsdurchführung</div>
+        <p class="bafa-step-desc" id="bp3-desc">Nach Genehmigung des Antrags beginnen wir mit der geförderten Beratungsleistung. Alle Leistungen werden BAFA-konform dokumentiert.</p>
+      </div>
+      <div class="bafa-step reveal">
+        <div class="bafa-step-num">04</div>
+        <div class="bafa-step-title" id="bp4-title">Zuschuss erhalten</div>
+        <p class="bafa-step-desc" id="bp4-desc">Nach Abschluss der Beratung reichen wir gemeinsam den Verwendungsnachweis ein. Der Zuschuss wird direkt auf Ihr Konto überwiesen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY APM -->
+<section class="bafa-why">
+  <div class="container">
+    <div class="eyebrow tc" style="color:var(--glacier)" id="bafa-why-eyebrow">Warum APM Agenta</div>
+    <h2 class="section-title tc" style="color:var(--white)" id="bafa-why-title">Ihr Partner für <em>geförderte Beratung.</em></h2>
+    <div class="bafa-why-grid">
+      <div class="bafa-why-card">
+        <div class="bafa-why-num">01</div>
+        <div class="bafa-why-title" id="bw1-title">Vollständige Begleitung</div>
+        <p class="bafa-why-desc" id="bw1-desc">Von der Prüfung der Förderfähigkeit über die Antragstellung bis zur Einreichung des Verwendungsnachweises. Kein Schritt den Sie alleine gehen müssen.</p>
+      </div>
+      <div class="bafa-why-card">
+        <div class="bafa-why-num">02</div>
+        <div class="bafa-why-title" id="bw2-title">Keine Zusatzkosten</div>
+        <p class="bafa-why-desc" id="bw2-desc">Die BAFA-Begleitung ist Teil unserer Beratungsleistung. Es entstehen keine separaten Kosten für Antragsstellung oder Prozessbegleitung.</p>
+      </div>
+      <div class="bafa-why-card">
+        <div class="bafa-why-num">03</div>
+        <div class="bafa-why-title" id="bw3-title">Qualifizierter Berater</div>
+        <p class="bafa-why-desc" id="bw3-desc">APM Agenta erfüllt die Qualifikationsanforderungen des BAFA-Programms. Unsere Beratungsleistungen sind vollständig förderfähig.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bafa-faq">
+  <div class="container">
+    <div class="eyebrow tc" id="bafa-faq-eyebrow">Häufige Fragen</div>
+    <h2 class="section-title tc" id="bafa-faq-title">Alles was Sie über <em>BAFA wissen müssen.</em></h2>
+    <div class="bafa-faq-list" id="bafa-faq-list"></div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="bafa-cta">
+  <div class="container">
+    <div class="bafa-cta-grid">
+      <div>
+        <div class="eyebrow" style="color:var(--glacier)" id="bafa-cta-eyebrow">Jetzt anfragen</div>
+        <h2 class="contact-headline" id="bafa-cta-title"><span>Förderung beantragen</span> <em id="bafa-cta-title-em">und sparen.</em></h2>
+        <p class="contact-sub" id="bafa-cta-sub">Wir prüfen kostenlos und unverbindlich ob Ihr Unternehmen förderfähig ist und begleiten Sie durch den gesamten Prozess. Schreiben Sie uns einfach eine Nachricht.</p>
+        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" rel="noopener" class="book-btn" id="bafa-book-btn">Kostenloses Erstgespräch buchen</a>
+      </div>
+      <div>
+        <div id="bafa-form-success" class="form-success" style="display:none">Vielen Dank. Wir melden uns innerhalb von 24 Stunden bei Ihnen.</div>
+        <div id="bafa-form-error" class="form-error-msg" style="display:none">Ein Fehler ist aufgetreten. Bitte schreiben Sie uns direkt an <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a>.</div>
+        <form id="bafa-form" class="contact-form" novalidate action="https://formspree.io/f/xykvekev" method="POST">
+          <input type="hidden" name="_subject" value="BAFA-Förderung Anfrage">
+          <input type="hidden" name="source" value="BAFA Landingpage">
+          <input type="hidden" name="_replyto" id="bafa-reply-email">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bafa-name" id="bafa-lbl-name">Name</label>
+              <input type="text" id="bafa-name" name="name" required placeholder="Ihr Name" autocomplete="name">
+              <span class="ferr" id="bafa-name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="bafa-company" id="bafa-lbl-company">Unternehmen</label>
+              <input type="text" id="bafa-company" name="company" required placeholder="Ihr Unternehmen">
+              <span class="ferr" id="bafa-company-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bafa-email" id="bafa-lbl-email">E-Mail</label>
+              <input type="email" id="bafa-email" name="email" required placeholder="ihre@email.de" autocomplete="email" oninput="document.getElementById('bafa-reply-email').value=this.value">
+              <span class="ferr" id="bafa-email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="bafa-employees" id="bafa-lbl-employees">Mitarbeiterzahl</label>
+              <select id="bafa-employees" name="employees">
+                <option value="" id="bafa-sel-default">Bitte wählen</option>
+                <option value="1-10">1 bis 10</option>
+                <option value="11-50">11 bis 50</option>
+                <option value="51-100">51 bis 100</option>
+                <option value="101-250">101 bis 250</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bafa-message" id="bafa-lbl-message">Ihre Anfrage</label>
+            <textarea id="bafa-message" name="message" required placeholder="Beschreiben Sie kurz Ihr Unternehmen und was Sie beraten werden möchten..." rows="4"></textarea>
+            <span class="ferr" id="bafa-message-error"></span>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="bafa-consent" required>
+              <span class="consent-text" id="bafa-consent-text">Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span>
+            </label>
+            <span class="ferr" id="bafa-consent-error"></span>
+          </div>
+          <button type="submit" class="form-submit" id="bafa-submit">Förderung anfragen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy">
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a> ·
+        <a href="agb.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+/* BAFA page FAQ */
+const BAFA_FAQS = {
+  de: [
+    { q: 'Wie hoch ist der maximale Zuschuss?', a: 'Der maximale Zuschuss beträgt 3.500 Euro pro Beratungsvorhaben. Bei einer Förderquote von 50 Prozent entspricht das einem anerkannten Beratungshonorar von bis zu 7.000 Euro netto.' },
+    { q: 'Kann ich die Förderung mehrfach beantragen?', a: 'Ja, grundsätzlich sind mehrere Förderanträge für verschiedene Beratungsvorhaben möglich. Es gelten jedoch Obergrenzen für den Gesamtbetrag der De-minimis-Beihilfen über einen Zeitraum von drei Jahren.' },
+    { q: 'Wie lange dauert der Antragsprozess?', a: 'Nach Einreichung des vollständigen Antrags dauert die Bearbeitung durch das BAFA in der Regel zwei bis vier Wochen. Die Beratung darf erst nach Erhalt des Bewilligungsbescheids beginnen.' },
+    { q: 'Was passiert wenn mein Antrag abgelehnt wird?', a: 'Im Falle einer Ablehnung begleiten wir Sie bei der Prüfung der Ablehnungsgründe und gegebenenfalls bei der Einlegung eines Widerspruchs oder der Stellung eines neuen Antrags.' },
+    { q: 'Ist die Beratung von APM Agenta wirklich förderfähig?', a: 'Ja. APM Agenta erfüllt die Qualifikationsanforderungen des BAFA-Programms. Unsere Beratungsleistungen in den Bereichen Marketing-Strategie, Digitalisierung und Unternehmenspositionierung sind vollständig förderfähig.' },
+  ],
+  en: [
+    { q: 'What is the maximum subsidy?', a: 'The maximum subsidy is 3,500 euros per consulting project. At a funding rate of 50 percent this corresponds to a recognised consulting fee of up to 7,000 euros net.' },
+    { q: 'Can I apply for the funding multiple times?', a: 'Yes, multiple funding applications for different consulting projects are generally possible. However, there are limits on the total amount of de minimis aid over a three-year period.' },
+    { q: 'How long does the application process take?', a: 'After submission of the complete application the BAFA typically takes two to four weeks to process it. Consulting may only begin after receiving the approval notice.' },
+    { q: 'What happens if my application is rejected?', a: 'In the event of a rejection we will support you in reviewing the reasons for rejection and if necessary in lodging an appeal or submitting a new application.' },
+    { q: 'Is consulting from APM Agenta really eligible for funding?', a: 'Yes. APM Agenta meets the qualification requirements of the BAFA programme. Our consulting services in the areas of marketing strategy, digitalisation and business positioning are fully eligible.' },
+  ]
+};
+
+function renderBafaFaq(lang) {
+  const list = document.getElementById('bafa-faq-list');
+  if (!list) return;
+  list.innerHTML = BAFA_FAQS[lang || 'de'].map((f, i) => `
+    <div class="bafa-faq-item">
+      <button class="bafa-faq-btn" onclick="toggleBafaFaq(${i})">
+        <span class="bafa-faq-q">${f.q}</span>
+        <span class="bafa-faq-icon" id="bfi-${i}">+</span>
+      </button>
+      <div class="bafa-faq-answer" id="bfa-${i}">
+        <div class="bafa-faq-answer-inner">${f.a}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function toggleBafaFaq(i) {
+  const ans = document.getElementById('bfa-' + i);
+  const icon = document.getElementById('bfi-' + i);
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.bafa-faq-answer').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.bafa-faq-icon').forEach(ic => ic.classList.remove('open'));
+  if (!isOpen) { ans.classList.add('open'); icon.classList.add('open'); }
+}
+
+/* BAFA form validation */
+document.getElementById('bafa-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const lang = localStorage.getItem('apm_lang') || 'de';
+  let valid = true;
+  ['name','company','email','message','consent'].forEach(f => {
+    const err = document.getElementById('bafa-' + f + '-error');
+    const inp = document.getElementById('bafa-' + f);
+    if (err) { err.textContent = ''; err.classList.remove('visible'); }
+    if (inp) inp.style.borderColor = '';
+  });
+  const show = (f, m) => {
+    const err = document.getElementById('bafa-' + f + '-error');
+    const inp = document.getElementById('bafa-' + f);
+    if (err) { err.textContent = m; err.classList.add('visible'); }
+    if (inp) inp.style.borderColor = '#fc8181';
+  };
+  const name = document.getElementById('bafa-name');
+  const company = document.getElementById('bafa-company');
+  const email = document.getElementById('bafa-email');
+  const msg = document.getElementById('bafa-message');
+  const consent = document.getElementById('bafa-consent');
+  const errs = lang === 'en'
+    ? { name:'Please enter your name.', company:'Please enter your company name.', email:'Please enter a valid email.', message:'Please describe your enquiry.', consent:'Please agree to the privacy policy.' }
+    : { name:'Bitte geben Sie Ihren Namen ein.', company:'Bitte geben Sie Ihr Unternehmen ein.', email:'Bitte geben Sie eine gültige E-Mail ein.', message:'Bitte beschreiben Sie Ihre Anfrage.', consent:'Bitte stimmen Sie der Datenschutzerklärung zu.' };
+  if (!name?.value.trim()) { show('name', errs.name); valid = false; }
+  if (!company?.value.trim()) { show('company', errs.company); valid = false; }
+  if (!email?.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { show('email', errs.email); valid = false; }
+  if (!msg?.value.trim()) { show('message', errs.message); valid = false; }
+  if (!consent?.checked) { show('consent', errs.consent); valid = false; }
+  if (!valid) return;
+  const btn = document.getElementById('bafa-submit');
+  btn.disabled = true;
+  btn.textContent = lang === 'en' ? 'Sending...' : 'Wird gesendet...';
+  try {
+    const res = await fetch(e.target.action, { method: 'POST', body: new FormData(e.target), headers: { Accept: 'application/json' } });
+    const success = document.getElementById('bafa-form-success');
+    const errMsg = document.getElementById('bafa-form-error');
+    if (res.ok) {
+      e.target.reset();
+      if (success) { success.textContent = lang === 'en' ? 'Thank you. We will be in touch within 24 hours.' : 'Vielen Dank. Wir melden uns innerhalb von 24 Stunden bei Ihnen.'; success.style.display = 'block'; }
+    } else {
+      if (errMsg) errMsg.style.display = 'block';
+    }
+  } catch { document.getElementById('bafa-form-error').style.display = 'block'; }
+  finally { btn.disabled = false; btn.textContent = lang === 'en' ? 'Request Funding' : 'Förderung anfragen'; }
+});
+
+/* Render FAQ on load and on language change */
+document.addEventListener('DOMContentLoaded', () => {
+  renderBafaFaq(localStorage.getItem('apm_lang') || 'de');
+});
+
+/* Hook into language switcher to re-render FAQ */
+const _bafaOrigSetLang = setLang;
+setLang = function(lang) {
+  _bafaOrigSetLang(lang);
+  renderBafaFaq(lang);
+  applyBafaLang(lang);
+};
+
+/* BAFA page translations */
+const BAFA_T = {
+  de: {
+    pageTitle: 'BAFA-Förderung | APM Agenta',
+    'bafa-eyebrow': 'BAFA-Förderung',
+    'bafa-hero-title': 'Bis zu 50% Ihrer<br>Beratungskosten<br><em>vom Staat erstattet.</em>',
+    'bafa-hero-sub': 'Das BAFA-Förderprogramm ermöglicht kleinen und mittleren Unternehmen in Deutschland einen staatlichen Zuschuss auf strategische Unternehmensberatung. APM Agenta begleitet Sie durch den gesamten Prozess — von der Antragstellung bis zur Auszahlung.',
+    'bafa-hero-cta': 'Förderung anfragen',
+    'bs1': 'Max. Förderquote', 'bs2': 'Max. Zuschuss', 'bs3': 'Max. Mitarbeiter', 'bs4': 'Mindest-Unternehmensalter',
+    'bafa-what-eyebrow': 'Was ist BAFA?',
+    'bafa-what-title': 'Staatliche Förderung für <em>unternehmerische Beratung.</em>',
+    'bafa-what-p1': 'Das Bundesamt für Wirtschaft und Ausfuhrkontrolle (BAFA) fördert im Rahmen des Programms <strong>„Förderung unternehmerischen Know-hows"</strong> die Inanspruchnahme von Beratungsleistungen durch kleine und mittlere Unternehmen sowie Freiberufler in Deutschland.',
+    'bafa-what-p2': 'Konkret bedeutet das: Wenn Sie als Unternehmen eine externe Beratung in Anspruch nehmen, übernimmt der Staat einen Teil der Kosten. Der Zuschuss beträgt je nach Region <strong>bis zu 50 Prozent</strong> des anerkannten Beraterhonorars, maximal jedoch 3.500 Euro.',
+    'bafa-what-p3': 'Die Förderung gilt für Beratungsleistungen in den Bereichen Strategie, Marketing, Digitalisierung, Personal und weitere Unternehmensthemen. APM Agenta ist als Beratungsunternehmen für BAFA-geförderte Leistungen qualifiziert.',
+    'bafa-crit-eyebrow': 'Voraussetzungen',
+    'bafa-crit-title': 'Erfüllen Sie <em>die Kriterien?</em>',
+    'bc1-title': 'Unternehmensgröße', 'bc1-desc': 'Weniger als 250 Mitarbeiter und ein Jahresumsatz unter 50 Millionen EUR oder eine Jahresbilanzsumme unter 43 Millionen EUR.',
+    'bc2-title': 'Unternehmensalter', 'bc2-desc': 'Das Unternehmen besteht seit mindestens zwei Jahren und ist nicht in wirtschaftlichen Schwierigkeiten.',
+    'bc3-title': 'Sitz in Deutschland', 'bc3-desc': 'Das Unternehmen hat seinen Sitz oder seine Betriebsstätte in der Bundesrepublik Deutschland.',
+    'bc4-title': 'Kein Vorförderantrag', 'bc4-desc': 'Für dasselbe Beratungsvorhaben darf kein anderer öffentlicher Zuschuss beantragt oder bewilligt worden sein.',
+    'bafa-proc-eyebrow': 'Der Prozess',
+    'bafa-proc-title': 'Von der Antragstellung <em>bis zur Auszahlung.</em>',
+    'bp1-title': 'Erstgespräch', 'bp1-desc': 'Wir prüfen gemeinsam ob Ihr Unternehmen die Fördervoraussetzungen erfüllt und welche Beratungsleistungen förderfähig sind.',
+    'bp2-title': 'Antragstellung', 'bp2-desc': 'Wir begleiten Sie bei der Registrierung im BAFA-Portal und der vollständigen Antragstellung — ohne zusätzliche Kosten.',
+    'bp3-title': 'Beratungsdurchführung', 'bp3-desc': 'Nach Genehmigung des Antrags beginnen wir mit der geförderten Beratungsleistung. Alle Leistungen werden BAFA-konform dokumentiert.',
+    'bp4-title': 'Zuschuss erhalten', 'bp4-desc': 'Nach Abschluss der Beratung reichen wir gemeinsam den Verwendungsnachweis ein. Der Zuschuss wird direkt auf Ihr Konto überwiesen.',
+    'bafa-why-eyebrow': 'Warum APM Agenta',
+    'bafa-why-title': 'Ihr Partner für <em>geförderte Beratung.</em>',
+    'bw1-title': 'Vollständige Begleitung', 'bw1-desc': 'Von der Prüfung der Förderfähigkeit über die Antragstellung bis zur Einreichung des Verwendungsnachweises. Kein Schritt den Sie alleine gehen müssen.',
+    'bw2-title': 'Keine Zusatzkosten', 'bw2-desc': 'Die BAFA-Begleitung ist Teil unserer Beratungsleistung. Es entstehen keine separaten Kosten für Antragsstellung oder Prozessbegleitung.',
+    'bw3-title': 'Qualifizierter Berater', 'bw3-desc': 'APM Agenta erfüllt die Qualifikationsanforderungen des BAFA-Programms. Unsere Beratungsleistungen sind vollständig förderfähig.',
+    'bafa-faq-eyebrow': 'Häufige Fragen',
+    'bafa-faq-title': 'Alles was Sie über <em>BAFA wissen müssen.</em>',
+    'bafa-cta-eyebrow': 'Jetzt anfragen',
+    'bafa-cta-title': 'Förderung beantragen', 'bafa-cta-title-em': 'und sparen.',
+    'bafa-cta-sub': 'Wir prüfen kostenlos und unverbindlich ob Ihr Unternehmen förderfähig ist und begleiten Sie durch den gesamten Prozess. Schreiben Sie uns einfach eine Nachricht.',
+    'bafa-book-btn': 'Kostenloses Erstgespräch buchen',
+    'bafa-lbl-name': 'Name', 'bafa-lbl-company': 'Unternehmen', 'bafa-lbl-email': 'E-Mail',
+    'bafa-lbl-employees': 'Mitarbeiterzahl', 'bafa-lbl-message': 'Ihre Anfrage',
+    'bafa-sel-default': 'Bitte wählen',
+    'bafa-submit': 'Förderung anfragen',
+    'bafa-consent-text': 'Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.',
+  },
+  en: {
+    pageTitle: 'BAFA Funding | APM Agenta',
+    'bafa-eyebrow': 'BAFA Funding',
+    'bafa-hero-title': 'Up to 50% of your<br>consulting costs<br><em>covered by the state.</em>',
+    'bafa-hero-sub': 'The BAFA funding programme allows small and medium-sized businesses in Germany to receive a government subsidy on strategic business consulting. APM Agenta guides you through the entire process — from application to payment.',
+    'bafa-hero-cta': 'Request Funding',
+    'bs1': 'Max. Funding Rate', 'bs2': 'Max. Subsidy', 'bs3': 'Max. Employees', 'bs4': 'Min. Business Age',
+    'bafa-what-eyebrow': 'What is BAFA?',
+    'bafa-what-title': 'Government funding for <em>business consulting.</em>',
+    'bafa-what-p1': 'The Federal Office for Economic Affairs and Export Control (BAFA) funds the use of consulting services by small and medium-sized businesses and freelancers in Germany through its <strong>"Promotion of Entrepreneurial Know-How"</strong> programme.',
+    'bafa-what-p2': 'In concrete terms: when your business engages external consulting, the government covers a portion of the costs. The subsidy amounts to <strong>up to 50 percent</strong> of the recognised consulting fee depending on your region, with a maximum of 3,500 euros.',
+    'bafa-what-p3': 'The funding applies to consulting services in strategy, marketing, digitalisation, HR and other business topics. APM Agenta is qualified to provide BAFA-funded consulting services.',
+    'bafa-crit-eyebrow': 'Requirements',
+    'bafa-crit-title': 'Do you meet <em>the criteria?</em>',
+    'bc1-title': 'Business Size', 'bc1-desc': 'Fewer than 250 employees and an annual turnover below 50 million EUR or an annual balance sheet total below 43 million EUR.',
+    'bc2-title': 'Business Age', 'bc2-desc': 'The business has been operating for at least two years and is not in financial difficulty.',
+    'bc3-title': 'Based in Germany', 'bc3-desc': 'The business has its registered office or place of business in the Federal Republic of Germany.',
+    'bc4-title': 'No Prior Subsidy', 'bc4-desc': 'No other public subsidy may have been applied for or granted for the same consulting project.',
+    'bafa-proc-eyebrow': 'The Process',
+    'bafa-proc-title': 'From application <em>to payment.</em>',
+    'bp1-title': 'Initial Consultation', 'bp1-desc': 'We jointly assess whether your business meets the funding requirements and which consulting services are eligible.',
+    'bp2-title': 'Application', 'bp2-desc': 'We support you with registration in the BAFA portal and the complete application submission — at no additional cost.',
+    'bp3-title': 'Consulting Delivery', 'bp3-desc': 'Once the application is approved we begin the funded consulting engagement. All services are documented in compliance with BAFA requirements.',
+    'bp4-title': 'Receive Subsidy', 'bp4-desc': 'After the consulting is complete we jointly submit the proof of use. The subsidy is transferred directly to your account.',
+    'bafa-why-eyebrow': 'Why APM Agenta',
+    'bafa-why-title': 'Your partner for <em>funded consulting.</em>',
+    'bw1-title': 'Complete Support', 'bw1-desc': 'From eligibility assessment through application to submission of proof of use. No step you have to take alone.',
+    'bw2-title': 'No Extra Costs', 'bw2-desc': 'BAFA support is part of our consulting service. There are no separate charges for application or process support.',
+    'bw3-title': 'Qualified Consultant', 'bw3-desc': 'APM Agenta meets the qualification requirements of the BAFA programme. Our consulting services are fully eligible for funding.',
+    'bafa-faq-eyebrow': 'Frequently Asked Questions',
+    'bafa-faq-title': 'Everything you need to <em>know about BAFA.</em>',
+    'bafa-cta-eyebrow': 'Apply Now',
+    'bafa-cta-title': 'Apply for funding', 'bafa-cta-title-em': 'and save.',
+    'bafa-cta-sub': 'We check free of charge and without obligation whether your business is eligible and guide you through the entire process. Just send us a message.',
+    'bafa-book-btn': 'Book a Free Initial Consultation',
+    'bafa-lbl-name': 'Name', 'bafa-lbl-company': 'Company', 'bafa-lbl-email': 'Email',
+    'bafa-lbl-employees': 'Number of Employees', 'bafa-lbl-message': 'Your Enquiry',
+    'bafa-sel-default': 'Please select',
+    'bafa-submit': 'Request Funding',
+    'bafa-consent-text': 'I have read the <a href="datenschutz.html" target="_blank">Privacy Policy</a> and agree to the processing of my data.',
+  }
+};
+
+function applyBafaLang(lang) {
+  const t = BAFA_T[lang];
+  document.title = t.pageTitle;
+  Object.entries(t).forEach(([id, val]) => {
+    if (id === 'pageTitle') return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (id === 'bafa-consent-text' || id.endsWith('-title') || id.endsWith('-sub') || id.endsWith('-desc') || id.endsWith('-p1') || id.endsWith('-p2') || id.endsWith('-p3')) {
+      el.innerHTML = val;
+    } else {
+      el.textContent = val;
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = localStorage.getItem('apm_lang') || 'de';
+  applyBafaLang(lang);
+  renderBafaFaq(lang);
+});
+</script>
+</body>
+</html>
