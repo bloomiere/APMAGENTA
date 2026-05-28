@@ -750,3 +750,72 @@ applySubPageLang = function(lang) {
   };
   if (titles[page]) document.title = titles[page][lang];
 };
+
+/* ---- FULL CONTENT TRANSLATIONS PATCH ---- */
+const FULL_CONTENT_T = {
+  services: {
+    de: {
+      's1-desc': 'Von der Zielgruppenanalyse bis zur aktiven Recruiting-Kampagne bringen wir die richtigen Talente zur richtigen Zeit zu Ihnen. Mit individuellem Funnel, kontinuierlicher Optimierung und transparentem Reporting machen wir Recruiting zu einem planbaren Prozess.',
+      's2-desc': 'Wir machen Ihr Unternehmen zur ersten Wahl für qualifizierte Bewerber. Durch gezielte Positionierung, authentische Inhalte und strategische Kampagnen die nachhaltig wirken.',
+      's3-desc': 'Präzisionskampagnen auf Meta, Instagram, TikTok und Google mit maximal optimiertem Budget. Werbebudget wird immer zum Selbstkostenpreis ohne Aufschlag weitergeleitet.',
+      's4-desc': 'Professionelle Employer-Branding-Videos und hochwertige Fotoinhalte inklusive Konzeption, Drehtag und Nachbearbeitung. Anreise und Unterkunft im Paketpreis enthalten.',
+      's5-desc': 'Konsistente Content-Planung, Texterstellung, Grafikdesign und Veröffentlichung auf Ihren Kanälen. Klarer Umfang, klare Leistungen, klare Ergebnisse.',
+      's6-desc': 'Kleine und mittlere Unternehmen in Deutschland können bis zu 50 Prozent der Beratungskosten staatlich gefördert bekommen. Wir begleiten Sie vollständig durch den Antragsprozess.',
+      'sl1': 'Kampagne starten', 'sl2': 'Marke aufbauen', 'sl3': 'Kampagne starten',
+      'sl4': 'Drehtag planen', 'sl5': 'Präsenz aufbauen', 'sl6': 'Förderung prüfen',
+    },
+    en: {
+      's1-desc': 'From target group analysis to active recruiting campaigns we bring the right talent to you at the right time. With individual funnels, continuous optimisation and transparent reporting we make hiring a predictable process.',
+      's2-desc': 'We make your company the first choice for qualified applicants through targeted positioning, authentic content and strategic campaigns that create lasting impact.',
+      's3-desc': 'Precision campaigns on Meta, Instagram, TikTok and Google with fully optimised budgets. Advertising spend is always passed through at cost with zero markup.',
+      's4-desc': 'Professional employer branding videos and high-quality photo content including concept development, the shoot day and full post-production. Travel and accommodation included in the package price.',
+      's5-desc': 'Consistent content planning, copywriting, graphic design and publishing across your channels. Clear scope, clear deliverables, clear results.',
+      's6-desc': 'Small and medium-sized businesses in Germany can receive up to 50 percent state funding on consulting costs. We guide you completely through the application process.',
+      'sl1': 'Start a Campaign', 'sl2': 'Build Your Brand', 'sl3': 'Start a Campaign',
+      'sl4': 'Plan a Shoot', 'sl5': 'Grow Your Presence', 'sl6': 'Check Your Eligibility',
+    }
+  },
+  industries: {
+    de: {
+      'ind1-sub': 'Kliniken, Praxen, MVZ und medizinische Einrichtungen',
+      'ind2-sub': 'Handwerksbetriebe, Produktionsunternehmen, technische Dienstleister',
+      'ind3-sub': 'Software-Unternehmen, SaaS-Produkte, digitale Plattformen',
+      'ind4-sub': 'Lokale Geschäfte, Restaurants, Hotellerie, E-Commerce',
+      'ind5-sub': 'Pflegeheime, ambulante Dienste, soziale Einrichtungen',
+      'ind6-sub': 'Etablierte Unternehmen mit 10 bis 250 Mitarbeitern',
+      'ind1-desc': 'Wir bauen automatisierte Patienten-Gewinnungs-Pipelines für moderne Kliniken und Arztpraxen. Von gezielten Meta-Kampagnen bis zur vollständigen Recruiting-Strategie für medizinisches Fachpersonal.',
+      'ind2-desc': 'Fachkräftemangel ist eine der größten Herausforderungen im Handwerk. Wir entwickeln gezielte Recruiting-Kampagnen die qualifizierte Bewerber direkt ansprechen.',
+      'ind3-desc': 'Performance Marketing für schnell wachsende Tech-Unternehmen. Von User-Acquisition-Kampagnen bis hin zu B2B-Lead-Generierung auf LinkedIn und Google.',
+      'ind4-desc': 'Lokale Sichtbarkeit und Kundenbindung in einem wettbewerbsintensiven Markt. Kampagnen die Laufkundschaft generieren, Online-Bestellungen steigern und Stammkunden aufbauen.',
+      'ind5-desc': 'Fachkräftegewinnung für Pflegeberufe ist eine der dringlichsten Aufgaben unserer Zeit. Einfühlsame Recruiting-Kampagnen die die richtigen Menschen ansprechen.',
+      'ind6-desc': 'Ganzheitliche Marketing-Strategie für etablierte Unternehmen die professionelles Marketing ohne Agentur-Preisaufschläge benötigen. Von der ersten Analyse bis zur langfristigen Begleitung.',
+    },
+    en: {
+      'ind1-sub': 'Clinics, practices, medical centres and healthcare institutions',
+      'ind2-sub': 'Trade businesses, manufacturing companies, technical service providers',
+      'ind3-sub': 'Software companies, SaaS products, digital platforms',
+      'ind4-sub': 'Local shops, restaurants, hospitality, e-commerce',
+      'ind5-sub': 'Care homes, outpatient services, social institutions',
+      'ind6-sub': 'Established businesses with 10 to 250 employees',
+      'ind1-desc': 'We build automated patient acquisition pipelines for modern clinics and medical practices. From targeted Meta campaigns to complete recruiting strategies for medical professionals.',
+      'ind2-desc': 'Skills shortages are one of the greatest challenges in the trades sector. We develop targeted recruiting campaigns that reach qualified applicants directly.',
+      'ind3-desc': 'Performance marketing for fast-growing tech companies. From user acquisition campaigns to B2B lead generation on LinkedIn and Google.',
+      'ind4-desc': 'Local visibility and customer retention in a highly competitive market. Campaigns that generate foot traffic, increase online orders and build loyal customer bases.',
+      'ind5-desc': 'Recruiting specialist care workers is one of the most urgent challenges of our time. Empathetic recruiting campaigns that reach the right people.',
+      'ind6-desc': 'Comprehensive marketing strategy for established businesses that need professional marketing without agency price markups. From initial analysis to long-term partnership.',
+    }
+  }
+};
+
+/* Final patch — extend applySubPageLang to include full content */
+const _prevApplySubPage = applySubPageLang;
+applySubPageLang = function(lang) {
+  _prevApplySubPage(lang);
+  const page = document.body.getAttribute('data-page');
+  if (!page || !FULL_CONTENT_T[page]) return;
+  const t = FULL_CONTENT_T[page][lang];
+  Object.entries(t).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = val;
+  });
+};
