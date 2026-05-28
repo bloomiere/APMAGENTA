@@ -319,7 +319,7 @@ a.ci-val:hover { color:var(--glacier); border-color:var(--glacier); }
 footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgba(143,174,201,0.07); }
 .footer-top { display:grid; grid-template-columns:1.8fr 1fr 1fr 1fr; gap:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(143,174,201,0.07); }
 .footer-logo-img { height:36px; width:auto; object-fit:contain; margin-bottom:0.75rem; display:block; }
-.footer-brand { font-size:1.4rem; font-weight:700; color:var(--white); letter-spacing:0.08em; margin-bottom:0.2rem; }
+.footer-brand { font-size:1rem; font-weight:300; color:var(--white); letter-spacing:0.25em; text-transform:uppercase; margin-bottom:0.2rem; }
 .footer-tagline { font-size:0.58rem; letter-spacing:0.3em; text-transform:uppercase; color:rgba(143,174,201,0.55); margin-bottom:1rem; font-weight:500; }
 .footer-desc { font-size:0.75rem; color:rgba(143,174,201,0.55); line-height:1.85; font-weight:300; margin-bottom:0.75rem; }
 .footer-phone { font-size:0.78rem; color:var(--glacier); font-weight:500; transition:opacity 0.2s; display:inline-block; margin-bottom:1rem; }
