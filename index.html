@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="APM Agenta baut automatisierte Marketing-Pipelines für KMU, Kliniken und Unternehmen in Deutschland. Recruitment Marketing, Employer Branding, Paid Media und BAFA-Beratung.">
+<meta name="description" content="APM Agenta entwickelt datenbasierte Marketing-Strategien für kleine und mittlere Unternehmen. Recruitment Marketing, Employer Branding, Paid Media und BAFA-geförderte Beratung.">
 <meta property="og:title" content="APM Agenta | Marketing. Strategie. Wachstum.">
-<meta property="og:description" content="Wir bauen automatisierte Marketing-Pipelines für moderne Unternehmen. Kein Halbwissen. Messbarer Erfolg.">
+<meta property="og:description" content="Datenbasierte Marketing-Strategien für KMU. Transparent. Messbar. Ohne versteckte Kosten.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://apmagenta.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://apmagenta.com">
 <title>APM Agenta | Marketing. Strategie. Wachstum.</title>
-<!-- Async font loading — eliminates render-blocking -->
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -22,12 +21,7 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  // Default: deny all until user consents
-  gtag('consent', 'default', {
-    analytics_storage: 'denied',
-    ad_storage: 'denied',
-    wait_for_update: 500
-  });
+  gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', wait_for_update: 500 });
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Q1C85SF9T"></script>
 <script>
@@ -37,27 +31,25 @@
 </head>
 <body>
 
-<!-- COOKIE BANNER — DSGVO/GDPR konform -->
+<!-- COOKIE BANNER -->
 <div id="cookie-banner" class="cookie-banner cookie-banner-v2" role="dialog" aria-labelledby="ck-title" aria-modal="true">
   <div class="cookie-box">
     <div class="cookie-header">
       <strong id="ck-title">Datenschutzeinstellungen</strong>
-      <p id="ck-desc">Wir verwenden Cookies um Ihnen die beste Nutzererfahrung zu bieten und unsere Website zu verbessern. Analytische Cookies helfen uns zu verstehen wie Besucher unsere Website nutzen. Sie können Ihre Einwilligung jederzeit widerrufen. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+      <p id="ck-desc">Wir verwenden Cookies um Ihnen die beste Nutzererfahrung zu bieten. Analytische Cookies helfen uns zu verstehen wie Besucher unsere Website nutzen. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     </div>
     <div class="cookie-options">
       <div class="cookie-option">
         <div class="cookie-option-info">
-          <span class="cookie-option-name">Notwendige Cookies</span>
-          <span class="cookie-option-desc">Für die Grundfunktionen der Website erforderlich.</span>
+          <span class="cookie-option-name" id="ck-necessary-label">Notwendige Cookies</span>
+          <span class="cookie-option-desc" id="ck-necessary-desc">Für die Grundfunktionen der Website erforderlich.</span>
         </div>
-        <div class="cookie-toggle cookie-toggle-locked" aria-label="Immer aktiv">
-          <span class="cookie-toggle-label">Immer aktiv</span>
-        </div>
+        <div class="cookie-toggle-locked"><span class="cookie-toggle-label" id="ck-always-active">Immer aktiv</span></div>
       </div>
       <div class="cookie-option">
         <div class="cookie-option-info">
-          <span class="cookie-option-name">Analyse-Cookies</span>
-          <span class="cookie-option-desc">Helfen uns zu verstehen wie Besucher die Website nutzen (Google Analytics).</span>
+          <span class="cookie-option-name" id="ck-analytics-label">Analyse-Cookies</span>
+          <span class="cookie-option-desc" id="ck-analytics-desc">Helfen uns zu verstehen wie Besucher die Website nutzen (Google Analytics).</span>
         </div>
         <label class="cookie-switch" aria-label="Analyse-Cookies">
           <input type="checkbox" id="analytics-toggle" checked>
@@ -73,22 +65,18 @@
   </div>
 </div>
 
-<!-- NAV — logo far left · all links far right · no phone/booking in header -->
+<!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
-    <!-- LOGO: locked to far left -->
-    <a href="index.html" class="nav-logo" aria-label="APM Agenta Startseite">
+    <a href="index.html" class="nav-logo" aria-label="APM Agenta">
       <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
     </a>
-
-    <!-- LINKS: pushed to far right via margin-left:auto on .nav-links -->
     <ul class="nav-links" id="nav-links">
       <li><a href="about.html" id="nav-about">Über uns</a></li>
       <li><a href="services.html" id="nav-services">Leistungen</a></li>
       <li><a href="#framework" id="nav-framework">Framework</a></li>
       <li><a href="industries.html" id="nav-industries">Branchen</a></li>
       <li><a href="#faq" id="nav-faq">FAQ</a></li>
-      <!-- Language dropdown -->
       <li class="lang-dropdown" id="langDropdownWrap">
         <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
           <span id="lang-current">DE</span>
@@ -101,11 +89,8 @@
           <li><button class="lang-opt" role="option" aria-selected="false" onclick="setLang('en')">English</button></li>
         </ul>
       </li>
-      <!-- Kontakt CTA -->
       <li><a href="#contact" class="nav-cta-link" id="nav-contact">Kontakt</a></li>
     </ul>
-
-    <!-- Mobile hamburger — far right -->
     <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -142,11 +127,11 @@
     <circle cx="350" cy="90" r="150" stroke="white" stroke-width="1.5" fill="none" opacity="0.4"/>
   </svg>
   <div class="hero-content">
-    <h1 class="hero-headline" id="hero-headline">Wir bauen automatisierte<br><em>Marketing-Pipelines</em><br>für Unternehmen die wachsen wollen.</h1>
-    <p class="hero-sub" id="hero-sub">Kein Halbwissen. Kein Aufschlag auf Werbebudget. Messbarer Erfolg für KMU, Kliniken und lokale Unternehmen in Deutschland.</p>
+    <h1 class="hero-headline" id="hero-headline">APM Agenta entwickelt datenbasierte<br><em>Marketing-Strategien</em><br>die messbare Ergebnisse liefern.</h1>
+    <p class="hero-sub" id="hero-sub">Wir verbinden analytische Präzision mit kreativer Exzellenz. Für kleine und mittlere Unternehmen die professionelles Marketing verdienen — transparent, skalierbar und ohne versteckte Kosten.</p>
     <div class="hero-btns">
-      <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" rel="noopener" class="btn-primary" id="hero-book">Strategie-Gespräch buchen</a>
-      <a href="services.html" class="btn-ghost" id="hero-services">Unsere Leistungen</a>
+      <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" rel="noopener" class="btn-primary" id="hero-book">Strategiegespräch vereinbaren</a>
+      <a href="services.html" class="btn-ghost" id="hero-services">Leistungen entdecken</a>
     </div>
     <div class="hero-trust">
       <div class="trust-item"><span class="trust-num">199€</span><span class="trust-label" id="tr1">Ab pro Monat</span></div>
@@ -166,27 +151,27 @@
   <div class="container">
     <div class="who-grid">
       <div class="who-left">
-        <div class="eyebrow" id="who-eyebrow">Wer wir sind</div>
-        <h2 class="section-title" id="who-title">APM Agenta. <em>Transparenz ist unser Standard.</em></h2>
-        <p class="who-body" id="who-body">APM Agenta ist eine Performance-Marketing-Agentur für kleine und mittlere Unternehmen in Deutschland. Wir liefern klare Pakete, klare Preise und klare Ergebnisse. Kein verstecktes Markup auf Werbebudgets. Keine vagen Versprechen. Nur messbarer Mehrwert.</p>
-        <p class="who-body" id="who-body2">Unsere Spezialisierung liegt auf automatisierten Recruiting- und Lead-Pipelines, Employer Branding und gezielten Paid-Media-Kampagnen auf Meta, Google und TikTok.</p>
-        <a href="about.html" class="text-link" id="who-link">Mehr über uns erfahren</a>
+        <div class="eyebrow" id="who-eyebrow">Über APM Agenta</div>
+        <h2 class="section-title" id="who-title">Analytische Präzision. <em>Kreative Exzellenz.</em></h2>
+        <p class="who-body" id="who-body">APM Agenta wurde gegründet um die Lücke zwischen leistungsstarkem Marketing und zugänglichen Preisen zu schließen. Wir entwickeln individuelle Strategien auf Basis fundierter Marktanalysen und setzen diese mit messbarem Erfolg um.</p>
+        <p class="who-body" id="who-body2">Unser Ansatz basiert auf Transparenz: Werbebudgets werden ohne Aufschlag weitergeleitet, Leistungsumfänge sind klar definiert und jede Kampagne wird anhand konkreter Kennzahlen bewertet.</p>
+        <a href="about.html" class="text-link" id="who-link">Mehr über uns</a>
       </div>
       <div class="who-right">
         <div class="who-card reveal">
           <div class="who-card-num">01</div>
-          <div class="who-card-title" id="wc1-t">Performance First</div>
-          <p class="who-card-desc" id="wc1-d">Jede Kampagne wird auf messbare KPIs ausgerichtet. Wir optimieren kontinuierlich auf Basis echter Daten.</p>
+          <div class="who-card-title" id="wc1-t">Datenbasierte Strategien</div>
+          <p class="who-card-desc" id="wc1-d">Jede Kampagne basiert auf fundierten Marktanalysen und wird anhand messbarer Kennzahlen kontinuierlich optimiert.</p>
         </div>
         <div class="who-card reveal">
           <div class="who-card-num">02</div>
-          <div class="who-card-title" id="wc2-t">Volle Transparenz</div>
-          <p class="who-card-desc" id="wc2-d">Preise, Leistungsumfang und Werbebudget sind klar getrennt. Sie wissen immer, wofür Sie bezahlen.</p>
+          <div class="who-card-title" id="wc2-t">Vollständige Kostentransparenz</div>
+          <p class="who-card-desc" id="wc2-d">Servicegebühren und Werbebudgets sind klar getrennt. Kein Aufschlag auf Drittanbieterkosten. Keine versteckten Positionen.</p>
         </div>
         <div class="who-card reveal">
           <div class="who-card-num">03</div>
-          <div class="who-card-title" id="wc3-t">Lokaler Fokus</div>
-          <p class="who-card-desc" id="wc3-d">Wir kennen den deutschen Markt. Von BAFA-Förderung bis lokalem Targeting bauen wir Strategien die funktionieren.</p>
+          <div class="who-card-title" id="wc3-t">Skalierbare Lösungen</div>
+          <p class="who-card-desc" id="wc3-d">Unsere Leistungspakete wachsen mit Ihrem Unternehmen. Von der ersten Kampagne bis zur vollständigen Marketinginfrastruktur.</p>
         </div>
       </div>
     </div>
@@ -199,34 +184,34 @@
     <div class="section-header">
       <div>
         <div class="eyebrow" id="ind-eyebrow">Branchen</div>
-        <h2 class="section-title" id="ind-title">Branchen die wir <em>betreuen.</em></h2>
+        <h2 class="section-title" id="ind-title">Spezialisierte Lösungen für <em>Ihren Markt.</em></h2>
       </div>
       <a href="industries.html" class="view-all" id="ind-link">Alle Branchen</a>
     </div>
     <div class="ind-grid-large">
       <a href="industries.html#health" class="ind-card reveal">
         <div class="ind-card-name" id="ic1">Gesundheitswesen</div>
-        <div class="ind-card-desc" id="ic1d">Patienten-Gewinnungs-Pipelines für Kliniken und Praxen</div>
+        <div class="ind-card-desc" id="ic1d">Patientengewinnung und Fachkräfterekrutierung für medizinische Einrichtungen</div>
       </a>
       <a href="industries.html#trades" class="ind-card reveal">
         <div class="ind-card-name" id="ic2">Handwerk und Industrie</div>
-        <div class="ind-card-desc" id="ic2d">Mitarbeitergewinnung und Recruiting-Kampagnen</div>
+        <div class="ind-card-desc" id="ic2d">Strategische Mitarbeitergewinnung für produzierende Unternehmen</div>
       </a>
       <a href="industries.html#tech" class="ind-card reveal">
         <div class="ind-card-name" id="ic3">Tech und Start-ups</div>
-        <div class="ind-card-desc" id="ic3d">Performance Marketing und Growth Hacking</div>
+        <div class="ind-card-desc" id="ic3d">Performance Marketing und skalierbare Wachstumsstrategien</div>
       </a>
       <a href="industries.html#retail" class="ind-card reveal">
         <div class="ind-card-name" id="ic4">Einzelhandel und Gastronomie</div>
-        <div class="ind-card-desc" id="ic4d">Lokale Sichtbarkeit und Kundenbindung</div>
+        <div class="ind-card-desc" id="ic4d">Lokale Marktpräsenz und nachhaltige Kundenbindung</div>
       </a>
       <a href="industries.html#care" class="ind-card reveal">
         <div class="ind-card-name" id="ic5">Pflege und Soziales</div>
-        <div class="ind-card-desc" id="ic5d">Fachkräftegewinnung für Pflegeeinrichtungen</div>
+        <div class="ind-card-desc" id="ic5d">Gezielte Fachkräftegewinnung für Pflegeeinrichtungen</div>
       </a>
       <a href="industries.html#sme" class="ind-card reveal">
         <div class="ind-card-name" id="ic6">KMU und Mittelstand</div>
-        <div class="ind-card-desc" id="ic6d">Ganzheitliche Marketing-Strategie für etablierte Unternehmen</div>
+        <div class="ind-card-desc" id="ic6d">Ganzheitliche Marketingstrategien für etablierte Unternehmen</div>
       </a>
     </div>
   </div>
@@ -236,72 +221,72 @@
 <section class="framework" id="framework">
   <div class="container">
     <div class="eyebrow tc" id="fw-eyebrow">Unser Framework</div>
-    <h2 class="section-title tc" id="fw-title">Wie wir <em>arbeiten.</em></h2>
-    <p class="fw-sub" id="fw-sub">Anstatt leere Portfolios zu zeigen, zeigen wir Ihnen den exakten Prozess den wir für jeden Kunden einsetzen.</p>
+    <h2 class="section-title tc" id="fw-title">Strukturiert. Messbar. <em>Wirksam.</em></h2>
+    <p class="fw-sub" id="fw-sub">Unser Prozess folgt einem klar definierten Framework das für jeden Kunden individuell angepasst wird und jederzeit vollständige Transparenz über Fortschritt und Ergebnisse gewährleistet.</p>
     <div class="fw-grid">
-      <div class="fw-step reveal"><div class="fw-num">01</div><div class="fw-step-title" id="fw1t">Analyse und Strategie</div><p class="fw-step-desc" id="fw1d">Wir analysieren Ihre Zielgruppe, den Wettbewerb und Ihre aktuelle Marktposition. Auf Basis echter Daten entwickeln wir eine maßgeschneiderte Kampagnenstrategie.</p></div>
-      <div class="fw-step reveal"><div class="fw-num">02</div><div class="fw-step-title" id="fw2t">Pipeline-Aufbau</div><p class="fw-step-desc" id="fw2d">Wir bauen automatisierte Funnels für Recruiting, Lead-Generierung oder Patientengewinnung mit individuellem Tracking und klaren Conversion-Zielen.</p></div>
-      <div class="fw-step reveal"><div class="fw-num">03</div><div class="fw-step-title" id="fw3t">Creative Produktion</div><p class="fw-step-desc" id="fw3d">Ad-Texte, Grafiken und Videos werden datenbasiert entwickelt und auf die Zielgruppe optimiert. Kein generischer Content.</p></div>
-      <div class="fw-step reveal"><div class="fw-num">04</div><div class="fw-step-title" id="fw4t">Launch und Optimierung</div><p class="fw-step-desc" id="fw4d">Kampagnenstart mit täglichem Monitoring. Kontinuierliche datenbasierte Anpassungen für maximale Effizienz jedes eingesetzten Euro.</p></div>
-      <div class="fw-step reveal"><div class="fw-num">05</div><div class="fw-step-title" id="fw5t">Reporting</div><p class="fw-step-desc" id="fw5d">Monatliche Reporting-Gespräche in klarer Sprache. KPIs, Fortschritt und nächste Schritte. Kein Fachjargon. Keine Überraschungen.</p></div>
-      <div class="fw-step reveal"><div class="fw-num">06</div><div class="fw-step-title" id="fw6t">Skalierung</div><p class="fw-step-desc" id="fw6d">Was funktioniert, skalieren wir. Was nicht funktioniert, verbessern wir. Langfristige Partnerschaften mit messbarem Wachstum.</p></div>
+      <div class="fw-step reveal"><div class="fw-num">01</div><div class="fw-step-title" id="fw1t">Analyse und Strategie</div><p class="fw-step-desc" id="fw1d">Fundierte Analyse Ihrer Zielgruppe, des Wettbewerbsumfelds und Ihrer aktuellen Marktposition. Daraus entwickeln wir eine maßgeschneiderte Strategie mit klaren Zielvorgaben.</p></div>
+      <div class="fw-step reveal"><div class="fw-num">02</div><div class="fw-step-title" id="fw2t">Pipeline-Entwicklung</div><p class="fw-step-desc" id="fw2d">Konzeption und Aufbau automatisierter Marketing-Funnels mit individuellem Tracking und definierten Conversion-Zielen.</p></div>
+      <div class="fw-step reveal"><div class="fw-num">03</div><div class="fw-step-title" id="fw3t">Creative-Produktion</div><p class="fw-step-desc" id="fw3d">Entwicklung zielgruppenspezifischer Werbemittel auf Basis datengestützter Erkenntnisse. Werbetexte, Grafiken und Videocontent werden konsequent auf Conversion optimiert.</p></div>
+      <div class="fw-step reveal"><div class="fw-num">04</div><div class="fw-step-title" id="fw4t">Launch und Optimierung</div><p class="fw-step-desc" id="fw4d">Kampagnenstart mit täglichem Performance-Monitoring. Kontinuierliche datenbasierte Anpassungen zur Maximierung des Return on Ad Spend.</p></div>
+      <div class="fw-step reveal"><div class="fw-num">05</div><div class="fw-step-title" id="fw5t">Reporting und Analyse</div><p class="fw-step-desc" id="fw5d">Monatliche Reportinggespräche mit klarer Darstellung aller relevanten KPIs. Vollständige Transparenz über Kampagnenleistung und Budgetverwendung.</p></div>
+      <div class="fw-step reveal"><div class="fw-num">06</div><div class="fw-step-title" id="fw6t">Skalierung</div><p class="fw-step-desc" id="fw6d">Systematische Skalierung erfolgreicher Maßnahmen. Aufbau einer langfristigen Marketinginfrastruktur die mit Ihrem Unternehmen wächst.</p></div>
     </div>
   </div>
 </section>
 
-<!-- PRICING / INVESTMENT -->
+<!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="container">
-    <div class="eyebrow tc" id="price-eyebrow">Investment und Frameworks</div>
-    <h2 class="section-title tc"><span id="price-title">Skalierbare Programme für Ihren</span> <em id="price-title-em">Marktdurchbruch.</em></h2>
-    <p class="pricing-sub" id="price-sub">Keine starren Dienstleistungen, sondern maßgeschneiderte Wachstums-Pipelines. Wählen Sie das Fundament, das zu Ihren aktuellen Unternehmenszielen passt. Alle Preise sind Nettopreise ohne Werbebudget.</p>
+    <div class="eyebrow tc" id="price-eyebrow">Leistungspakete</div>
+    <h2 class="section-title tc"><span id="price-title">Transparente Investition.</span> <em id="price-title-em">Kalkulierbarer Erfolg.</em></h2>
+    <p class="pricing-sub" id="price-sub">Alle Pakete beinhalten klar definierte Leistungsumfänge ohne versteckte Kosten. Werbebudgets werden stets ohne Aufschlag weitergeleitet und sind nicht im Paketpreis enthalten.</p>
     <div class="pricing-grid">
       <div class="pricing-card reveal">
-        <div class="pricing-badge" style="visibility:hidden">Beliebt</div>
+        <div class="pricing-badge" style="visibility:hidden">-</div>
         <div class="pricing-tag">APM Scale Catalyst&#8482;</div>
         <div class="pricing-price">199 <span>EUR/Mo</span></div>
-        <p class="pricing-desc" id="p1-desc">Die digitale Infrastruktur für planbare Anfragen und messbare Markenpräsenz.</p>
+        <p class="pricing-desc" id="p1-desc">Der strukturierte Einstieg in professionelles Performance Marketing mit messbarer Wirkung.</p>
         <ul class="pricing-features">
-          <li><strong>Premium Tracking Setup:</strong> Datenschutzkonforme Server-Side-Attribution für exakte Daten.</li>
-          <li><strong>Paid Media Grundstein:</strong> Konzeption und Launch Ihrer ersten High-Converting Werbekampagnen.</li>
-          <li><strong>Creative Copywriting:</strong> Zielgruppenspezifische Werbetexte mit psychologischer Verkaufsstruktur.</li>
-          <li><strong>Monatliches Reporting:</strong> Transparente Performance-Dashboards direkt auf Ihre KPIs ausgelegt.</li>
-          <li><strong>Direkter Support:</strong> Kurze Kommunikationswege mit Ihrem dedizierten Strategen.</li>
+          <li><strong>Tracking-Infrastruktur:</strong> Datenschutzkonforme Attribution für präzise Erfolgsmessung.</li>
+          <li><strong>Kampagnenkonzeption:</strong> Entwicklung und Launch initialer Werbekampagnen.</li>
+          <li><strong>Zielgruppenspezifisches Copywriting:</strong> Werbetexte mit psychologisch fundierter Verkaufsstruktur.</li>
+          <li><strong>Monatliches Reporting:</strong> Transparente Performance-Dashboards auf Basis Ihrer KPIs.</li>
+          <li><strong>Dedizierter Strategiekontakt:</strong> Direkter Ansprechpartner für alle Kampagnenanliegen.</li>
         </ul>
-        <a href="#contact" class="pricing-cta" id="p1-cta">Catalyst anfordern</a>
+        <a href="#contact" class="pricing-cta" id="p1-cta">Paket anfragen</a>
       </div>
       <div class="pricing-card featured reveal">
-        <div class="pricing-badge" id="p2-badge">Meistgewählt</div>
-        <div class="pricing-tag">The Market Velocity Engine&#8482;</div>
+        <div class="pricing-badge" id="p2-badge">Empfohlen</div>
+        <div class="pricing-tag">Market Velocity Engine&#8482;</div>
         <div class="pricing-price">399 <span>EUR/Mo</span></div>
-        <p class="pricing-desc" id="p2-desc">Die Omnichannel-Wachstumsmaschine für ambitionierte KMU, die den Markt dominieren wollen.</p>
+        <p class="pricing-desc" id="p2-desc">Die umfassende Wachstumslösung für Unternehmen die ihre Marktposition systematisch ausbauen wollen.</p>
         <ul class="pricing-features">
-          <li><strong>Inklusive aller Leistungen</strong> aus dem Scale Catalyst&#8482; Programm.</li>
-          <li><strong>High-Performance Video Content:</strong> Skripting und Post-Produktion für konvertierende Video-Ads.</li>
-          <li><strong>Cross-Channel Skalierung:</strong> Simultane Kampagnenführung auf Meta, Google, LinkedIn und TikTok.</li>
-          <li><strong>A/B Creative Testing:</strong> Kontinuierliche Optimierung von Bild- und Videomaterial zur CPA-Senkung.</li>
-          <li><strong>Funnel-Optimierung:</strong> UX-Analyse Ihrer Landingpages zur Maximierung der Conversion-Rate.</li>
-          <li><strong>Bi-Wöchentliche Strategie-Calls:</strong> Proaktive Anpassungen an Markttrends und Performance.</li>
+          <li><strong>Alle Leistungen</strong> des Scale Catalyst&#8482; inklusive.</li>
+          <li><strong>Video-Content-Produktion:</strong> Konzeption und Postproduktion konvertierender Video-Ads.</li>
+          <li><strong>Multi-Channel-Strategie:</strong> Simultane Kampagnenführung auf Meta, Google, LinkedIn und TikTok.</li>
+          <li><strong>A/B-Testing:</strong> Systematische Optimierung von Werbemitteln zur CPA-Reduktion.</li>
+          <li><strong>Conversion-Rate-Optimierung:</strong> UX-Analyse und Optimierung Ihrer Landingpages.</li>
+          <li><strong>Bi-wöchentliche Strategiegespräche:</strong> Proaktive Kampagnenanpassung an Marktentwicklungen.</li>
         </ul>
-        <a href="#contact" class="pricing-cta featured-cta" id="p2-cta">Velocity Engine starten</a>
+        <a href="#contact" class="pricing-cta featured-cta" id="p2-cta">Paket anfragen</a>
       </div>
       <div class="pricing-card reveal">
-        <div class="pricing-badge" style="visibility:hidden">Exklusiv</div>
-        <div class="pricing-tag">The Market Domination Suite&#8482;</div>
+        <div class="pricing-badge" style="visibility:hidden">-</div>
+        <div class="pricing-tag">Market Domination Suite&#8482;</div>
         <div class="pricing-price">649 <span>EUR/Mo</span></div>
-        <p class="pricing-desc" id="p3-desc">Das Rundum-Sorglos-Paket für maximale Marktanteile, Omnipräsenz und Employer Branding.</p>
+        <p class="pricing-desc" id="p3-desc">Die vollständige Marketinglösung für maximale Marktpräsenz, Neukundengewinnung und Arbeitgeberpositionierung.</p>
         <ul class="pricing-features">
-          <li><strong>Inklusive aller Leistungen</strong> aus der Velocity Engine&#8482;.</li>
-          <li><strong>Automated Recruitment Pipeline:</strong> Rekrutierung von Spitzenfachkräften über Social-First Kampagnen.</li>
-          <li><strong>Employer Branding Kampagne:</strong> Positionierung Ihres Unternehmens als Top-Arbeitgeber der Region.</li>
-          <li><strong>BAFA-Förderungsfähig:</strong> Bis zu 50% staatlicher Zuschuss auf strategische Beratung möglich.</li>
-          <li><strong>Predictive Lead Analytics:</strong> Datengestützte Vorhersagemodelle zur Skalierung Ihres Budgets.</li>
-          <li><strong>Priorisierter VIP-Support:</strong> Höchste Priorität bei allen Asset-Erstellungen und Änderungen.</li>
+          <li><strong>Alle Leistungen</strong> der Velocity Engine&#8482; inklusive.</li>
+          <li><strong>Automatisierte Recruiting-Pipeline:</strong> Systematische Gewinnung qualifizierter Fachkräfte.</li>
+          <li><strong>Employer-Branding-Strategie:</strong> Professionelle Positionierung als attraktiver Arbeitgeber.</li>
+          <li><strong>BAFA-Förderung:</strong> Bis zu 50% staatlicher Zuschuss auf strategische Beratungsleistungen.</li>
+          <li><strong>Predictive Analytics:</strong> Datengestützte Prognosemodelle zur Budgetoptimierung.</li>
+          <li><strong>Priorisierter Support:</strong> Bevorzugte Bearbeitung aller Leistungsanfragen.</li>
         </ul>
-        <a href="#contact" class="pricing-cta" id="p3-cta">Gespräch vereinbaren</a>
+        <a href="#contact" class="pricing-cta" id="p3-cta">Paket anfragen</a>
       </div>
     </div>
-    <p class="pricing-note" id="price-note">Werbebudget für Meta, Instagram oder Google Ads wird immer separat und ohne Aufschlag berechnet. APM Agenta verdient nie am Werbebudget unserer Kunden.</p>
+    <p class="pricing-note" id="price-note">Werbebudgets für Meta, Google Ads und weitere Plattformen werden stets ohne Aufschlag weitergeleitet. APM Agenta erzielt keine Erträge aus den Werbebudgets unserer Kunden.</p>
   </div>
 </section>
 
@@ -316,18 +301,15 @@
   </div>
 </section>
 
-<!-- CONTACT — all booking and phone lives here only -->
+<!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="container">
     <div class="contact-grid">
       <div class="contact-left">
         <div class="eyebrow" style="color:var(--glacier)" id="con-eyebrow">Kontakt</div>
-        <h2 class="contact-headline"><span id="con-title">Lassen Sie uns gemeinsam</span> <em id="con-title-em">wachsen.</em></h2>
-        <p class="contact-sub" id="con-sub">Kein Druck. Keine Verpflichtung. Nur ein ehrliches Gespräch über Ihre Ziele.</p>
+        <h2 class="contact-headline"><span id="con-title">Gemeinsam zum</span> <em id="con-title-em">nächsten Wachstumsschritt.</em></h2>
+        <p class="contact-sub" id="con-sub">Wir analysieren Ihre aktuelle Situation und entwickeln gemeinsam eine Strategie die zu Ihren Unternehmenszielen passt. Unverbindlich und kostenfrei.</p>
         <div class="contact-info">
-          <div class="ci">
-            
-          </div>
           <div class="ci">
             <div class="ci-label" id="ci1-l">E-Mail</div>
             <a href="mailto:contact@apmagenta.com" class="ci-val">contact@apmagenta.com</a>
@@ -338,14 +320,14 @@
           </div>
           <div class="ci">
             <div class="ci-label" id="ci3-l">Erstgespräch</div>
-            <div class="ci-val" id="ci3-v">Kostenloser 30-minütiger Strategie-Call</div>
+            <div class="ci-val" id="ci3-v">Kostenlos und unverbindlich</div>
           </div>
         </div>
-        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" rel="noopener" class="book-btn" id="con-book">Strategie-Gespräch buchen</a>
+        <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" rel="noopener" class="book-btn" id="con-book">Strategiegespräch buchen</a>
       </div>
       <div class="contact-right">
-        <div id="form-success" class="form-success" style="display:none">Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.</div>
-        <div id="form-error-msg" class="form-error-msg" style="display:none">Etwas ist schiefgelaufen. Bitte schreiben Sie uns direkt an <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a> oder rufen Sie uns an: </div>
+        <div id="form-success" class="form-success" style="display:none">Vielen Dank für Ihre Anfrage. Wir melden uns innerhalb von 24 Stunden bei Ihnen.</div>
+        <div id="form-error-msg" class="form-error-msg" style="display:none">Ein Fehler ist aufgetreten. Bitte schreiben Sie uns direkt an <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a>.</div>
         <form id="contact-form" class="contact-form" novalidate action="https://formspree.io/f/xykvekev" method="POST">
           <input type="hidden" name="_subject" value="Neue Anfrage von apmagenta.com">
           <input type="hidden" name="_replyto" id="reply-email">
@@ -362,7 +344,7 @@
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="femail" id="lbl-email">E-Mail Adresse</label>
+              <label for="femail" id="lbl-email">E-Mail</label>
               <input type="email" id="femail" name="email" required placeholder="ihre@email.de" autocomplete="email" oninput="document.getElementById('reply-email').value=this.value">
               <span class="ferr" id="email-error"></span>
             </div>
@@ -373,7 +355,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="fservice" id="lbl-service">Gewünschtes Programm</label>
+            <label for="fservice" id="lbl-service">Gewünschtes Paket</label>
             <select id="fservice" name="service">
               <option value="" id="sel-default">Bitte wählen</option>
               <option value="catalyst" id="sel-cat">APM Scale Catalyst (199 EUR/Mo)</option>
@@ -384,8 +366,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="fmessage" id="lbl-message">Ihre Nachricht</label>
-            <textarea id="fmessage" name="message" required placeholder="Erzählen Sie uns von Ihrem Projekt und Ihren Zielen..." rows="5"></textarea>
+            <label for="fmessage" id="lbl-message">Nachricht</label>
+            <textarea id="fmessage" name="message" required placeholder="Beschreiben Sie kurz Ihr Unternehmen und Ihre Ziele..." rows="5"></textarea>
             <span class="ferr" id="message-error"></span>
           </div>
           <div class="form-group">
@@ -395,7 +377,7 @@
             </label>
             <span class="ferr" id="consent-error"></span>
           </div>
-          <button type="submit" class="form-submit" id="submit-btn">Nachricht senden</button>
+          <button type="submit" class="form-submit" id="submit-btn">Anfrage senden</button>
         </form>
       </div>
     </div>
@@ -410,46 +392,44 @@
         <img src="assets/logo.png" alt="APM Agenta" class="footer-logo-img" width="100" height="34">
         <div class="footer-brand">APM Agenta</div>
         <div class="footer-tagline">Performance Marketing</div>
-        
-        
-        <p class="footer-desc">Transparente und ergebnisorientierte Marketing-Agentur für Unternehmen die wachsen wollen.</p>
+        <p class="footer-desc" id="footer-desc">Datenbasierte Marketing-Strategien für Unternehmen die professionelles Marketing verdienen.</p>
       </div>
       <div>
-        <div class="footer-col-title">Leistungen</div>
+        <div class="footer-col-title" id="ft-col1">Leistungen</div>
         <ul class="footer-links">
-          <li><a href="services.html">Recruitment Marketing</a></li>
-          <li><a href="services.html">Employer Branding</a></li>
-          <li><a href="services.html">Paid Media</a></li>
-          <li><a href="services.html">Social Media</a></li>
-          <li><a href="services.html">BAFA Beratung</a></li>
+          <li><a href="services.html" id="ftl-1">Recruitment Marketing</a></li>
+          <li><a href="services.html" id="ftl-2">Employer Branding</a></li>
+          <li><a href="services.html" id="ftl-3">Paid Media</a></li>
+          <li><a href="services.html" id="ftl-4">Social Media</a></li>
+          <li><a href="services.html" id="ftl-5">BAFA Beratung</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Unternehmen</div>
+        <div class="footer-col-title" id="ft-col2">Unternehmen</div>
         <ul class="footer-links">
-          <li><a href="about.html">Über APM Agenta</a></li>
-          <li><a href="industries.html">Branchen</a></li>
-          <li><a href="#pricing">Investment</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Kontakt</a></li>
+          <li><a href="about.html" id="ftc-1">Über APM Agenta</a></li>
+          <li><a href="industries.html" id="ftc-2">Branchen</a></li>
+          <li><a href="#pricing" id="ftc-3">Pakete</a></li>
+          <li><a href="#faq" id="ftc-4">FAQ</a></li>
+          <li><a href="#contact" id="ftc-5">Kontakt</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Rechtliches</div>
+        <div class="footer-col-title" id="ft-col3">Rechtliches</div>
         <ul class="footer-links">
-          <li><a href="impressum.html">Impressum</a></li>
-          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
-          <li><a href="agb.html">AGB</a></li>
+          <li><a href="impressum.html" id="ftleg-1">Impressum</a></li>
+          <li><a href="datenschutz.html" id="ftleg-2">Datenschutzerklärung</a></li>
+          <li><a href="agb.html" id="ftleg-3">AGB</a></li>
+          <li><button class="cookie-settings-link" onclick="reopenCookieBanner()" id="ft-cookies">Cookie-Einstellungen</button></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy" id="ft-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
       <div class="footer-copy">
-        <a href="impressum.html">Impressum</a> ·
-        <a href="datenschutz.html">Datenschutz</a> ·
-        <a href="agb.html">AGB</a> ·
-        <button class="cookie-settings-link" onclick="reopenCookieBanner()">Cookie-Einstellungen</button>
+        <a href="impressum.html" id="fb-imp">Impressum</a> ·
+        <a href="datenschutz.html" id="fb-dsg">Datenschutz</a> ·
+        <a href="agb.html" id="fb-agb">AGB</a>
       </div>
     </div>
   </div>
