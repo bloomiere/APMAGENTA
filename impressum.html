@@ -1,71 +1,115 @@
-!DOCTYPE html
-html lang"de"
-head
-meta charset"UTF-8"meta name"viewport" content"widthdevice-width, initial-scale1.0"
-meta name"robots" content"noindex, follow"
-titleImpressum  APM Agenta/title
-link href"https://fonts.googleapis.com/css2?familyMontserrat:wght@200;300;400;500;600;700&displayswap" rel"stylesheet"
-link rel"stylesheet" href"css/style.css"
-/head
-body
-nav id"navbar"div class"nav-inner"
-  a href"index.html" class"nav-logo"div class"nav-logo-text"span class"nav-logo-main"APM/spanspan class"nav-logo-sub"Agenta/span/div/a
-  div class"nav-actions"a href"index.html#contact" class"nav-cta"Kontakt/a/div
-/div/nav
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<title>Impressum | APM Agenta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-div class"legal-page"
-  div class"container" style"max-width:760px"
-    h1Impressum/h1
-    p class"legal-date"Stand: 2026/p
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="APM Agenta Startseite">
+      <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="services.html">Leistungen</a></li>
+      <li><a href="index.html#framework">Framework</a></li>
+      <li><a href="industries.html">Branchen</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact" class="nav-cta-link">Kontakt</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-    h2Angaben gemäß § 5 TMG/h2
-    p
-      APM AGENTAbr
-      Liefergasse 4br
-      40213 Düsseldorfbr
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <ul>
+      <li><a href="about.html" onclick="closeMobile()">Über uns</a></li>
+      <li><a href="services.html" onclick="closeMobile()">Leistungen</a></li>
+      <li><a href="index.html#framework" onclick="closeMobile()">Framework</a></li>
+      <li><a href="industries.html" onclick="closeMobile()">Branchen</a></li>
+      <li><a href="index.html#faq" onclick="closeMobile()">FAQ</a></li>
+      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta">Kontakt</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="legal-page">
+  <div class="container" style="max-width:760px">
+    <h1>Impressum</h1>
+    <p class="legal-date">Stand: Mai 2026</p>
+
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>
+      APM AGENTA<br>
+      Sirin Haddad<br>
+      Liefergasse 4<br>
+      40213 Düsseldorf<br>
       Deutschland
-    /p
+    </p>
 
-    h2Kontakt/h2
-    p
-      E-Mail: a href"mailto:contact@apmagenta.com"contact@apmagenta.com/abr
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a><br>
       Website: apmagenta.com
-    /p
+    </p>
 
-    h2Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV/h2
-    p
-      Sirin Haddadbr
-      Liefergasse 4, 40213 Düsseldorf
-    /p
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p>
+      Sirin Haddad<br>
+      Liefergasse 4<br>
+      40213 Düsseldorf
+    </p>
 
-    h2Umsatzsteuer-Identifikationsnummer/h2
-    p
-      !-- USt-ID eintragen sobald Registrierung abgeschlossen --
-      Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:br
-      Wird nach Abschluss der Registrierung ergänzt
-    /p
+    <h2>Umsatzsteuer-Identifikationsnummer</h2>
+    <p>
+      Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br>
+      Wird nach Abschluss der Registrierung ergänzt.
+    </p>
 
-    h2Handelsregister/h2
-    p
-      !-- Handelsregisternummer eintragen sobald Registrierung abgeschlossen --
-      Registergericht: Amtsgericht Düsseldorfbr
-      Registernummer: Wird nach Abschluss der Registrierung ergänzt
-    /p
+    <h2>Handelsregister</h2>
+    <p>
+      Registergericht: Amtsgericht Düsseldorf<br>
+      Registernummer: Wird nach Abschluss der Registrierung ergänzt.
+    </p>
 
-    h2Streitschlichtung/h2
-    pDie Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: a href"https://ec.europa.eu/consumers/odr" target"_blank" rel"noopener"https://ec.europa.eu/consumers/odr/a. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen./p
+    <h2>Streitschlichtung</h2>
+    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
-    h2Haftung für Inhalte/h2
-    pAls Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen./p
+    <h2>Haftung für Inhalte</h2>
+    <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
 
-    h2Haftung für Links/h2
-    pUnser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich./p
+    <h2>Haftung für Links</h2>
+    <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
 
-    h2Urheberrecht/h2
-    pDie durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors./p
-  /div
-/div
+    <h2>Urheberrecht</h2>
+    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+  </div>
+</div>
 
-footerdiv class"container"div class"footer-bottom"div class"footer-copy" 2026 APM AGENTA. Alle Rechte vorbehalten./divdiv class"footer-copy"a href"impressum.html"Impressum/a · a href"datenschutz.html"Datenschutz/a · a href"agb.html"AGB/a/div/div/div/footer
-script src"js/main.js"/script
-/body/html
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy">
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a> ·
+        <a href="agb.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

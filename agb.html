@@ -1,42 +1,103 @@
-!DOCTYPE html
-html lang"de"
-head
-meta charset"UTF-8"
-meta name"viewport" content"widthdevice-width, initial-scale1.0"
-meta name"robots" content"noindex, follow"
-titleAGB  APM Agency/title
-link href"https://fonts.googleapis.com/css2?familyMontserrat:wght@200;300;400;500;600;700&displayswap" rel"stylesheet"
-link rel"stylesheet" href"css/style.css"
-/head
-body
-nav id"navbar"div class"nav-inner"a href"index.html" class"nav-logo"span class"nav-logo-main"APM/spanspan class"nav-logo-sub"Marketing Agency/span/adiv class"nav-actions"a href"index.html#contact" class"nav-cta"Kontakt/a/div/div/nav
-div class"legal-page"
-  div class"container" style"max-width:760px"
-    h1Allgemeine Geschäftsbedingungen/h1
-    p class"legal-date"Stand: 2026/p
-    h2§ 1 Geltungsbereich/h2
-    pDiese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen APM AGENTA und ihren Auftraggebern über Marketing, Beratungs und Kreativleistungen./p
-    h2§ 2 Vertragsschluss/h2
-    pEin Vertrag kommt durch die schriftliche Auftragsbestätigung von APM AGENTA oder durch den Beginn der Leistungserbringung zustande./p
-    h2§ 3 Leistungsumfang/h2
-    pDer genaue Leistungsumfang ergibt sich aus dem jeweiligen Angebot oder dem abgeschlossenen Vertrag. Änderungen bedürfen der schriftlichen Vereinbarung./p
-    h2§ 4 Vergütung und Zahlungsbedingungen/h2
-    pDie Vergütung ergibt sich aus dem jeweiligen Angebot. Rechnungen sind innerhalb von 14 Tagen nach Rechnungsdatum ohne Abzug zu begleichen. Werbebudgets werden ohne Aufschlag zum Selbstkostenpreis weitergeleitet./p
-    h2§ 5 Mitwirkungspflichten/h2
-    pDer Auftraggeber stellt APM AGENTA alle notwendigen Informationen, Materialien und Zugänge rechtzeitig zur Verfügung./p
-    h2§ 6 Nutzungsrechte/h2
-    pAPM AGENTA räumt dem Auftraggeber nach vollständiger Bezahlung das einfache Nutzungsrecht an den erstellten Werken für den vereinbarten Verwendungszweck ein./p
-    h2§ 7 Vertraulichkeit/h2
-    pBeide Parteien verpflichten sich, vertrauliche Informationen der jeweils anderen Partei nicht ohne deren ausdrückliche Zustimmung an Dritte weiterzugeben./p
-    h2§ 8 Haftung/h2
-    pAPM AGENTA haftet für Vorsatz und grobe Fahrlässigkeit unbegrenzt. Eine Garantie für bestimmte Ergebnisse wird nicht übernommen./p
-    h2§ 9 Laufzeit und Kündigung/h2
-    pDie Vertragslaufzeit ergibt sich aus dem jeweiligen Angebot. Der Vertrag verlängert sich automatisch, sofern er nicht mit einer Frist von 14 Tagen vor Ablauf schriftlich gekündigt wird./p
-    h2§ 10 Schlussbestimmungen/h2
-    pEs gilt das Recht der Bundesrepublik Deutschland. Änderungen dieser AGB bedürfen der Schriftform./p
-  /div
-/div
-footerdiv class"container"div class"footer-bottom"div class"footer-copy" 2026 APM AGENTA. Alle Rechte vorbehalten./divdiv class"footer-copy"a href"impressum.html"Impressum/a · a href"datenschutz.html"Datenschutz/a · a href"agb.html"AGB/a/div/div/div/footer
-script src"js/main.js"/script
-/body
-/html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<title>AGB | APM Agenta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="APM Agenta Startseite">
+      <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="services.html">Leistungen</a></li>
+      <li><a href="index.html#framework">Framework</a></li>
+      <li><a href="industries.html">Branchen</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact" class="nav-cta-link">Kontakt</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <ul>
+      <li><a href="about.html" onclick="closeMobile()">Über uns</a></li>
+      <li><a href="services.html" onclick="closeMobile()">Leistungen</a></li>
+      <li><a href="index.html#framework" onclick="closeMobile()">Framework</a></li>
+      <li><a href="industries.html" onclick="closeMobile()">Branchen</a></li>
+      <li><a href="index.html#faq" onclick="closeMobile()">FAQ</a></li>
+      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta">Kontakt</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="legal-page">
+  <div class="container" style="max-width:760px">
+    <h1>Allgemeine Geschäftsbedingungen</h1>
+    <p class="legal-date">Stand: Mai 2026</p>
+
+    <h2>§ 1 Geltungsbereich</h2>
+    <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen APM AGENTA, Sirin Haddad, Liefergasse 4, 40213 Düsseldorf (nachfolgend "APM Agenta") und ihren Auftraggebern über Marketing-, Beratungs- und Kreativleistungen.</p>
+
+    <h2>§ 2 Vertragsschluss</h2>
+    <p>Ein Vertrag kommt durch die schriftliche Auftragsbestätigung von APM Agenta oder durch den Beginn der Leistungserbringung zustande. Angebote von APM Agenta sind freibleibend und unverbindlich, sofern sie nicht ausdrücklich als verbindlich gekennzeichnet sind.</p>
+
+    <h2>§ 3 Leistungsumfang</h2>
+    <p>Der genaue Leistungsumfang ergibt sich aus dem jeweiligen Angebot oder dem abgeschlossenen Vertrag. Änderungen und Erweiterungen des Leistungsumfangs bedürfen der schriftlichen Vereinbarung und können zu einer Anpassung der Vergütung führen.</p>
+
+    <h2>§ 4 Vergütung und Zahlungsbedingungen</h2>
+    <p>Die Vergütung ergibt sich aus dem jeweiligen Angebot und versteht sich zuzüglich der gesetzlichen Mehrwertsteuer. Rechnungen sind innerhalb von 14 Tagen nach Rechnungsdatum ohne Abzug zu begleichen. Werbebudgets für Drittanbieter wie Meta oder Google werden ohne Aufschlag zum Selbstkostenpreis weitergeleitet und sind nicht im Paketpreis enthalten.</p>
+    <p>Bei Zahlungsverzug ist APM Agenta berechtigt, die Leistungserbringung bis zum Ausgleich der offenen Forderungen auszusetzen.</p>
+
+    <h2>§ 5 Mitwirkungspflichten des Auftraggebers</h2>
+    <p>Der Auftraggeber stellt APM Agenta alle für die Leistungserbringung notwendigen Informationen, Materialien und Zugänge rechtzeitig und vollständig zur Verfügung. Verzögerungen die auf unzureichender Mitwirkung des Auftraggebers beruhen, gehen nicht zu Lasten von APM Agenta.</p>
+
+    <h2>§ 6 Nutzungsrechte</h2>
+    <p>APM Agenta räumt dem Auftraggeber nach vollständiger Bezahlung das einfache, nicht übertragbare Nutzungsrecht an den im Rahmen des Auftrags erstellten Werken für den vereinbarten Verwendungszweck ein. Eine weitergehende Nutzung bedarf der schriftlichen Zustimmung von APM Agenta.</p>
+
+    <h2>§ 7 Vertraulichkeit</h2>
+    <p>Beide Parteien verpflichten sich, vertrauliche Informationen der jeweils anderen Partei nicht ohne deren ausdrückliche schriftliche Zustimmung an Dritte weiterzugeben. Diese Verpflichtung gilt auch über die Beendigung des Vertragsverhältnisses hinaus.</p>
+
+    <h2>§ 8 Haftung</h2>
+    <p>APM Agenta haftet für Vorsatz und grobe Fahrlässigkeit unbegrenzt. Bei leichter Fahrlässigkeit haftet APM Agenta nur bei Verletzung wesentlicher Vertragspflichten und nur in Höhe des vorhersehbaren, vertragstypischen Schadens. Eine Garantie für bestimmte Kampagnenergebnisse, Reichweiten oder Umsätze wird ausdrücklich nicht übernommen, da diese von externen Faktoren abhängen.</p>
+
+    <h2>§ 9 Laufzeit und Kündigung</h2>
+    <p>Die Vertragslaufzeit ergibt sich aus dem jeweiligen Angebot. Der Vertrag verlängert sich automatisch um einen weiteren Monat, sofern er nicht mit einer Frist von 14 Tagen vor Ablauf schriftlich per E-Mail an contact@apmagenta.com gekündigt wird.</p>
+
+    <h2>§ 10 Änderungen der AGB</h2>
+    <p>APM Agenta behält sich das Recht vor, diese AGB mit einer Ankündigungsfrist von 30 Tagen zu ändern. Die geänderten AGB gelten als angenommen, wenn der Auftraggeber nicht innerhalb von 14 Tagen nach Bekanntgabe schriftlich widerspricht.</p>
+
+    <h2>§ 11 Schlussbestimmungen</h2>
+    <p>Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten ist Düsseldorf, sofern der Auftraggeber Kaufmann ist. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy">
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a> ·
+        <a href="agb.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
