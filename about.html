@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/subpage.css">
 </head>
-<body>
+<body data-page="about">
 
 <nav id="navbar">
   <div class="nav-inner">
@@ -21,10 +21,10 @@
     </a>
     <ul class="nav-links">
       <li><a href="about.html" class="nav-active">Über uns</a></li>
-      <li><a href="services.html">Leistungen</a></li>
-      <li><a href="index.html#framework">Framework</a></li>
-      <li><a href="industries.html">Branchen</a></li>
-      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="services.html" id="nav-services">Leistungen</a></li>
+      <li><a href="index.html#framework" id="nav-framework">Framework</a></li>
+      <li><a href="industries.html" id="nav-industries">Branchen</a></li>
+      <li><a href="index.html#faq" id="nav-faq">FAQ</a></li>
       <li class="lang-dropdown" id="langDropdownWrap">
         <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
           <span id="lang-current">DE</span>
@@ -37,7 +37,7 @@
           <li><button class="lang-opt" role="option" aria-selected="false" onclick="setLang('en')">English</button></li>
         </ul>
       </li>
-      <li><a href="index.html#contact" class="nav-cta-link">Kontakt</a></li>
+      <li><a href="index.html#contact" class="nav-cta-link" id="nav-contact">Kontakt</a></li>
     </ul>
     <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -48,18 +48,18 @@
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <div class="mobile-menu-inner">
     <ul>
-      <li><a href="about.html" onclick="closeMobile()">Über uns</a></li>
-      <li><a href="services.html" onclick="closeMobile()">Leistungen</a></li>
-      <li><a href="index.html#framework" onclick="closeMobile()">Framework</a></li>
-      <li><a href="industries.html" onclick="closeMobile()">Branchen</a></li>
-      <li><a href="index.html#faq" onclick="closeMobile()">FAQ</a></li>
+      <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
+      <li><a href="services.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
+      <li><a href="index.html#framework" onclick="closeMobile()" id="mob-framework">Framework</a></li>
+      <li><a href="industries.html" onclick="closeMobile()" id="mob-industries">Branchen</a></li>
+      <li><a href="index.html#faq" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
       <li>
         <div class="mob-lang-row">
           <button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button>
           <button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');closeMobile()">EN</button>
         </div>
       </li>
-      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta">Kontakt</a></li>
+      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta" id="mob-contact">Kontakt</a></li>
     </ul>
   </div>
 </div>
@@ -71,9 +71,9 @@
     <path d="M480 100 L360 480 L560 480 L620 280 Z" fill="white" opacity="0.6"/>
   </svg>
   <div class="sub-hero-content">
-    <div class="sub-hero-eyebrow">Wer wir sind</div>
-    <h1 class="sub-hero-title">Hinter APM Agenta <em>stehen echte Menschen.</em></h1>
-    <p class="sub-hero-sub">Wir glauben dass kleine Unternehmen die gleiche Qualität im Marketing verdienen wie große. Deshalb haben wir APM Agenta gegründet.</p>
+    <div class="sub-hero-eyebrow" id="page-eyebrow">Wer wir sind</div>
+    <h1 class="sub-hero-title" id="page-title">Hinter APM Agenta <em>stehen echte Menschen.</em></h1>
+    <p class="sub-hero-sub" id="page-sub">Wir glauben dass kleine Unternehmen die gleiche Qualität im Marketing verdienen wie große. Deshalb haben wir APM Agenta gegründet.</p>
   </div>
 </div>
 

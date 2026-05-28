@@ -559,3 +559,67 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initSmoothScroll();
 });
+
+/* ---- SUB-PAGE TRANSLATIONS ---- */
+const SUB_PAGE_T = {
+  about: {
+    de: {
+      'page-eyebrow': 'Wer wir sind',
+      'page-title': 'Hinter APM Agenta <em>stehen echte Menschen.</em>',
+      'page-sub': 'Wir glauben dass kleine Unternehmen die gleiche Qualität im Marketing verdienen wie große. Deshalb haben wir APM Agenta gegründet.'
+    },
+    en: {
+      'page-eyebrow': 'Who We Are',
+      'page-title': 'Behind APM Agenta <em>stand real people.</em>',
+      'page-sub': 'We believe small businesses deserve the same quality of marketing as large ones. That is why we founded APM Agenta.'
+    }
+  },
+  services: {
+    de: {
+      'page-eyebrow': 'Was wir anbieten',
+      'page-title': 'Unsere <em>Leistungen.</em>',
+      'page-sub': 'Sechs spezialisierte Dienstleistungen für messbare Ergebnisse. Transparent. Skalierbar. Ohne versteckte Kosten.'
+    },
+    en: {
+      'page-eyebrow': 'What We Offer',
+      'page-title': 'Our <em>Services.</em>',
+      'page-sub': 'Six specialised services for measurable results. Transparent. Scalable. No hidden costs.'
+    }
+  },
+  industries: {
+    de: {
+      'page-eyebrow': 'Unsere Zielgruppen',
+      'page-title': 'Branchen die wir <em>betreuen.</em>',
+      'page-sub': 'Spezialisierte Strategien für jede Branche. Wir verstehen die Herausforderungen Ihres Marktes.'
+    },
+    en: {
+      'page-eyebrow': 'Our Target Markets',
+      'page-title': 'Industries we <em>serve.</em>',
+      'page-sub': 'Specialised strategies for every industry. We understand the challenges of your market.'
+    }
+  }
+};
+
+function applySubPageLang(lang) {
+  const page = document.body.getAttribute('data-page');
+  if (!page || !SUB_PAGE_T[page]) return;
+  const t = SUB_PAGE_T[page][lang];
+  Object.entries(t).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = val;
+  });
+  // Also update page title
+  const titles = {
+    about:      { de: 'Über uns | APM Agenta',      en: 'About | APM Agenta' },
+    services:   { de: 'Leistungen | APM Agenta',    en: 'Services | APM Agenta' },
+    industries: { de: 'Branchen | APM Agenta',      en: 'Industries | APM Agenta' }
+  };
+  if (titles[page]) document.title = titles[page][lang];
+}
+
+/* Patch applyLang to also run sub-page translations */
+const _originalApplyLang = applyLang;
+applyLang = function(lang) {
+  _originalApplyLang(lang);
+  applySubPageLang(lang);
+};
