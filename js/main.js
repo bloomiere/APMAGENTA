@@ -623,3 +623,130 @@ applyLang = function(lang) {
   _originalApplyLang(lang);
   applySubPageLang(lang);
 };
+
+/* ---- EXTENDED SUB-PAGE CONTENT TRANSLATIONS ---- */
+const SUB_CONTENT_T = {
+  about: {
+    de: {
+      'meta-desc': 'Über APM Agenta. Transparente Performance-Marketing-Agentur für KMU in Deutschland.',
+      'about-mission-eyebrow': 'Unsere Mission',
+      'about-mission-title': 'Professionelles Marketing <em>für alle zugänglich machen.</em>',
+      'about-mission-p1': 'APM Agenta wurde gegründet weil wir eine klare Lücke im Markt gesehen haben: Teure Agenturen auf der einen Seite, überforderte Unternehmer auf der anderen. Wir schließen diese Lücke mit transparenten Paketen, fairen Preisen und echter Expertise.',
+      'about-mission-p2': 'Kein versteckter Aufschlag auf Werbebudgets. Keine leeren Versprechen. Keine vagen Berichte. Nur klare Leistungen, klare Preise und messbare Ergebnisse.',
+      'about-values-eyebrow': 'Unsere Werte',
+      'about-values-title': 'Was uns <em>antreibt.</em>',
+      'val1-title': 'Transparenz', 'val1-desc': 'Wir veröffentlichen unsere Preise offen. Werbebudget wird ohne Aufschlag weitergeleitet. Sie wissen immer wo Ihr Geld hingeht.',
+      'val2-title': 'Verantwortung', 'val2-desc': 'Jedes Paket enthält Reporting. Jede Kampagne wird gemessen. Wir sagen Ihnen was funktioniert und was nicht, in klarer Sprache.',
+      'val3-title': 'Zugänglichkeit', 'val3-desc': 'Professionelles Marketing sollte nicht nur für Unternehmen mit großem Budget zugänglich sein. Deshalb beginnen unsere Pakete bei 199 EUR.',
+      'val4-title': 'Ergebnisse', 'val4-desc': 'Wir interessieren uns mehr dafür was wirklich funktioniert als dafür was im Pitch-Deck beeindruckend klingt. Daten statt Bauchgefühl.',
+      'about-team-eyebrow': 'Unser Team',
+      'about-team-title': 'Die Menschen <em>hinter APM Agenta.</em>',
+      'about-team-sub': 'Wir sind ein junges, engagiertes Team mit echter Expertise in Performance Marketing, Employer Branding und digitalem Wachstum. Keine anonyme Agentur, sondern echte Ansprechpartner die sich für Ihre Ergebnisse verantwortlich fühlen.',
+      'about-cta-title': 'Lernen Sie uns <em>persönlich kennen.</em>',
+      'about-cta-btn': 'Kostenloses Erstgespräch buchen',
+    },
+    en: {
+      'meta-desc': 'About APM Agenta. Transparent performance marketing agency for SMEs in Germany.',
+      'about-mission-eyebrow': 'Our Mission',
+      'about-mission-title': 'Making professional marketing <em>accessible to everyone.</em>',
+      'about-mission-p1': 'APM Agenta was founded because we saw a clear gap in the market: expensive agencies on one side, overwhelmed business owners on the other. We close this gap with transparent packages, fair pricing and real expertise.',
+      'about-mission-p2': 'No hidden markup on advertising budgets. No empty promises. No vague reports. Just clear services, clear prices and measurable results.',
+      'about-values-eyebrow': 'Our Values',
+      'about-values-title': 'What <em>drives us.</em>',
+      'val1-title': 'Transparency', 'val1-desc': 'We publish our prices openly. Ad spend is passed through without markup. You always know where your money goes.',
+      'val2-title': 'Accountability', 'val2-desc': 'Every package includes reporting. Every campaign is measured. We tell you what works and what does not, in plain language.',
+      'val3-title': 'Accessibility', 'val3-desc': 'Professional marketing should not only be available to businesses with large budgets. That is why our packages start at 199 EUR.',
+      'val4-title': 'Results', 'val4-desc': 'We care more about what actually works than what sounds impressive in a pitch deck. Data over gut feeling.',
+      'about-team-eyebrow': 'Our Team',
+      'about-team-title': 'The people <em>behind APM Agenta.</em>',
+      'about-team-sub': 'We are a young, dedicated team with real expertise in performance marketing, employer branding and digital growth. Not an anonymous agency, but real people who feel responsible for your results.',
+      'about-cta-title': 'Get to <em>know us personally.</em>',
+      'about-cta-btn': 'Book a Free Initial Consultation',
+    }
+  },
+  services: {
+    de: {
+      'meta-desc': 'APM Agenta Leistungen: Recruitment Marketing, Employer Branding, Paid Media, Social Media Management und BAFA-Beratung.',
+      's1-name': 'Recruitment Marketing',
+      's2-name': 'Employer Branding',
+      's3-name': 'Paid Media',
+      's4-name': 'Video und Fotoproduktion',
+      's5-name': 'Social Media Management',
+      's6-name': 'BAFA-geförderte Beratung',
+      'svc-cta-title': 'Bereit zu starten? <em>Gespräch buchen.</em>',
+      'svc-cta-btn': 'Kostenloses Strategie-Gespräch buchen',
+    },
+    en: {
+      'meta-desc': 'APM Agenta Services: Recruitment Marketing, Employer Branding, Paid Media, Social Media Management and BAFA Consulting.',
+      's1-name': 'Recruitment Marketing',
+      's2-name': 'Employer Branding',
+      's3-name': 'Paid Media',
+      's4-name': 'Video and Photo Production',
+      's5-name': 'Social Media Management',
+      's6-name': 'BAFA-Funded Consulting',
+      'svc-cta-title': 'Ready to get started? <em>Book a call.</em>',
+      'svc-cta-btn': 'Book a Free Strategy Call',
+    }
+  },
+  industries: {
+    de: {
+      'meta-desc': 'APM Agenta betreut Unternehmen in Gesundheitswesen, Handwerk, Tech, Einzelhandel, Pflege und KMU in Deutschland.',
+      'ind1-title': 'Gesundheitswesen',
+      'ind2-title': 'Handwerk und Industrie',
+      'ind3-title': 'Tech und Start-ups',
+      'ind4-title': 'Einzelhandel und Gastronomie',
+      'ind5-title': 'Pflege und Soziales',
+      'ind6-title': 'KMU und Mittelstand',
+      'ind-cta-title': 'Ihre Branche dabei? <em>Sprechen wir.</em>',
+      'ind-cta-btn': 'Kostenloses Strategie-Gespräch buchen',
+    },
+    en: {
+      'meta-desc': 'APM Agenta serves businesses in healthcare, trades, tech, retail, care and SMEs across Germany.',
+      'ind1-title': 'Healthcare',
+      'ind2-title': 'Trades and Industry',
+      'ind3-title': 'Tech and Start-ups',
+      'ind4-title': 'Retail and Hospitality',
+      'ind5-title': 'Care and Social Services',
+      'ind6-title': 'SMEs and Mid-Market',
+      'ind-cta-title': 'Your industry included? <em>Let\'s talk.</em>',
+      'ind-cta-btn': 'Book a Free Strategy Call',
+    }
+  }
+};
+
+/* Override applySubPageLang to also apply content translations */
+applySubPageLang = function(lang) {
+  const page = document.body.getAttribute('data-page');
+  if (!page) return;
+
+  // Hero text
+  if (SUB_PAGE_T[page]) {
+    const t = SUB_PAGE_T[page][lang];
+    Object.entries(t).forEach(([id, val]) => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = val;
+    });
+  }
+
+  // Content text
+  if (SUB_CONTENT_T[page]) {
+    const t = SUB_CONTENT_T[page][lang];
+    Object.entries(t).forEach(([id, val]) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (id === 'meta-desc') {
+        el.setAttribute('content', val);
+      } else {
+        el.innerHTML = val;
+      }
+    });
+  }
+
+  // Page title
+  const titles = {
+    about:      { de: 'Über uns | APM Agenta',      en: 'About | APM Agenta' },
+    services:   { de: 'Leistungen | APM Agenta',    en: 'Services | APM Agenta' },
+    industries: { de: 'Branchen | APM Agenta',      en: 'Industries | APM Agenta' }
+  };
+  if (titles[page]) document.title = titles[page][lang];
+};
