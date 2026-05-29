@@ -383,6 +383,11 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
   .footer-top { grid-template-columns:1fr; }
   .footer-bottom { flex-direction:column; align-items:flex-start; }
   .section-header { flex-direction:column; align-items:flex-start; }
+  .hero-trust .trust-div { display:none; }
+  .hero-trust .trust-item { padding:0.75rem; border-right:1px solid rgba(143,174,201,0.15); border-bottom:1px solid rgba(143,174,201,0.15); }
+  .hero-trust .trust-item:nth-child(2n) { border-right:none; }
+  .hero-trust .trust-item:nth-last-child(-n+2) { border-bottom:none; }
+  .trust-num { font-size:1.8rem; }
 }
 
 /* ---- ACTIVE NAV STATE ---- */
