@@ -194,11 +194,11 @@ nav.scrolled { box-shadow: 0 2px 30px rgba(13,27,42,0.1); }
 .btn-primary:hover { background:var(--silver); }
 .btn-ghost { background:transparent; color:var(--white); padding:1rem 2.2rem; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; border:1px solid rgba(255,255,255,0.3); cursor:pointer; transition:all 0.2s; display:inline-block; }
 .btn-ghost:hover { border-color:var(--white); }
-.hero-trust { display:flex; align-items:center; gap:2.5rem; margin-top:3rem; flex-wrap:wrap; opacity:0; animation:fadeUp 0.9s 0.9s forwards; background:rgba(143,174,201,0.06); border:1px solid rgba(143,174,201,0.15); padding:1.5rem 2rem; }
+.hero-trust { display:flex; align-items:center; gap:2rem; margin-top:3rem; flex-wrap:wrap; opacity:0; animation:fadeUp 0.9s 0.9s forwards; }
 .trust-item { display:flex; flex-direction:column; gap:0.2rem; }
-.trust-num { font-size:2.4rem; font-weight:300; color:var(--glacier); line-height:1; letter-spacing:-0.02em; }
-.trust-label { font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(200,216,232,0.85); font-weight:600; margin-top:0.3rem; }
-.trust-div { width:1px; height:48px; background:rgba(143,174,201,0.25); }
+.trust-num { font-size:1.6rem; font-weight:200; color:var(--white); line-height:1; letter-spacing:-0.02em; }
+.trust-label { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(200,216,232,0.75); font-weight:500; }
+.trust-div { width:1px; height:36px; background:rgba(143,174,201,0.2); }
 .scroll-indicator { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); z-index:2; }
 .scroll-line { width:1px; height:48px; background:linear-gradient(to bottom,var(--glacier),transparent); animation:pulse 2s infinite; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
@@ -383,11 +383,6 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
   .footer-top { grid-template-columns:1fr; }
   .footer-bottom { flex-direction:column; align-items:flex-start; }
   .section-header { flex-direction:column; align-items:flex-start; }
-  .hero-trust .trust-div { display:none; }
-  .hero-trust .trust-item { padding:0.75rem; border-right:1px solid rgba(143,174,201,0.15); border-bottom:1px solid rgba(143,174,201,0.15); }
-  .hero-trust .trust-item:nth-child(2n) { border-right:none; }
-  .hero-trust .trust-item:nth-last-child(-n+2) { border-bottom:none; }
-  .trust-num { font-size:1.8rem; }
 }
 
 /* ---- ACTIVE NAV STATE ---- */
@@ -556,4 +551,3 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
   .cookie-actions { flex-direction: column; }
   .cookie-accept-all, .cookie-banner-v2 .cookie-accept { flex: none; width: 100%; }
 }
-
