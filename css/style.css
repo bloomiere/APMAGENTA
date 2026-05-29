@@ -1,12 +1,12 @@
 /* ============================================================
-   APM Agenta — style.css v5
+   APM Agenta style.css v5
    New logo palette: charcoal slate #1a2332 / glacier accents
    No dashes in text · No emojis · Full Lighthouse compliance
 ============================================================ */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
-  /* Core brand — matched to new logo's dark charcoal-navy tones */
+  /* Core brand matched to new logo's dark charcoal-navy tones */
   --navy:    #0f1923;
   --navy2:   #131f2b;
   --navy3:   #1a2738;
@@ -20,7 +20,7 @@
   --off:     #f5f7fa;
   --border:  rgba(13,27,42,0.09);
   --text:    #1a202c;
-  /* Logo palette accent — the slate-blue of the mountain */
+  /* Logo palette accent the slate-blue of the mountain */
   --logo-slate: #4e5863;
   --logo-dark:  #1a2332;
 }
@@ -47,7 +47,7 @@ ul { list-style:none; }
 .cookie-decline:hover { color:var(--white); border-color:var(--white); }
 
 /* ============================================================
-   NAV — edge-to-edge, logo locked left, links locked right
+   NAV edge-to-edge, logo locked left, links locked right
 ============================================================ */
 nav {
   position: fixed; top:0; left:0; right:0; z-index:1000;
@@ -69,7 +69,7 @@ nav.scrolled { box-shadow: 0 2px 30px rgba(13,27,42,0.1); }
   gap: 1rem;
 }
 
-/* LOGO — absolute left */
+/* LOGO absolute left */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -84,7 +84,7 @@ nav.scrolled { box-shadow: 0 2px 30px rgba(13,27,42,0.1); }
   display: block;
 }
 
-/* NAV LINKS — pushed to right via margin-left:auto */
+/* NAV LINKS pushed to right via margin-left:auto */
 .nav-links {
   display: flex;
   align-items: center;
@@ -106,7 +106,7 @@ nav.scrolled { box-shadow: 0 2px 30px rgba(13,27,42,0.1); }
 }
 .nav-links a:hover { color: var(--glacier-dark); }
 
-/* Kontakt — accent pill */
+/* Kontakt accent pill */
 .nav-cta-link {
   background: var(--navy) !important;
   color: var(--white) !important;
@@ -400,7 +400,7 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
   max-width: 200px;
   object-fit: contain;
   display: block;
-  /* No filter needed — this is a dark logo on white nav background */
+  /* No filter needed this is a dark logo on white nav background */
   filter: none;
 }
 
