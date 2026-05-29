@@ -551,3 +551,50 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
   .cookie-actions { flex-direction: column; }
   .cookie-accept-all, .cookie-banner-v2 .cookie-accept { flex: none; width: 100%; }
 }
+
+/* ---- LEGAL PAGES: Impressum, Datenschutz, AGB ---- */
+.legal-page { padding: 9rem 0 6rem; min-height: 100vh; background: #fff; }
+.legal-page h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 300;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+.legal-date {
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.legal-page h2 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 2.5rem 0 0.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.legal-page h2:first-of-type { border-top: none; }
+.legal-page p {
+  font-size: 0.84rem;
+  color: #374151;
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+.legal-page a { color: var(--glacier-dark); }
+.legal-page ul { margin: 0.5rem 0 1rem 1.2rem; }
+.legal-page ul li {
+  font-size: 0.84rem;
+  color: #374151;
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 0.3rem;
+}
