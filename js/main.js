@@ -38,6 +38,7 @@ const T = {
     'nav-faq': 'FAQ',
     'nav-bafa': 'BAFA',
     'nav-bafa': 'BAFA',
+    'nav-blog': 'Blog',
     'nav-contact': 'Kontakt',
     'mob-about': 'Über uns',
     'mob-services': 'Leistungen',
@@ -46,6 +47,7 @@ const T = {
     'mob-faq': 'FAQ',
     'mob-bafa': 'BAFA',
     'mob-bafa': 'BAFA',
+    'mob-blog': 'Blog',
     'mob-contact': 'Kontakt',
     /* HERO */
     'hero-headline': 'APM Agenta entwickelt datenbasierte<br><em>Marketing-Strategien</em><br>die messbare Ergebnisse liefern.',
@@ -166,6 +168,7 @@ const T = {
     'nav-faq': 'FAQ',
     'nav-bafa': 'BAFA',
     'nav-bafa': 'BAFA',
+    'nav-blog': 'Blog',
     'nav-contact': 'Contact',
     'mob-about': 'About',
     'mob-services': 'Services',
@@ -174,6 +177,7 @@ const T = {
     'mob-faq': 'FAQ',
     'mob-bafa': 'BAFA',
     'mob-bafa': 'BAFA',
+    'mob-blog': 'Blog',
     'mob-contact': 'Contact',
     /* HERO */
     'hero-headline': 'APM Agenta develops data-driven<br><em>marketing strategies</em><br>that deliver measurable results.',

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="APM Agenta Blog: Insights zu Recruitment Marketing, Employer Branding, Paid Media und BAFA-Förderung für KMU in Deutschland.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://apmagenta.com/blog.html">
+<title>Blog & Insights | APM Agenta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.blog-hero { background: var(--navy); padding: 9rem 4% 5rem; position: relative; overflow: hidden; }
+.blog-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,16,26,0.95) 0%, rgba(10,16,26,0.7) 100%); }
+.blog-hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; }
+.blog-section { padding: 7rem 0; background: var(--off); }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
+.blog-card { background: var(--white); border: 1px solid var(--border); display: flex; flex-direction: column; transition: transform 0.3s, border-color 0.3s; text-decoration: none; }
+.blog-card:hover { transform: translateY(-5px); border-color: var(--glacier); }
+.blog-card-img { height: 200px; background: var(--navy); position: relative; overflow: hidden; }
+.blog-card-img-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.blog-card-cat { position: absolute; top: 1rem; left: 1rem; background: var(--glacier); color: var(--navy); font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; padding: 0.3rem 0.75rem; }
+.blog-card-body { padding: 1.8rem; flex: 1; display: flex; flex-direction: column; }
+.blog-card-date { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 0.75rem; }
+.blog-card-title { font-size: 1rem; font-weight: 600; color: var(--navy); line-height: 1.35; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+.blog-card-excerpt { font-size: 0.78rem; color: #374151; line-height: 1.8; font-weight: 300; flex: 1; margin-bottom: 1.2rem; }
+.blog-card-link { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--glacier-dark); font-weight: 700; border-bottom: 1px solid var(--glacier-dark); padding-bottom: 2px; display: inline-block; transition: opacity 0.2s; }
+.blog-card-link:hover { opacity: 0.7; }
+.blog-featured { grid-column: span 3; display: grid; grid-template-columns: 1.2fr 1fr; border: 1px solid var(--border); background: var(--white); text-decoration: none; transition: border-color 0.3s; }
+.blog-featured:hover { border-color: var(--glacier); }
+.blog-featured-img { background: var(--navy2); min-height: 320px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.blog-featured-body { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+.blog-featured-badge { font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--glacier); font-weight: 700; margin-bottom: 1rem; }
+.blog-featured-title { font-size: 1.6rem; font-weight: 300; color: var(--navy); line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.01em; }
+.blog-featured-title em { font-style: italic; color: var(--steel); }
+.blog-featured-excerpt { font-size: 0.82rem; color: #374151; line-height: 1.85; font-weight: 300; margin-bottom: 1.5rem; }
+.blog-newsletter { padding: 5rem 0; background: var(--navy); }
+.blog-newsletter-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+.blog-newsletter-title { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--white); margin-bottom: 0.75rem; }
+.blog-newsletter-sub { font-size: 0.82rem; color: var(--silver); font-weight: 300; line-height: 1.75; margin-bottom: 2rem; }
+.blog-nl-form { display: flex; gap: 0.75rem; }
+.blog-nl-input { flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(143,174,201,0.25); color: var(--white); padding: 0.85rem 1rem; font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 300; outline: none; }
+.blog-nl-input::placeholder { color: rgba(143,174,201,0.4); }
+.blog-nl-input:focus { border-color: var(--glacier); }
+.blog-nl-btn { background: var(--glacier); color: var(--navy); border: none; padding: 0.85rem 1.5rem; font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+.blog-nl-btn:hover { background: var(--silver); }
+/* SVG decorations for card images */
+.card-svg { width: 80%; height: 80%; opacity: 0.06; }
+@media (max-width: 900px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-featured { grid-column: span 2; grid-template-columns: 1fr; }
+  .blog-featured-img { min-height: 200px; }
+}
+@media (max-width: 640px) {
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-featured { grid-column: span 1; }
+  .blog-nl-form { flex-direction: column; }
+}
+</style>
+</head>
+<body data-page="blog">
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="APM Agenta">
+      <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" id="nav-about">Über uns</a></li>
+      <li><a href="services.html" id="nav-services">Leistungen</a></li>
+      <li><a href="index.html#framework" id="nav-framework">Framework</a></li>
+      <li><a href="industries.html" id="nav-industries">Branchen</a></li>
+      <li><a href="index.html#faq" id="nav-faq">FAQ</a></li>
+      <li><a href="bafa.html" id="nav-bafa">BAFA</a></li>
+      <li class="lang-dropdown" id="langDropdownWrap">
+        <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="lang-current">DE</span>
+          <svg class="lang-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+          <li><button class="lang-opt" role="option" aria-selected="true" onclick="setLang('de')">Deutsch</button></li>
+          <li><button class="lang-opt" role="option" aria-selected="false" onclick="setLang('en')">English</button></li>
+        </ul>
+      </li>
+      <li><a href="index.html#contact" class="nav-cta-link" id="nav-contact">Kontakt</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <ul>
+      <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
+      <li><a href="services.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
+      <li><a href="index.html#framework" onclick="closeMobile()" id="mob-framework">Framework</a></li>
+      <li><a href="industries.html" onclick="closeMobile()" id="mob-industries">Branchen</a></li>
+      <li><a href="index.html#faq" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
+      <li><a href="bafa.html" onclick="closeMobile()" id="mob-bafa">BAFA</a></li>
+      <li>
+        <div class="mob-lang-row">
+          <button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button>
+          <button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');closeMobile()">EN</button>
+        </div>
+      </li>
+      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta" id="mob-contact">Kontakt</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-overlay"></div>
+  <div class="blog-hero-content">
+    <div class="sub-hero-eyebrow" id="blog-eyebrow">Blog und Insights</div>
+    <h1 class="sub-hero-title" id="blog-title">Wissen das <em>Ihrem Unternehmen hilft.</em></h1>
+    <p class="sub-hero-sub" id="blog-sub">Praxisnahe Einblicke zu Recruitment Marketing, Employer Branding, Paid Media und staatlichen Förderprogrammen für KMU in Deutschland.</p>
+  </div>
+</div>
+
+<!-- BLOG POSTS -->
+<section class="blog-section">
+  <div class="container">
+    <div class="blog-grid">
+
+      <!-- FEATURED ARTICLE -->
+      <a href="blog-fachkraeftemangel.html" class="blog-featured reveal">
+        <div class="blog-featured-img">
+          <svg class="card-svg" viewBox="0 0 400 300" fill="none" aria-hidden="true">
+            <circle cx="200" cy="150" r="100" stroke="white" stroke-width="2"/>
+            <path d="M200 50 L200 250 M100 150 L300 150" stroke="white" stroke-width="1.5"/>
+          </svg>
+          <div class="blog-card-cat" id="feat-cat">Recruitment Marketing</div>
+        </div>
+        <div class="blog-featured-body">
+          <div class="blog-featured-badge" id="feat-badge">Aktueller Beitrag</div>
+          <h2 class="blog-featured-title" id="feat-title">Fachkräftemangel in Deutschland: <em>Wie moderne Unternehmen qualifizierte Mitarbeiter gewinnen.</em></h2>
+          <p class="blog-featured-excerpt" id="feat-excerpt">Der Fachkräftemangel ist eine der größten Herausforderungen für deutsche Unternehmen. Wir zeigen wie datenbasiertes Recruitment Marketing den Unterschied macht und welche Strategien wirklich funktionieren.</p>
+          <span class="blog-card-link" id="feat-link">Artikel lesen</span>
+        </div>
+      </a>
+
+      <!-- ARTICLE 2 -->
+      <a href="blog-employer-branding.html" class="blog-card reveal">
+        <div class="blog-card-img">
+          <div class="blog-card-img-inner">
+            <svg class="card-svg" viewBox="0 0 300 200" fill="none" aria-hidden="true">
+              <rect x="30" y="30" width="240" height="140" rx="2" stroke="white" stroke-width="2"/>
+              <path d="M30 80 L270 80" stroke="white" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="blog-card-cat" id="a2-cat">Employer Branding</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" id="a2-date">Mai 2026</div>
+          <h3 class="blog-card-title" id="a2-title">Employer Branding für KMU: Wie kleine Unternehmen zur ersten Wahl für Bewerber werden.</h3>
+          <p class="blog-card-excerpt" id="a2-excerpt">Große Konzerne haben riesige Budgets für ihr Employer Branding. Aber auch KMU können eine starke Arbeitgebermarke aufbauen, die die richtigen Talente anzieht.</p>
+          <span class="blog-card-link" id="a2-link">Artikel lesen</span>
+        </div>
+      </a>
+
+      <!-- ARTICLE 3 -->
+      <a href="blog-meta-ads.html" class="blog-card reveal">
+        <div class="blog-card-img">
+          <div class="blog-card-img-inner">
+            <svg class="card-svg" viewBox="0 0 300 200" fill="none" aria-hidden="true">
+              <polyline points="20,160 80,100 140,120 200,60 280,30" stroke="white" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div class="blog-card-cat" id="a3-cat">Paid Media</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" id="a3-date">April 2026</div>
+          <h3 class="blog-card-title" id="a3-title">Meta Ads für lokale Unternehmen: So generieren Sie qualifizierte Leads ohne Budget zu verschwenden.</h3>
+          <p class="blog-card-excerpt" id="a3-excerpt">Meta Ads sind eines der wirkungsvollsten Werkzeuge für lokale Unternehmen, wenn man sie richtig einsetzt. Wir zeigen die häufigsten Fehler und wie man sie vermeidet.</p>
+          <span class="blog-card-link" id="a3-link">Artikel lesen</span>
+        </div>
+      </a>
+
+      <!-- ARTICLE 4 -->
+      <a href="blog-bafa.html" class="blog-card reveal">
+        <div class="blog-card-img">
+          <div class="blog-card-img-inner">
+            <svg class="card-svg" viewBox="0 0 300 200" fill="none" aria-hidden="true">
+              <path d="M150 20 L20 180 L280 180 Z" stroke="white" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div class="blog-card-cat" id="a4-cat">BAFA Förderung</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" id="a4-date">März 2026</div>
+          <h3 class="blog-card-title" id="a4-title">BAFA-Förderung 2026: Was KMU wissen müssen um bis zu 80% ihrer Beratungskosten erstattet zu bekommen.</h3>
+          <p class="blog-card-excerpt" id="a4-excerpt">Das BAFA-Programm ist eines der attraktivsten Förderprogramme für deutsche KMU. Aber viele Unternehmer wissen nicht davon oder scheuen den Antragsprozess.</p>
+          <span class="blog-card-link" id="a4-link">Artikel lesen</span>
+        </div>
+      </a>
+
+      <!-- PLACEHOLDER CARD -->
+      <div class="blog-card reveal" style="opacity:0.5;pointer-events:none;">
+        <div class="blog-card-img" style="background:var(--off)">
+          <div class="blog-card-img-inner">
+            <svg class="card-svg" viewBox="0 0 300 200" fill="none" aria-hidden="true" style="opacity:0.3">
+              <rect x="60" y="60" width="180" height="80" rx="2" stroke="#6B8CAE" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" id="ph-date">Demnächst</div>
+          <h3 class="blog-card-title" id="ph-title">Weitere Artikel folgen in Kürze.</h3>
+          <p class="blog-card-excerpt" id="ph-excerpt">Wir arbeiten an neuen Inhalten rund um Performance Marketing, Digitalisierung und Wachstumsstrategien für KMU.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="blog-newsletter">
+  <div class="blog-newsletter-inner">
+    <div class="eyebrow tc" style="color:var(--glacier)" id="nl-eyebrow">Newsletter</div>
+    <h2 class="blog-newsletter-title" id="nl-title">Keine Insights verpassen.</h2>
+    <p class="blog-newsletter-sub" id="nl-sub">Erhalten Sie neue Artikel, Praxistipps und aktuelle Informationen zu Förderprogrammen direkt in Ihr Postfach. Kein Spam. Jederzeit abbestellbar.</p>
+    <div class="blog-nl-form">
+      <input type="email" class="blog-nl-input" id="nl-input" placeholder="ihre@email.de">
+      <button class="blog-nl-btn" id="nl-btn" onclick="subscribeNewsletter()">Anmelden</button>
+    </div>
+    <p style="font-size:0.65rem;color:rgba(143,174,201,0.4);margin-top:0.75rem;text-align:center" id="nl-note">Mit der Anmeldung stimmen Sie unserer <a href="datenschutz.html" style="color:rgba(143,174,201,0.4)">Datenschutzerklärung</a> zu.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy">
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a> ·
+        <a href="agb.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+const BLOG_T = {
+  de: {
+    pageTitle: 'Blog & Insights | APM Agenta',
+    'blog-eyebrow': 'Blog und Insights',
+    'blog-title': 'Wissen das <em>Ihrem Unternehmen hilft.</em>',
+    'blog-sub': 'Praxisnahe Einblicke zu Recruitment Marketing, Employer Branding, Paid Media und staatlichen Förderprogrammen für KMU in Deutschland.',
+    'feat-cat': 'Recruitment Marketing', 'feat-badge': 'Aktueller Beitrag',
+    'feat-title': 'Fachkräftemangel in Deutschland: <em>Wie moderne Unternehmen qualifizierte Mitarbeiter gewinnen.</em>',
+    'feat-excerpt': 'Der Fachkräftemangel ist eine der größten Herausforderungen für deutsche Unternehmen. Wir zeigen wie datenbasiertes Recruitment Marketing den Unterschied macht und welche Strategien wirklich funktionieren.',
+    'feat-link': 'Artikel lesen',
+    'a2-cat': 'Employer Branding', 'a2-date': 'Mai 2026',
+    'a2-title': 'Employer Branding für KMU: Wie kleine Unternehmen zur ersten Wahl für Bewerber werden.',
+    'a2-excerpt': 'Große Konzerne haben riesige Budgets für ihr Employer Branding. Aber auch KMU können eine starke Arbeitgebermarke aufbauen, die die richtigen Talente anzieht.',
+    'a2-link': 'Artikel lesen',
+    'a3-cat': 'Paid Media', 'a3-date': 'April 2026',
+    'a3-title': 'Meta Ads für lokale Unternehmen: So generieren Sie qualifizierte Leads ohne Budget zu verschwenden.',
+    'a3-excerpt': 'Meta Ads sind eines der wirkungsvollsten Werkzeuge für lokale Unternehmen, wenn man sie richtig einsetzt. Wir zeigen die häufigsten Fehler und wie man sie vermeidet.',
+    'a3-link': 'Artikel lesen',
+    'a4-cat': 'BAFA Förderung', 'a4-date': 'März 2026',
+    'a4-title': 'BAFA-Förderung 2026: Was KMU wissen müssen um bis zu 80% ihrer Beratungskosten erstattet zu bekommen.',
+    'a4-excerpt': 'Das BAFA-Programm ist eines der attraktivsten Förderprogramme für deutsche KMU. Aber viele Unternehmer wissen nicht davon oder scheuen den Antragsprozess.',
+    'a4-link': 'Artikel lesen',
+    'ph-date': 'Demnächst', 'ph-title': 'Weitere Artikel folgen in Kürze.',
+    'ph-excerpt': 'Wir arbeiten an neuen Inhalten rund um Performance Marketing, Digitalisierung und Wachstumsstrategien für KMU.',
+    'nl-eyebrow': 'Newsletter', 'nl-title': 'Keine Insights verpassen.',
+    'nl-sub': 'Erhalten Sie neue Artikel, Praxistipps und aktuelle Informationen zu Förderprogrammen direkt in Ihr Postfach. Kein Spam. Jederzeit abbestellbar.',
+    'nl-btn': 'Anmelden', 'nl-input-ph': 'ihre@email.de',
+    'nl-note-inner': 'Mit der Anmeldung stimmen Sie unserer <a href="datenschutz.html" style="color:rgba(143,174,201,0.4)">Datenschutzerklärung</a> zu.',
+  },
+  en: {
+    pageTitle: 'Blog & Insights | APM Agenta',
+    'blog-eyebrow': 'Blog and Insights',
+    'blog-title': 'Knowledge that <em>helps your business.</em>',
+    'blog-sub': 'Practical insights on recruitment marketing, employer branding, paid media and government funding programmes for SMEs in Germany.',
+    'feat-cat': 'Recruitment Marketing', 'feat-badge': 'Latest Article',
+    'feat-title': 'Skills Shortage in Germany: <em>How modern businesses attract qualified employees.</em>',
+    'feat-excerpt': 'The skills shortage is one of the greatest challenges for German businesses. We show how data-driven recruitment marketing makes the difference and which strategies really work.',
+    'feat-link': 'Read Article',
+    'a2-cat': 'Employer Branding', 'a2-date': 'May 2026',
+    'a2-title': 'Employer Branding for SMEs: How small businesses become the first choice for applicants.',
+    'a2-excerpt': 'Large corporations have enormous budgets for employer branding. But SMEs can also build a strong employer brand that attracts the right talent.',
+    'a2-link': 'Read Article',
+    'a3-cat': 'Paid Media', 'a3-date': 'April 2026',
+    'a3-title': 'Meta Ads for Local Businesses: How to generate qualified leads without wasting budget.',
+    'a3-excerpt': 'Meta Ads are one of the most powerful tools for local businesses when used correctly. We show the most common mistakes and how to avoid them.',
+    'a3-link': 'Read Article',
+    'a4-cat': 'BAFA Funding', 'a4-date': 'March 2026',
+    'a4-title': 'BAFA Funding 2026: What SMEs need to know to get up to 80% of consulting costs reimbursed.',
+    'a4-excerpt': 'The BAFA programme is one of the most attractive funding programmes for German SMEs. But many business owners do not know about it or are put off by the application process.',
+    'a4-link': 'Read Article',
+    'ph-date': 'Coming Soon', 'ph-title': 'More articles coming soon.',
+    'ph-excerpt': 'We are working on new content around performance marketing, digitalisation and growth strategies for SMEs.',
+    'nl-eyebrow': 'Newsletter', 'nl-title': 'Never miss an insight.',
+    'nl-sub': 'Receive new articles, practical tips and current information on funding programmes directly to your inbox. No spam. Unsubscribe anytime.',
+    'nl-btn': 'Subscribe', 'nl-input-ph': 'your@email.com',
+    'nl-note-inner': 'By subscribing you agree to our <a href="datenschutz.html" style="color:rgba(143,174,201,0.4)">Privacy Policy</a>.',
+  }
+};
+
+function applyBlogLang(lang) {
+  const t = BLOG_T[lang];
+  document.title = t.pageTitle;
+  const htmlIds = ['blog-title','feat-title','a2-title','a3-title','a4-title'];
+  Object.entries(t).forEach(([id, val]) => {
+    if (id === 'pageTitle' || id === 'nl-input-ph' || id === 'nl-note-inner') return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (htmlIds.includes(id)) { el.innerHTML = val; }
+    else { el.textContent = val; }
+  });
+  const inp = document.getElementById('nl-input');
+  if (inp) inp.placeholder = t['nl-input-ph'];
+  const note = document.getElementById('nl-note');
+  if (note) note.innerHTML = t['nl-note-inner'];
+}
+
+function subscribeNewsletter() {
+  const inp = document.getElementById('nl-input');
+  const lang = localStorage.getItem('apm_lang') || 'de';
+  if (!inp || !inp.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value)) {
+    inp.style.borderColor = '#fc8181';
+    return;
+  }
+  inp.style.borderColor = 'var(--glacier)';
+  const btn = document.getElementById('nl-btn');
+  btn.textContent = lang === 'en' ? 'Thank you!' : 'Vielen Dank!';
+  btn.style.background = 'var(--navy)';
+  btn.style.color = 'var(--glacier)';
+  inp.value = '';
+}
+
+const _origSetLang = setLang;
+setLang = function(lang) { _origSetLang(lang); applyBlogLang(lang); };
+
+document.addEventListener('DOMContentLoaded', () => {
+  applyBlogLang(localStorage.getItem('apm_lang') || 'de');
+});
+</script>
+</body>
+</html>
