@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="APM Agenta Leistungen: Recruitment Marketing, Employer Branding, Paid Media, SEO, Website-Erstellung, Branding und mehr. Alles aus einer Hand.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://apmagenta.com/leistungen.html">
+<title>Leistungen | APM Agenta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* CATEGORY TABS */
+.cat-nav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 72px; z-index: 100; }
+.cat-nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 4%; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+.cat-nav-inner::-webkit-scrollbar { display: none; }
+.cat-tab { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--muted); padding: 1rem 1.2rem; border-bottom: 2px solid transparent; white-space: nowrap; cursor: pointer; transition: all 0.2s; background: none; border-top: none; border-left: none; border-right: none; font-family: 'Montserrat', sans-serif; text-decoration: none; display: block; }
+.cat-tab:hover { color: var(--navy); }
+.cat-tab.active { color: var(--navy); border-bottom-color: var(--glacier-dark); }
+
+/* CATEGORY SECTIONS */
+.cat-section { padding: 6rem 0; border-bottom: 1px solid var(--border); }
+.cat-section:last-child { border-bottom: none; }
+.cat-section:nth-child(even) { background: var(--off); }
+.cat-header { margin-bottom: 4rem; }
+.cat-label { font-size: 0.6rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--glacier-dark); font-weight: 700; margin-bottom: 0.5rem; }
+.cat-title { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 300; color: var(--navy); line-height: 1.12; letter-spacing: -0.01em; }
+.cat-title em { font-style: italic; color: var(--steel); }
+.cat-desc { font-size: 0.85rem; color: #374151; line-height: 1.85; font-weight: 300; max-width: 600px; margin-top: 1rem; }
+
+/* SERVICE CARDS GRID */
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.svc-card { padding: 2.2rem; border: 1px solid var(--border); background: #fff; transition: border-color 0.3s, transform 0.3s; }
+.svc-card:hover { border-color: var(--glacier); transform: translateY(-4px); }
+.cat-section:nth-child(even) .svc-card { background: #fff; }
+.svc-card-num { font-size: 0.58rem; letter-spacing: 0.3em; color: var(--muted); font-weight: 600; margin-bottom: 0.75rem; }
+.svc-card-title { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.75rem; }
+.svc-card-desc { font-size: 0.78rem; color: #374151; line-height: 1.8; font-weight: 300; margin-bottom: 1.2rem; }
+.svc-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.svc-tag { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; background: var(--off); color: var(--muted); padding: 0.25rem 0.6rem; }
+
+/* PRICE NOTE */
+.price-note-bar { background: var(--navy); padding: 1.5rem 4%; text-align: center; }
+.price-note-bar p { font-size: 0.78rem; color: var(--silver); font-weight: 300; line-height: 1.7; }
+.price-note-bar a { color: var(--glacier); }
+.price-note-bar strong { color: var(--white); font-weight: 600; }
+
+/* CTA BAND */
+.leistungen-cta { padding: 6rem 0; background: var(--navy); text-align: center; }
+.leistungen-cta h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--white); margin-bottom: 1rem; letter-spacing: -0.01em; }
+.leistungen-cta h2 em { font-style: italic; color: var(--glacier); }
+.leistungen-cta p { font-size: 0.85rem; color: var(--silver); font-weight: 300; max-width: 480px; margin: 0 auto 2rem; line-height: 1.8; }
+
+@media (max-width: 900px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .svc-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-page="leistungen">
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="APM Agenta">
+      <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" id="nav-about">Über uns</a></li>
+      <li><a href="leistungen.html" class="nav-active" id="nav-services">Leistungen</a></li>
+      <li><a href="index.html#framework" id="nav-framework">Framework</a></li>
+      <li><a href="industries.html" id="nav-industries">Branchen</a></li>
+      <li><a href="index.html#faq" id="nav-faq">FAQ</a></li>
+      <li><a href="bafa.html" id="nav-bafa">BAFA</a></li>
+      <li><a href="blog.html" id="nav-blog">Blog</a></li>
+      <li class="lang-dropdown" id="langDropdownWrap">
+        <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="lang-current">DE</span>
+          <svg class="lang-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+          <li><button class="lang-opt" role="option" aria-selected="true" onclick="setLang('de')">Deutsch</button></li>
+          <li><button class="lang-opt" role="option" aria-selected="false" onclick="setLang('en')">English</button></li>
+        </ul>
+      </li>
+      <li><a href="index.html#contact" class="nav-cta-link" id="nav-contact">Kontakt</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <ul>
+      <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
+      <li><a href="leistungen.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
+      <li><a href="index.html#framework" onclick="closeMobile()" id="mob-framework">Framework</a></li>
+      <li><a href="industries.html" onclick="closeMobile()" id="mob-industries">Branchen</a></li>
+      <li><a href="index.html#faq" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
+      <li><a href="bafa.html" onclick="closeMobile()" id="mob-bafa">BAFA</a></li>
+      <li><a href="blog.html" onclick="closeMobile()" id="mob-blog">Blog</a></li>
+      <li>
+        <div class="mob-lang-row">
+          <button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button>
+          <button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');closeMobile()">EN</button>
+        </div>
+      </li>
+      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta" id="mob-contact">Kontakt</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="sub-hero">
+  <div class="sub-hero-overlay"></div>
+  <svg class="sub-hero-mountain" viewBox="0 0 700 500" fill="none" aria-hidden="true">
+    <path d="M350 20 L140 480 L270 480 L350 200 L430 480 L560 480 Z" fill="white"/>
+    <path d="M480 100 L360 480 L560 480 L620 280 Z" fill="white" opacity="0.6"/>
+  </svg>
+  <div class="sub-hero-content">
+    <div class="sub-hero-eyebrow" id="page-eyebrow">Unsere Leistungen</div>
+    <h1 class="sub-hero-title" id="page-title">Alles aus einer Hand. <em>Alles was Sie brauchen.</em></h1>
+    <p class="sub-hero-sub" id="page-sub">Von Recruitment Marketing über SEO bis zur Website-Erstellung. APM Agenta deckt alle Bereiche des digitalen Marketings ab damit Sie sich auf Ihr Kerngeschäft konzentrieren können.</p>
+  </div>
+</div>
+
+<!-- CATEGORY TABS -->
+<nav class="cat-nav" aria-label="Leistungskategorien">
+  <div class="cat-nav-inner">
+    <a href="#performance" class="cat-tab active" id="tab-perf">Performance Marketing</a>
+    <a href="#recruiting" class="cat-tab" id="tab-rec">Recruiting und HR</a>
+    <a href="#branding" class="cat-tab" id="tab-brand">Branding und Identity</a>
+    <a href="#digital" class="cat-tab" id="tab-dig">Web und SEO</a>
+    <a href="#content" class="cat-tab" id="tab-cont">Content und Produktion</a>
+    <a href="#consulting" class="cat-tab" id="tab-cons">Beratung und Strategie</a>
+  </div>
+</nav>
+
+<!-- PRICE NOTE -->
+<div class="price-note-bar">
+  <p id="price-note-text"><strong>Transparente Preisgestaltung:</strong> Pakete mit festen Preisen ab 199 EUR/Mo finden Sie auf der <a href="index.html#pricing">Pricing-Seite</a>. Leistungen auf dieser Seite werden individuell kalkuliert. Kontaktieren Sie uns für ein unverbindliches Angebot.</p>
+</div>
+
+<!-- 1. PERFORMANCE MARKETING -->
+<section class="cat-section" id="performance">
+  <div class="container">
+    <div class="cat-header">
+      <div class="cat-label" id="cat1-label">Performance Marketing</div>
+      <h2 class="cat-title" id="cat1-title">Kampagnen die <em>messbare Ergebnisse liefern.</em></h2>
+      <p class="cat-desc" id="cat1-desc">Datenbasierte Werbekampagnen auf den relevanten Plattformen. Jedes eingesetzte Budget wird auf maximale Performance optimiert.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-card-num">01</div>
+        <div class="svc-card-title" id="p1-title">Meta Ads</div>
+        <p class="svc-card-desc" id="p1-desc">Zielgruppenspezifische Kampagnen auf Facebook und Instagram. Von der Konzeption über das Targeting bis zum täglichen Kampagnenmanagement und Reporting.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Facebook</span><span class="svc-tag">Instagram</span><span class="svc-tag">Lead Gen</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">02</div>
+        <div class="svc-card-title" id="p2-title">Google Ads</div>
+        <p class="svc-card-desc" id="p2-desc">Search, Display und Performance Max Kampagnen auf Google. Wir erreichen Nutzer genau dann wenn sie aktiv nach Ihren Leistungen suchen.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Search</span><span class="svc-tag">Display</span><span class="svc-tag">Performance Max</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">03</div>
+        <div class="svc-card-title" id="p3-title">TikTok Ads</div>
+        <p class="svc-card-desc" id="p3-desc">Video-First Kampagnen für jüngere Zielgruppen auf TikTok. Authentische Creatives die organisch wirken und gleichzeitig konvertieren.</p>
+        <div class="svc-card-tags"><span class="svc-tag">TikTok</span><span class="svc-tag">Video Ads</span><span class="svc-tag">Gen Z</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">04</div>
+        <div class="svc-card-title" id="p4-title">LinkedIn Ads</div>
+        <p class="svc-card-desc" id="p4-desc">B2B-Kampagnen auf LinkedIn. Ideal für die Ansprache von Entscheidern, Fachkräften und professionellen Zielgruppen.</p>
+        <div class="svc-card-tags"><span class="svc-tag">B2B</span><span class="svc-tag">LinkedIn</span><span class="svc-tag">Lead Gen</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">05</div>
+        <div class="svc-card-title" id="p5-title">Social Media Management</div>
+        <p class="svc-card-desc" id="p5-desc">Konsistente Präsenz auf Ihren Social-Media-Kanälen. Content-Planung, Texterstellung, Grafikdesign und Veröffentlichung.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Instagram</span><span class="svc-tag">Facebook</span><span class="svc-tag">LinkedIn</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">06</div>
+        <div class="svc-card-title" id="p6-title">Retargeting</div>
+        <p class="svc-card-desc" id="p6-desc">Gezielte Wiederansprache von Website-Besuchern die noch nicht konvertiert haben. Erhöhung der Conversion-Rate durch präzises Remarketing.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Remarketing</span><span class="svc-tag">Pixel</span><span class="svc-tag">Conversion</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. RECRUITING UND HR -->
+<section class="cat-section" id="recruiting">
+  <div class="container">
+    <div class="cat-header">
+      <div class="cat-label" id="cat2-label">Recruiting und HR Marketing</div>
+      <h2 class="cat-title" id="cat2-title">Die richtigen Talente <em>zur richtigen Zeit.</em></h2>
+      <p class="cat-desc" id="cat2-desc">Automatisierte Recruiting-Pipelines und Employer-Branding-Strategien die qualifizierte Bewerber gezielt ansprechen.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-card-num">01</div>
+        <div class="svc-card-title" id="r1-title">Recruitment Marketing</div>
+        <p class="svc-card-desc" id="r1-desc">Vollständiger Recruiting-Funnel von der Zielgruppenanalyse über die Kampagne bis zur Kandidaten-Weiterleitung. Messbar und skalierbar.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Funnel</span><span class="svc-tag">Meta Ads</span><span class="svc-tag">Kandidaten</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">02</div>
+        <div class="svc-card-title" id="r2-title">Employer Branding</div>
+        <p class="svc-card-desc" id="r2-desc">Strategische Positionierung als attraktiver Arbeitgeber. Von der Employee Value Proposition bis zur Content-Strategie für Social Media.</p>
+        <div class="svc-card-tags"><span class="svc-tag">EVP</span><span class="svc-tag">Arbeitgebermarke</span><span class="svc-tag">Content</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">03</div>
+        <div class="svc-card-title" id="r3-title">Karriereseiten-Optimierung</div>
+        <p class="svc-card-desc" id="r3-desc">Optimierung Ihrer Karriereseite für maximale Conversion. Authentische Darstellung, einfacher Bewerbungsprozess und überzeugende Inhalte.</p>
+        <div class="svc-card-tags"><span class="svc-tag">UX</span><span class="svc-tag">Conversion</span><span class="svc-tag">Content</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. BRANDING UND IDENTITY -->
+<section class="cat-section" id="branding">
+  <div class="container">
+    <div class="cat-header">
+      <div class="cat-label" id="cat3-label">Branding und Corporate Identity</div>
+      <h2 class="cat-title" id="cat3-title">Eine Marke die <em>im Gedächtnis bleibt.</em></h2>
+      <p class="cat-desc" id="cat3-desc">Von der visuellen Identität bis zur Markenstrategie. Wir entwickeln Brands die professionell wirken und die richtigen Menschen ansprechen.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-card-num">01</div>
+        <div class="svc-card-title" id="b1-title">Markenstrategie</div>
+        <p class="svc-card-desc" id="b1-desc">Entwicklung einer klaren Markenpositionierung. Zielgruppenanalyse, Wettbewerbsabgrenzung, Markenversprechen und Kommunikationsstrategie.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Positionierung</span><span class="svc-tag">Strategie</span><span class="svc-tag">Zielgruppe</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">02</div>
+        <div class="svc-card-title" id="b2-title">Corporate Design</div>
+        <p class="svc-card-desc" id="b2-desc">Entwicklung eines konsistenten visuellen Erscheinungsbilds. Logo, Farben, Typografie und Designsystem für alle Kommunikationskanäle.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Logo</span><span class="svc-tag">CI</span><span class="svc-tag">Designsystem</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">03</div>
+        <div class="svc-card-title" id="b3-title">Brand Guidelines</div>
+        <p class="svc-card-desc" id="b3-desc">Erstellung eines Brand-Guideline-Dokuments das sicherstellt dass Ihre Marke auf allen Kanälen konsistent und professionell auftritt.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Guidelines</span><span class="svc-tag">Dokumentation</span><span class="svc-tag">Konsistenz</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">04</div>
+        <div class="svc-card-title" id="b4-title">Rebranding</div>
+        <p class="svc-card-desc" id="b4-desc">Strategische Neupositionierung bestehender Marken. Wir analysieren die aktuelle Wahrnehmung und entwickeln eine neue Markenidentität die besser zur Zielgruppe passt.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Rebranding</span><span class="svc-tag">Markenanalyse</span><span class="svc-tag">Neupositionierung</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">05</div>
+        <div class="svc-card-title" id="b5-title">Grafikdesign</div>
+        <p class="svc-card-desc" id="b5-desc">Erstellung von Werbemitteln, Social-Media-Grafiken, Präsentationen und weiteren Designmaterialien im Einklang mit Ihrer Corporate Identity.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Social Media</span><span class="svc-tag">Print</span><span class="svc-tag">Werbemittel</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">06</div>
+        <div class="svc-card-title" id="b6-title">Employer Branding Design</div>
+        <p class="svc-card-desc" id="b6-desc">Spezifische Designmaterialien für die Mitarbeitergewinnung. Karriereseiten-Gestaltung, Stellenanzeigen-Templates und Social-Media-Vorlagen.</p>
+        <div class="svc-card-tags"><span class="svc-tag">HR Design</span><span class="svc-tag">Templates</span><span class="svc-tag">Karriereseite</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. WEB UND SEO -->
+<section class="cat-section" id="digital">
+  <div class="container">
+    <div class="cat-header">
+      <div class="cat-label" id="cat4-label">Web und SEO</div>
+      <h2 class="cat-title" id="cat4-title">Online gefunden werden. <em>Überzeugend auftreten.</em></h2>
+      <p class="cat-desc" id="cat4-desc">Professionelle Websites und Suchmaschinenoptimierung damit Ihr Unternehmen online sichtbar ist und Besucher zu Kunden werden.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-card-num">01</div>
+        <div class="svc-card-title" id="w1-title">Website-Erstellung</div>
+        <p class="svc-card-desc" id="w1-desc">Entwicklung professioneller Websites von der Konzeption bis zum Launch. Responsiv, schnell, barrierefrei und auf Conversion optimiert.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Design</span><span class="svc-tag">Entwicklung</span><span class="svc-tag">Responsive</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">02</div>
+        <div class="svc-card-title" id="w2-title">Landing Pages</div>
+        <p class="svc-card-desc" id="w2-desc">Conversion-optimierte Landing Pages für Kampagnen, Produkte oder Services. Klare Botschaft, klarer Call-to-Action und A/B-Testing.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Conversion</span><span class="svc-tag">A/B Testing</span><span class="svc-tag">CTA</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">03</div>
+        <div class="svc-card-title" id="w3-title">SEO Optimierung</div>
+        <p class="svc-card-desc" id="w3-desc">Technische und inhaltliche Suchmaschinenoptimierung für bessere Rankings bei Google. Keyword-Analyse, On-Page-SEO und strukturierte Daten.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Google</span><span class="svc-tag">Keywords</span><span class="svc-tag">On-Page SEO</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">04</div>
+        <div class="svc-card-title" id="w4-title">Lokale SEO</div>
+        <p class="svc-card-desc" id="w4-desc">Optimierung für lokale Suchanfragen. Google Business Profile, lokale Keywords und regionale Sichtbarkeit für standortgebundene Unternehmen.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Local SEO</span><span class="svc-tag">Google Maps</span><span class="svc-tag">Regional</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">05</div>
+        <div class="svc-card-title" id="w5-title">Website Audit</div>
+        <p class="svc-card-desc" id="w5-desc">Vollständige Analyse Ihrer bestehenden Website. Performance, SEO, Accessibility, Conversion-Potenzial und technische Qualität mit konkreten Handlungsempfehlungen.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Analyse</span><span class="svc-tag">Performance</span><span class="svc-tag">UX</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">06</div>
+        <div class="svc-card-title" id="w6-title">SEO Content</div>
+        <p class="svc-card-desc" id="w6-desc">Erstellung von suchmaschinenoptimierten Inhalten die sowohl Google als auch Ihre Zielgruppe ansprechen. Blog-Artikel, Landingpages und Produkttexte.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Content</span><span class="svc-tag">Blog</span><span class="svc-tag">Keywords</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CONTENT UND PRODUKTION -->
+<section class="cat-section" id="content">
+  <div class="container">
+    <div class="cat-header">
+      <div class="cat-label" id="cat5-label">Content und Produktion</div>
+      <h2 class="cat-title" id="cat5-title">Inhalte die <em>überzeugen und konvertieren.</em></h2>
+      <p class="cat-desc" id="cat5-desc">Professionelle Foto- und Videoproduktion sowie Copywriting für alle Kanäle. Authentisch, zielgruppengerecht und auf Performance ausgerichtet.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-card-num">01</div>
+        <div class="svc-card-title" id="c1-title">Videoproduktion</div>
+        <p class="svc-card-desc" id="c1-desc">Professionelle Unternehmens- und Employer-Branding-Videos inklusive Konzeption, Drehtag und vollständiger Nachbearbeitung. Anreise inklusive.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Corporate Video</span><span class="svc-tag">Reels</span><span class="svc-tag">Employer Branding</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">02</div>
+        <div class="svc-card-title" id="c2-title">Fotoproduktion</div>
+        <p class="svc-card-desc" id="c2-desc">Hochwertige Unternehmens- und Personalfotos für Website, Social Media und Printmaterialien. Professionell und authentisch.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Corporate</span><span class="svc-tag">Personal</span><span class="svc-tag">Social Media</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">03</div>
+        <div class="svc-card-title" id="c3-title">Copywriting</div>
+        <p class="svc-card-desc" id="c3-desc">Zielgruppenspezifische Texte für Websites, Anzeigen, Social Media und weitere Kanäle. Überzeugend, klar und auf Conversion ausgerichtet.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Ads Copy</span><span class="svc-tag">Web Texte</span><span class="svc-tag">Social Media</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">04</div>
+        <div class="svc-card-title" id="c4-title">UGC Content</div>
+        <p class="svc-card-desc" id="c4-desc">User-Generated-Content Strategie und Produktion. Authentische Inhalte die organisch wirken und auf Social Media besonders hohe Engagement-Raten erzielen.</p>
+        <div class="svc-card-tags"><span class="svc-tag">UGC</span><span class="svc-tag">TikTok</span><span class="svc-tag">Reels</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. BERATUNG UND STRATEGIE -->
+<section class="cat-section" id="consulting">
+  <div class="container">
+    <div class="cat-header">
+      <div class="cat-label" id="cat6-label">Beratung und Strategie</div>
+      <h2 class="cat-title" id="cat6-title">Fundierte Strategie als <em>Basis für Wachstum.</em></h2>
+      <p class="cat-desc" id="cat6-desc">Strategische Beratung die auf echten Daten basiert und konkrete Handlungsempfehlungen liefert. Für Unternehmen die wissen wollen wo sie stehen und wo sie hinwollen.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-card-num">01</div>
+        <div class="svc-card-title" id="co1-title">Marketing-Strategie</div>
+        <p class="svc-card-desc" id="co1-desc">Entwicklung einer ganzheitlichen Marketing-Strategie basierend auf Marktanalyse, Zielgruppenforschung und Wettbewerbsanalyse. Mit konkretem Umsetzungsplan.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Strategie</span><span class="svc-tag">Analyse</span><span class="svc-tag">Roadmap</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">02</div>
+        <div class="svc-card-title" id="co2-title">BAFA-geförderte Beratung</div>
+        <p class="svc-card-desc" id="co2-desc">Strategische Unternehmensberatung mit Begleitung durch den BAFA-Förderprozess. Bis zu 80% der Beratungskosten können staatlich gefördert werden.</p>
+        <div class="svc-card-tags"><span class="svc-tag">BAFA</span><span class="svc-tag">Förderung</span><span class="svc-tag">KMU</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-card-num">03</div>
+        <div class="svc-card-title" id="co3-title">Marketing Audit</div>
+        <p class="svc-card-desc" id="co3-desc">Vollständige Analyse Ihrer aktuellen Marketing-Aktivitäten. Was funktioniert, was nicht, wo Budget verschwendet wird und wo Potenzial liegt.</p>
+        <div class="svc-card-tags"><span class="svc-tag">Audit</span><span class="svc-tag">Analyse</span><span class="svc-tag">Optimierung</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="leistungen-cta">
+  <div class="container">
+    <h2 id="lcta-title">Bereit anzufangen? <em>Lassen Sie uns sprechen.</em></h2>
+    <p id="lcta-sub">Jede Zusammenarbeit beginnt mit einem kostenlosen Erstgespräch. Wir analysieren Ihre Situation und empfehlen die Leistungen die wirklich zu Ihren Zielen passen.</p>
+    <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" rel="noopener" class="btn-primary" id="lcta-btn">Kostenloses Erstgespräch buchen</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy">
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a> ·
+        <a href="agb.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+/* Smooth tab highlighting on scroll */
+const sections = document.querySelectorAll('.cat-section');
+const tabs = document.querySelectorAll('.cat-tab');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 160) current = s.id;
+  });
+  tabs.forEach(t => {
+    t.classList.remove('active');
+    if (t.getAttribute('href') === '#' + current) t.classList.add('active');
+  });
+}, { passive: true });
+
+/* Translations */
+const L_T = {
+  de: {
+    pageTitle: 'Leistungen | APM Agenta',
+    'page-eyebrow': 'Unsere Leistungen',
+    'page-title': 'Alles aus einer Hand. <em>Alles was Sie brauchen.</em>',
+    'page-sub': 'Von Recruitment Marketing über SEO bis zur Website-Erstellung. APM Agenta deckt alle Bereiche des digitalen Marketings ab damit Sie sich auf Ihr Kerngeschäft konzentrieren können.',
+    'price-note-text': '<strong>Transparente Preisgestaltung:</strong> Pakete mit festen Preisen ab 199 EUR/Mo finden Sie auf der <a href="index.html#pricing">Pricing-Seite</a>. Leistungen auf dieser Seite werden individuell kalkuliert. Kontaktieren Sie uns für ein unverbindliches Angebot.',
+    'tab-perf': 'Performance Marketing', 'tab-rec': 'Recruiting und HR',
+    'tab-brand': 'Branding und Identity', 'tab-dig': 'Web und SEO',
+    'tab-cont': 'Content und Produktion', 'tab-cons': 'Beratung und Strategie',
+    'cat1-label': 'Performance Marketing',
+    'cat1-title': 'Kampagnen die <em>messbare Ergebnisse liefern.</em>',
+    'cat1-desc': 'Datenbasierte Werbekampagnen auf den relevanten Plattformen. Jedes eingesetzte Budget wird auf maximale Performance optimiert.',
+    'cat2-label': 'Recruiting und HR Marketing',
+    'cat2-title': 'Die richtigen Talente <em>zur richtigen Zeit.</em>',
+    'cat2-desc': 'Automatisierte Recruiting-Pipelines und Employer-Branding-Strategien die qualifizierte Bewerber gezielt ansprechen.',
+    'cat3-label': 'Branding und Corporate Identity',
+    'cat3-title': 'Eine Marke die <em>im Gedächtnis bleibt.</em>',
+    'cat3-desc': 'Von der visuellen Identität bis zur Markenstrategie. Wir entwickeln Brands die professionell wirken und die richtigen Menschen ansprechen.',
+    'cat4-label': 'Web und SEO',
+    'cat4-title': 'Online gefunden werden. <em>Überzeugend auftreten.</em>',
+    'cat4-desc': 'Professionelle Websites und Suchmaschinenoptimierung damit Ihr Unternehmen online sichtbar ist und Besucher zu Kunden werden.',
+    'cat5-label': 'Content und Produktion',
+    'cat5-title': 'Inhalte die <em>überzeugen und konvertieren.</em>',
+    'cat5-desc': 'Professionelle Foto- und Videoproduktion sowie Copywriting für alle Kanäle. Authentisch, zielgruppengerecht und auf Performance ausgerichtet.',
+    'cat6-label': 'Beratung und Strategie',
+    'cat6-title': 'Fundierte Strategie als <em>Basis für Wachstum.</em>',
+    'cat6-desc': 'Strategische Beratung die auf echten Daten basiert und konkrete Handlungsempfehlungen liefert.',
+    'lcta-title': 'Bereit anzufangen? <em>Lassen Sie uns sprechen.</em>',
+    'lcta-sub': 'Jede Zusammenarbeit beginnt mit einem kostenlosen Erstgespräch. Wir analysieren Ihre Situation und empfehlen die Leistungen die wirklich zu Ihren Zielen passen.',
+    'lcta-btn': 'Kostenloses Erstgespräch buchen',
+  },
+  en: {
+    pageTitle: 'Services | APM Agenta',
+    'page-eyebrow': 'Our Services',
+    'page-title': 'Everything from one source. <em>Everything you need.</em>',
+    'page-sub': 'From recruitment marketing to SEO and website creation. APM Agenta covers all areas of digital marketing so you can focus on your core business.',
+    'price-note-text': '<strong>Transparent pricing:</strong> Packages with fixed prices from 199 EUR/mo are available on the <a href="index.html#pricing">pricing page</a>. Services on this page are individually quoted. Contact us for a non-binding proposal.',
+    'tab-perf': 'Performance Marketing', 'tab-rec': 'Recruiting and HR',
+    'tab-brand': 'Branding and Identity', 'tab-dig': 'Web and SEO',
+    'tab-cont': 'Content and Production', 'tab-cons': 'Consulting and Strategy',
+    'cat1-label': 'Performance Marketing',
+    'cat1-title': 'Campaigns that <em>deliver measurable results.</em>',
+    'cat1-desc': 'Data-driven advertising campaigns on the relevant platforms. Every budget deployed is optimised for maximum performance.',
+    'cat2-label': 'Recruiting and HR Marketing',
+    'cat2-title': 'The right talent <em>at the right time.</em>',
+    'cat2-desc': 'Automated recruiting pipelines and employer branding strategies that target qualified applicants directly.',
+    'cat3-label': 'Branding and Corporate Identity',
+    'cat3-title': 'A brand that <em>stays in the mind.</em>',
+    'cat3-desc': 'From visual identity to brand strategy. We develop brands that look professional and speak to the right people.',
+    'cat4-label': 'Web and SEO',
+    'cat4-title': 'Found online. <em>Presenting convincingly.</em>',
+    'cat4-desc': 'Professional websites and search engine optimisation so your business is visible online and visitors become customers.',
+    'cat5-label': 'Content and Production',
+    'cat5-title': 'Content that <em>convinces and converts.</em>',
+    'cat5-desc': 'Professional photo and video production and copywriting for all channels. Authentic, target-group specific and performance-oriented.',
+    'cat6-label': 'Consulting and Strategy',
+    'cat6-title': 'Sound strategy as <em>the basis for growth.</em>',
+    'cat6-desc': 'Strategic consulting based on real data that delivers concrete recommendations for action.',
+    'lcta-title': 'Ready to start? <em>Let\'s talk.</em>',
+    'lcta-sub': 'Every collaboration begins with a free initial consultation. We analyse your situation and recommend the services that genuinely match your goals.',
+    'lcta-btn': 'Book a Free Initial Consultation',
+  }
+};
+
+function applyLeistungenLang(lang) {
+  const t = L_T[lang];
+  document.title = t.pageTitle;
+  const htmlIds = ['page-title','cat1-title','cat2-title','cat3-title','cat4-title','cat5-title','cat6-title','lcta-title','price-note-text'];
+  Object.entries(t).forEach(([id, val]) => {
+    if (id === 'pageTitle') return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (htmlIds.includes(id)) { el.innerHTML = val; }
+    else { el.textContent = val; }
+  });
+}
+
+const _origSetLang2 = setLang;
+setLang = function(lang) { _origSetLang2(lang); applyLeistungenLang(lang); };
+document.addEventListener('DOMContentLoaded', () => {
+  applyLeistungenLang(localStorage.getItem('apm_lang') || 'de');
+});
+</script>
+</body>
+</html>
