@@ -550,3 +550,36 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
   .cookie-actions { flex-direction: column; }
   .cookie-accept-all, .cookie-banner-v2 .cookie-accept { flex: none; width: 100%; }
 }
+
+/* ---- HERO PRICE BAR ---- */
+.hero-price-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.5s forwards;
+}
+.hero-price-highlight {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--glacier);
+  letter-spacing: -0.01em;
+  background: rgba(143,174,201,0.12);
+  border: 1px solid rgba(143,174,201,0.3);
+  padding: 0.4rem 1.1rem;
+}
+.hero-price-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(143,174,201,0.25);
+  flex-shrink: 0;
+}
+.hero-price-note {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(200,216,232,0.8);
+  font-weight: 500;
+}

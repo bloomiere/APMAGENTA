@@ -48,6 +48,9 @@ const T = {
     /* HERO */
     'hero-headline': 'APM Agenta entwickelt datenbasierte<br><em>Marketing-Strategien</em><br>die messbare Ergebnisse liefern.',
     'hero-sub': 'Wir verbinden analytische Präzision mit kreativer Exzellenz. Für kleine und mittlere Unternehmen die professionelles Marketing verdienen. transparent, skalierbar und ohne versteckte Kosten.',
+    'hero-price-bar': '',
+    'hpn1': 'Kein Aufschlag auf Werbebudget',
+    'hpn2': 'Keine versteckten Kosten',
     'hero-book': 'Strategiegespräch vereinbaren',
     'hero-services': 'Leistungen entdecken',
     'tr1': 'Ab pro Monat', 'tr2': 'Aufschlag auf Werbebudget',
@@ -174,6 +177,8 @@ const T = {
     /* HERO */
     'hero-headline': 'APM Agenta develops data-driven<br><em>marketing strategies</em><br>that deliver measurable results.',
     'hero-sub': 'We combine analytical precision with creative excellence. For small and medium-sized businesses that deserve professional marketing. transparent, scalable and without hidden costs.',
+    'hpn1': 'No markup on ad spend',
+    'hpn2': 'No hidden costs',
     'hero-book': 'Schedule a Strategy Call',
     'hero-services': 'Explore Services',
     'tr1': 'Starting per month', 'tr2': 'Ad Spend Markup',
