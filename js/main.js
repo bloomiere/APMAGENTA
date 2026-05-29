@@ -1,5 +1,5 @@
 /* ============================================================
-   APM Agenta — main.js
+   APM Agenta. main.js
    Auto language detection + full DE/EN translation
 ============================================================ */
 
@@ -36,16 +36,18 @@ const T = {
     'nav-framework': 'Framework',
     'nav-industries': 'Branchen',
     'nav-faq': 'FAQ',
+    'nav-bafa': 'BAFA',
     'nav-contact': 'Kontakt',
     'mob-about': 'Über uns',
     'mob-services': 'Leistungen',
     'mob-framework': 'Framework',
     'mob-industries': 'Branchen',
     'mob-faq': 'FAQ',
+    'mob-bafa': 'BAFA',
     'mob-contact': 'Kontakt',
     /* HERO */
     'hero-headline': 'APM Agenta entwickelt datenbasierte<br><em>Marketing-Strategien</em><br>die messbare Ergebnisse liefern.',
-    'hero-sub': 'Wir verbinden analytische Präzision mit kreativer Exzellenz. Für kleine und mittlere Unternehmen die professionelles Marketing verdienen — transparent, skalierbar und ohne versteckte Kosten.',
+    'hero-sub': 'Wir verbinden analytische Präzision mit kreativer Exzellenz. Für kleine und mittlere Unternehmen die professionelles Marketing verdienen. transparent, skalierbar und ohne versteckte Kosten.',
     'hero-book': 'Strategiegespräch vereinbaren',
     'hero-services': 'Leistungen entdecken',
     'tr1': 'Ab pro Monat', 'tr2': 'Aufschlag auf Werbebudget',
@@ -160,16 +162,18 @@ const T = {
     'nav-framework': 'Framework',
     'nav-industries': 'Industries',
     'nav-faq': 'FAQ',
+    'nav-bafa': 'BAFA',
     'nav-contact': 'Contact',
     'mob-about': 'About',
     'mob-services': 'Services',
     'mob-framework': 'Framework',
     'mob-industries': 'Industries',
     'mob-faq': 'FAQ',
+    'mob-bafa': 'BAFA',
     'mob-contact': 'Contact',
     /* HERO */
     'hero-headline': 'APM Agenta develops data-driven<br><em>marketing strategies</em><br>that deliver measurable results.',
-    'hero-sub': 'We combine analytical precision with creative excellence. For small and medium-sized businesses that deserve professional marketing — transparent, scalable and without hidden costs.',
+    'hero-sub': 'We combine analytical precision with creative excellence. For small and medium-sized businesses that deserve professional marketing. transparent, scalable and without hidden costs.',
     'hero-book': 'Schedule a Strategy Call',
     'hero-services': 'Explore Services',
     'tr1': 'Starting per month', 'tr2': 'Ad Spend Markup',
@@ -807,7 +811,7 @@ const FULL_CONTENT_T = {
   }
 };
 
-/* Final patch — extend applySubPageLang to include full content */
+/* Final patch. extend applySubPageLang to include full content */
 const _prevApplySubPage = applySubPageLang;
 applySubPageLang = function(lang) {
   _prevApplySubPage(lang);
