@@ -439,7 +439,11 @@ function declineCookies() {
 function acceptCookies() { acceptAll(); }
 function hideCookieBanner() {
   const b = document.getElementById('cookie-banner');
-  if (b) { b.classList.remove('visible'); setTimeout(() => { b.style.display = 'none'; }, 400); }
+  if (b) {
+    b.classList.remove('visible');
+    document.body.style.overflow = '';
+    setTimeout(() => { b.style.display = 'none'; }, 400);
+  }
 }
 function reopenCookieBanner() {
   const b = document.getElementById('cookie-banner');
@@ -449,7 +453,12 @@ function initCookieBanner() {
   if (localStorage.getItem('apm_analytics') === 'granted') enableAnalytics();
   if (!localStorage.getItem('apm_cookies')) {
     const b = document.getElementById('cookie-banner');
-    if (b) setTimeout(() => b.classList.add('visible'), 1200);
+    if (b) {
+      setTimeout(() => {
+        b.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+      }, 300);
+    }
   }
 }
 
