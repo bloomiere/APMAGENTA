@@ -608,3 +608,14 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
   font-weight: 300;
   margin-bottom: 0.3rem;
 }
+
+/* ---- GEO FAQ SECTIONS ---- */
+.geo-faq { padding: 7rem 0; background: #fff; border-top: 1px solid var(--border); }
+.geo-faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem 5rem; }
+.geo-faq-col .eyebrow { margin-bottom: 1.5rem; }
+.geo-faq-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.geo-faq-item { border-left: 2px solid var(--glacier); padding-left: 1.2rem; }
+.geo-faq-q { font-size: 0.84rem; font-weight: 600; color: var(--navy); line-height: 1.45; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+.geo-faq-a p { font-size: 0.78rem; color: #374151; line-height: 1.85; font-weight: 300; }
+
+@media (max-width: 900px) { .geo-faq-grid { grid-template-columns: 1fr; gap: 3rem; } }

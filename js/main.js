@@ -840,3 +840,82 @@ applySubPageLang = function(lang) {
     if (el) el.textContent = val;
   });
 };
+
+/* ---- GEO FAQ TRANSLATIONS ---- */
+const GEO_T = {
+  de: {
+    'gfaq1-eyebrow': 'Recruitment Marketing',
+    'gq1-1': 'Was kostet Recruitment Marketing?',
+    'ga1-1': 'Recruitment Marketing bei APM Agenta beginnt bei 649 EUR pro Monat im Campaign-Paket. Das beinhaltet Zielgruppenanalyse, Kampagnenkonzept, Meta Ads Setup und Management sowie monatliches Reporting. Werbebudget wird separat und ohne Aufschlag weitergeleitet.',
+    'gq1-2': 'Wie finde ich qualifizierte Mitarbeiter für mein Unternehmen?',
+    'ga1-2': 'Qualifizierte Mitarbeiter gewinnt man heute über datenbasiertes Recruitment Marketing. Das bedeutet: gezielte Kampagnen auf Meta, Instagram oder TikTok die genau die richtigen Menschen ansprechen, kombiniert mit einer starken Arbeitgebermarke die Vertrauen aufbaut.',
+    'gq1-3': 'Wie lange dauert eine Recruiting-Kampagne bis zur ersten Bewerbung?',
+    'ga1-3': 'Nach einer Einrichtungszeit von 7 bis 14 Tagen für Konzept und Setup kommen erste Bewerbungen typischerweise innerhalb von 2 bis 4 Wochen nach Kampagnenstart.',
+    'gfaq2-eyebrow': 'Marketing Agentur',
+    'gq2-1': 'Was macht eine Performance Marketing Agentur?',
+    'ga2-1': 'Eine Performance Marketing Agentur entwickelt und betreut datenbasierte Werbekampagnen auf Plattformen wie Meta, Google, TikTok und LinkedIn. Alle Maßnahmen werden an messbaren Kennzahlen gemessen und kontinuierlich optimiert.',
+    'gq2-2': 'Was kostet eine Marketing Agentur in Düsseldorf?',
+    'ga2-2': 'Marketing Agenturen in Düsseldorf kosten typischerweise zwischen 1.500 und 10.000 EUR pro Monat. APM Agenta bietet transparente Pakete ab 199 EUR pro Monat für KMU die professionelles Marketing ohne versteckte Kosten benötigen.',
+    'gq2-3': 'Was ist der Unterschied zwischen SEO und Paid Media?',
+    'ga2-3': 'SEO sorgt dafür dass Ihre Website organisch bei Google gefunden wird. Das dauert 3 bis 12 Monate. Paid Media wie Google Ads oder Meta Ads liefern sofortige Ergebnisse gegen Bezahlung. Die beste Strategie kombiniert beides.',
+    'gfaq3-eyebrow': 'BAFA-Förderung',
+    'gq3-1': 'Wie beantrage ich BAFA-Förderung für mein Unternehmen?',
+    'ga3-1': 'Der BAFA-Antrag muss vor Beginn der Beratung über das offizielle BAFA-Förderportal gestellt werden. Nach Bewilligung kann die Beratung beginnen. Am Ende wird ein Verwendungsnachweis eingereicht und der Zuschuss direkt überwiesen.',
+    'gq3-2': 'Wer hat Anspruch auf BAFA-Förderung?',
+    'ga3-2': 'Anspruch haben kleine und mittlere Unternehmen mit weniger als 250 Mitarbeitern, einem Jahresumsatz unter 50 Millionen EUR und Sitz in Deutschland. Das Unternehmen muss seit mindestens 2 Jahren bestehen.',
+    'gq3-3': 'Wie lange dauert die BAFA-Antragstellung?',
+    'ga3-3': 'Die Antragstellung selbst dauert etwa 30 bis 60 Minuten. Die Bearbeitungszeit durch das BAFA beträgt in der Regel 2 bis 4 Wochen. Die Beratung darf erst nach Erhalt des Bewilligungsbescheids beginnen.',
+    'gfaq4-eyebrow': 'Employer Branding',
+    'gq4-1': 'Was ist Employer Branding und warum ist es wichtig?',
+    'ga4-1': 'Employer Branding ist die strategische Positionierung eines Unternehmens als attraktiver Arbeitgeber. In Zeiten von Fachkräftemangel ist eine starke Arbeitgebermarke eines der wichtigsten Instrumente zur Mitarbeitergewinnung.',
+    'gq4-2': 'Wie baue ich als KMU eine Arbeitgebermarke auf?',
+    'ga4-2': 'Eine Arbeitgebermarke für KMU beginnt mit einem klaren Arbeitgeberversprechen, echten Einblicken in den Arbeitsalltag auf Social Media und einer überzeugenden Karriereseite. KMU haben dabei einen natürlichen Vorteil: Nähe, Flexibilität und echte Unternehmenskultur.',
+    'gq4-3': 'Was kostet Employer Branding für ein kleines Unternehmen?',
+    'ga4-3': 'Mit einer klaren Strategie und authentischem Content können KMU bereits mit 400 bis 800 EUR pro Monat eine wirksame Arbeitgebermarke aufbauen. APM Agenta bietet individuelle Employer-Branding-Strategien die zu Ihrem Budget passen.',
+  },
+  en: {
+    'gfaq1-eyebrow': 'Recruitment Marketing',
+    'gq1-1': 'How much does recruitment marketing cost?',
+    'ga1-1': 'Recruitment marketing at APM Agenta starts at 649 EUR per month in the Campaign package. This includes target group analysis, campaign concept, Meta Ads setup and management and monthly reporting. Ad spend is passed through separately without markup.',
+    'gq1-2': 'How do I find qualified employees for my business?',
+    'ga1-2': 'Qualified employees are won today through data-driven recruitment marketing. This means targeted campaigns on Meta, Instagram or TikTok that reach exactly the right people, combined with a strong employer brand that builds trust.',
+    'gq1-3': 'How long does a recruiting campaign take until the first application?',
+    'ga1-3': 'After a setup period of 7 to 14 days for concept and setup, first applications typically arrive within 2 to 4 weeks after campaign launch.',
+    'gfaq2-eyebrow': 'Marketing Agency',
+    'gq2-1': 'What does a performance marketing agency do?',
+    'ga2-1': 'A performance marketing agency develops and manages data-driven advertising campaigns on platforms like Meta, Google, TikTok and LinkedIn. All measures are evaluated against measurable KPIs and continuously optimised.',
+    'gq2-2': 'How much does a marketing agency in Düsseldorf cost?',
+    'ga2-2': 'Marketing agencies in Düsseldorf typically cost between 1,500 and 10,000 EUR per month. APM Agenta offers transparent packages from 199 EUR per month for SMEs that need professional marketing without hidden costs.',
+    'gq2-3': 'What is the difference between SEO and paid media?',
+    'ga2-3': 'SEO ensures your website is found organically on Google. This takes 3 to 12 months. Paid media like Google Ads or Meta Ads deliver immediate results for payment. The best strategy combines both.',
+    'gfaq3-eyebrow': 'BAFA Funding',
+    'gq3-1': 'How do I apply for BAFA funding for my business?',
+    'ga3-1': 'The BAFA application must be submitted before consulting begins via the official BAFA funding portal. After approval the consulting can begin. A proof of use is then submitted and the subsidy transferred directly.',
+    'gq3-2': 'Who is entitled to BAFA funding?',
+    'ga3-2': 'Small and medium-sized businesses with fewer than 250 employees, annual turnover below 50 million EUR and based in Germany are eligible. The business must have been operating for at least 2 years.',
+    'gq3-3': 'How long does the BAFA application process take?',
+    'ga3-3': 'The application itself takes about 30 to 60 minutes. Processing time by BAFA is typically 2 to 4 weeks. Consulting may only begin after receiving the approval notice.',
+    'gfaq4-eyebrow': 'Employer Branding',
+    'gq4-1': 'What is employer branding and why is it important?',
+    'ga4-1': 'Employer branding is the strategic positioning of a company as an attractive employer. In times of skills shortages a strong employer brand is one of the most important tools for attracting employees.',
+    'gq4-2': 'How do I build an employer brand as an SME?',
+    'ga4-2': 'An employer brand for SMEs starts with a clear employer value proposition, authentic insights into everyday working life on social media and a compelling careers page. SMEs have a natural advantage: closeness, flexibility and genuine company culture.',
+    'gq4-3': 'How much does employer branding cost for a small business?',
+    'ga4-3': 'With a clear strategy and authentic content SMEs can build an effective employer brand for 400 to 800 EUR per month. APM Agenta offers individual employer branding strategies that fit your budget.',
+  }
+};
+
+function applyGeoFaq(lang) {
+  const t = GEO_T[lang];
+  Object.entries(t).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = val;
+  });
+}
+
+/* Patch applyLang to include geo FAQ */
+const _origApplyLangGeo = applyLang;
+applyLang = function(lang) {
+  _origApplyLangGeo(lang);
+  applyGeoFaq(lang);
+};
