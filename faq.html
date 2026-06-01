@@ -13,16 +13,27 @@
 <link rel="stylesheet" href="assets/fonts/montserrat.css">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.faq-page { padding: 9rem 0 7rem; min-height: 100vh; background: var(--off); }
+.faq-page { padding: 9rem 0 7rem; min-height: 100vh; background: var(--navy); }
+.faq-page h1, .faq-page .section-title { color: var(--white); }
+.faq-page .eyebrow { color: var(--glacier); }
+.faq-page .section-sub { color: var(--silver); }
+.faq-page .section-sub a { color: var(--glacier); }
 .faq-page-grid { display: grid; grid-template-columns: 220px 1fr; gap: 5rem; margin-top: 4rem; align-items: start; }
 .faq-sidebar { position: sticky; top: 100px; }
-.faq-sidebar-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 1rem; }
+.faq-sidebar-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(143,174,201,0.5); font-weight: 600; margin-bottom: 1rem; }
 .faq-sidebar-links { display: flex; flex-direction: column; gap: 0.25rem; }
-.faq-sidebar-link { font-size: 0.75rem; color: var(--muted); font-weight: 400; text-decoration: none; padding: 0.5rem 0.75rem; border-left: 2px solid transparent; transition: all 0.2s; }
-.faq-sidebar-link:hover, .faq-sidebar-link.active { color: var(--navy); border-left-color: var(--glacier); }
+.faq-sidebar-link { font-size: 0.75rem; color: var(--silver); font-weight: 400; text-decoration: none; padding: 0.5rem 0.75rem; border-left: 2px solid transparent; transition: all 0.2s; }
+.faq-sidebar-link:hover, .faq-sidebar-link.active { color: var(--white); border-left-color: var(--glacier); }
 .faq-categories { display: flex; flex-direction: column; gap: 4rem; }
-.faq-cat-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--glacier-dark); font-weight: 700; margin-bottom: 1.5rem; }
-.faq-cat-list { background: var(--white); border: 1px solid var(--border); }
+.faq-cat-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--glacier); font-weight: 700; margin-bottom: 1.5rem; }
+.faq-cat-list { background: rgba(255,255,255,0.04); border: 1px solid rgba(143,174,201,0.15); }
+.faq-cat-list .faq-item { border-top: 1px solid rgba(143,174,201,0.12); }
+.faq-cat-list .faq-item:last-child { border-bottom: 1px solid rgba(143,174,201,0.12); }
+.faq-cat-list .faq-btn { padding: 1.3rem 1.5rem; }
+.faq-cat-list .faq-q { color: var(--white); font-size: 0.84rem; }
+.faq-cat-list .faq-icon { border-color: rgba(143,174,201,0.25); color: var(--glacier); }
+.faq-cat-list .faq-icon.open { background: var(--glacier); color: var(--navy); }
+.faq-cat-list .faq-answer-inner { color: var(--silver); padding: 0 1.5rem 1.3rem; }
 @media (max-width: 760px) {
   .faq-page-grid { grid-template-columns: 1fr; gap: 2rem; }
   .faq-sidebar { position: static; display: none; }
