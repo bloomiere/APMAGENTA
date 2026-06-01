@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://apmagenta.com/faq.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Häufige Fragen zu Recruitment Marketing, Employer Branding, Paid Media, SEO, BAFA-Förderung und Preisen bei APM Agenta.">
+<title>FAQ | APM Agenta</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/fonts/montserrat.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.faq-page { padding: 9rem 0 7rem; min-height: 100vh; background: var(--off); }
+.faq-page-grid { display: grid; grid-template-columns: 220px 1fr; gap: 5rem; margin-top: 4rem; align-items: start; }
+.faq-sidebar { position: sticky; top: 100px; }
+.faq-sidebar-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 1rem; }
+.faq-sidebar-links { display: flex; flex-direction: column; gap: 0.25rem; }
+.faq-sidebar-link { font-size: 0.75rem; color: var(--muted); font-weight: 400; text-decoration: none; padding: 0.5rem 0.75rem; border-left: 2px solid transparent; transition: all 0.2s; }
+.faq-sidebar-link:hover, .faq-sidebar-link.active { color: var(--navy); border-left-color: var(--glacier); }
+.faq-categories { display: flex; flex-direction: column; gap: 4rem; }
+.faq-cat-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--glacier-dark); font-weight: 700; margin-bottom: 1.5rem; }
+.faq-cat-list { background: var(--white); border: 1px solid var(--border); }
+@media (max-width: 760px) {
+  .faq-page-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .faq-sidebar { position: static; display: none; }
+}
+</style>
+</head>
+<body data-page="faq">
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68"></a>
+    <ul class="nav-links">
+      <li><a href="about.html" id="nav-about">Über uns</a></li>
+      <li><a href="leistungen.html" id="nav-services">Leistungen</a></li>
+      <li><a href="index.html#framework" id="nav-framework">Framework</a></li>
+      <li><a href="industries.html" id="nav-industries">Branchen</a></li>
+      <li><a href="faq.html" class="nav-active" id="nav-faq">FAQ</a></li>
+      <li><a href="bafa.html" id="nav-bafa">BAFA</a></li>
+      <li><a href="blog.html" id="nav-blog">Blog</a></li>
+      <li class="lang-dropdown" id="langDropdownWrap">
+        <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="lang-current">DE</span>
+          <svg class="lang-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+          <li><button class="lang-opt" role="option" onclick="setLang('de')">Deutsch</button></li>
+          <li><button class="lang-opt" role="option" onclick="setLang('en')">English</button></li>
+        </ul>
+      </li>
+      <li><a href="index.html#contact" class="nav-cta-link" id="nav-contact">Kontakt</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner"><ul>
+    <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
+    <li><a href="leistungen.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
+    <li><a href="bafa.html" onclick="closeMobile()" id="mob-bafa">BAFA</a></li>
+    <li><a href="blog.html" onclick="closeMobile()" id="mob-blog">Blog</a></li>
+    <li><div class="mob-lang-row"><button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button><button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');closeMobile()">EN</button></div></li>
+    <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta" id="mob-contact">Kontakt</a></li>
+  </ul></div>
+</div>
+
+<div class="faq-page">
+  <div class="container">
+    <div class="eyebrow" id="faq-page-eyebrow">FAQ</div>
+    <h1 class="section-title" id="faq-page-title">Häufig gestellte <em>Fragen.</em></h1>
+    <p class="section-sub" id="faq-page-sub">Finden Sie hier Antworten auf die häufigsten Fragen zu unseren Leistungen, Preisen und dem Ablauf einer Zusammenarbeit.</p>
+
+    <div class="faq-page-grid">
+      <aside class="faq-sidebar">
+        <div class="faq-sidebar-title" id="faq-nav-title">Kategorien</div>
+        <nav class="faq-sidebar-links" id="faq-sidebar-nav"></nav>
+      </aside>
+      <div class="faq-categories" id="faq-categories"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></div>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Was kostet Recruitment Marketing?","acceptedAnswer":{"@type":"Answer","text":"Recruitment Marketing bei APM Agenta beginnt bei 649 EUR pro Monat. Das beinhaltet Zielgruppenanalyse, Kampagnenkonzept, Meta Ads Setup und Management sowie monatliches Reporting. Werbebudget wird ohne Aufschlag weitergeleitet."}},
+    {"@type":"Question","name":"Was macht eine Performance Marketing Agentur?","acceptedAnswer":{"@type":"Answer","text":"Eine Performance Marketing Agentur entwickelt und betreut datenbasierte Werbekampagnen auf Meta, Google, TikTok und LinkedIn. Alle Maßnahmen werden an messbaren Kennzahlen gemessen und kontinuierlich optimiert."}},
+    {"@type":"Question","name":"Wer hat Anspruch auf BAFA-Förderung?","acceptedAnswer":{"@type":"Answer","text":"KMU mit weniger als 250 Mitarbeitern, Jahresumsatz unter 50 Millionen EUR und Sitz in Deutschland. Das Unternehmen muss seit mindestens 2 Jahren bestehen."}},
+    {"@type":"Question","name":"Was ist Employer Branding?","acceptedAnswer":{"@type":"Answer","text":"Employer Branding ist die strategische Positionierung als attraktiver Arbeitgeber. In Zeiten von Fachkräftemangel ist eine starke Arbeitgebermarke eines der wichtigsten Instrumente zur Mitarbeitergewinnung."}}
+  ]
+}
+</script>
+
+<script src="js/main.js"></script>
+<script>
+const FAQ_DATA = {
+  de: [
+    {
+      id: 'preise',
+      title: 'Preise und Pakete',
+      items: [
+        { q: 'Was kosten die Pakete von APM Agenta?', a: 'Unsere Pakete beginnen bei 199 EUR pro Monat (APM Scale Catalyst), 399 EUR (Market Velocity Engine) und 649 EUR (Market Domination Suite). Alle Preise sind Nettopreise. Werbebudgets werden immer ohne Aufschlag weitergeleitet.' },
+        { q: 'Gibt es versteckte Kosten?', a: 'Nein. Wir veröffentlichen unsere Preise transparent. Das Werbebudget für Meta Ads oder Google Ads wird immer 1:1 weitergeleitet ohne Aufschlag. Es gibt keine Setup-Gebühren oder versteckten Kosten.' },
+        { q: 'Wie lange sind die Vertragslaufzeiten?', a: 'Unsere Pakete sind monatlich kündbar. Wir setzen auf Qualität und Ergebnisse statt auf lange Vertragsbindungen. Eine Mindestlaufzeit von 3 Monaten empfehlen wir für optimale Kampagnenergebnisse.' },
+        { q: 'Kann ich ein Paket upgraden oder downgraden?', a: 'Ja, jederzeit zum nächsten Monatsbeginn. Wir passen das Paket an Ihre aktuellen Bedürfnisse an.' },
+      ]
+    },
+    {
+      id: 'leistungen',
+      title: 'Leistungen',
+      items: [
+        { q: 'Was macht eine Performance Marketing Agentur?', a: 'Eine Performance Marketing Agentur entwickelt und betreut datenbasierte Werbekampagnen auf Plattformen wie Meta, Google, TikTok und LinkedIn. Alle Maßnahmen werden an messbaren Kennzahlen wie Leads oder Bewerbungen gemessen und kontinuierlich optimiert.' },
+        { q: 'Was ist der Unterschied zwischen SEO und Paid Media?', a: 'SEO sorgt dafür dass Ihre Website organisch bei Google gefunden wird. Das dauert 3 bis 12 Monate. Paid Media wie Google Ads oder Meta Ads liefern sofortige Ergebnisse gegen Bezahlung. Die beste Strategie kombiniert beides.' },
+        { q: 'Erstellt APM Agenta auch Websites?', a: 'Ja. Wir entwickeln professionelle Websites von der Konzeption bis zum Launch. Responsiv, schnell und auf Conversion optimiert. Diese Leistung wird individuell kalkuliert.' },
+        { q: 'Bietet APM Agenta auch SEO an?', a: 'Ja. Wir bieten technische und inhaltliche Suchmaschinenoptimierung, Keyword-Analyse, On-Page-SEO, lokale SEO für Düsseldorf und Umgebung sowie SEO-Content-Erstellung.' },
+      ]
+    },
+    {
+      id: 'recruitment',
+      title: 'Recruitment Marketing',
+      items: [
+        { q: 'Was kostet Recruitment Marketing?', a: 'Recruitment Marketing beginnt bei 649 EUR pro Monat im Market Domination Suite Paket. Das beinhaltet Zielgruppenanalyse, Kampagnenkonzept, Meta Ads Setup und Management sowie monatliches Reporting. Werbebudget wird separat und ohne Aufschlag weitergeleitet.' },
+        { q: 'Wie lange dauert eine Recruiting-Kampagne bis zur ersten Bewerbung?', a: 'Nach einer Einrichtungszeit von 7 bis 14 Tagen kommen erste Bewerbungen typischerweise innerhalb von 2 bis 4 Wochen nach Kampagnenstart. Die genaue Zeit hängt von Zielgruppe, Region und Werbebudget ab.' },
+        { q: 'Für welche Branchen eignet sich Recruitment Marketing?', a: 'Besonders effektiv für Gesundheitswesen, Handwerk, Pflege, Tech und Gastronomie. Überall dort wo klassische Stellenanzeigen nicht mehr ausreichen.' },
+      ]
+    },
+    {
+      id: 'bafa',
+      title: 'BAFA-Förderung',
+      items: [
+        { q: 'Wer hat Anspruch auf BAFA-Förderung?', a: 'KMU mit weniger als 250 Mitarbeitern, Jahresumsatz unter 50 Millionen EUR und Sitz in Deutschland. Das Unternehmen muss seit mindestens 2 Jahren bestehen und darf sich nicht in wirtschaftlichen Schwierigkeiten befinden.' },
+        { q: 'Wie hoch ist die BAFA-Förderung?', a: 'Die Bemessungsgrundlage beträgt maximal 3.500 EUR netto. In den alten Bundesländern (inkl. Düsseldorf) beträgt der Zuschuss 50%, also maximal 1.750 EUR. In den neuen Bundesländern bis zu 80%, also maximal 2.800 EUR.' },
+        { q: 'Wie beantrage ich BAFA-Förderung?', a: 'Der Antrag muss vor Beginn der Beratung über das BAFA-Förderportal gestellt werden. APM Agenta informiert Sie über den Prozess und begleitet Sie bei der Antragstellung.' },
+        { q: 'Bis wann läuft das BAFA-Programm?', a: 'Das Programm läuft bis zum 31. Dezember 2026. Pro Unternehmen sind bis zu 5 Anträge möglich, maximal 2 pro Jahr.' },
+      ]
+    },
+    {
+      id: 'zusammenarbeit',
+      title: 'Zusammenarbeit',
+      items: [
+        { q: 'Wie läuft eine Zusammenarbeit ab?', a: 'Wir beginnen mit einem kostenlosen Erstgespräch. Danach erstellen wir ein individuelles Konzept. Nach Freigabe starten wir mit der Umsetzung. Monatliche Reporting-Calls halten Sie über alle Ergebnisse informiert.' },
+        { q: 'Wie schnell geht es nach dem Erstgespräch los?', a: 'Nach dem Erstgespräch und Vertragsunterzeichnung beginnen wir in der Regel innerhalb von 5 bis 7 Werktagen mit der Einrichtung. Erste Ergebnisse sehen Sie nach 2 bis 4 Wochen.' },
+        { q: 'Muss ich selbst viel Zeit investieren?', a: 'Nein. Wir benötigen zu Beginn etwa 1 bis 2 Stunden für ein Briefing und die Freigabe von Materialien. Danach läuft die Zusammenarbeit weitgehend selbstständig mit monatlichen Check-ins.' },
+      ]
+    },
+  ],
+  en: [
+    {
+      id: 'preise',
+      title: 'Pricing and Packages',
+      items: [
+        { q: 'How much do APM Agenta packages cost?', a: 'Our packages start at 199 EUR per month (APM Scale Catalyst), 399 EUR (Market Velocity Engine) and 649 EUR (Market Domination Suite). All prices are net. Ad budgets are always passed through without markup.' },
+        { q: 'Are there hidden costs?', a: 'No. We publish our prices transparently. Advertising budget for Meta Ads or Google Ads is always passed through 1:1 without markup. There are no setup fees or hidden costs.' },
+        { q: 'How long are the contract terms?', a: 'Our packages are cancellable monthly. We rely on quality and results rather than long contract commitments. We recommend a minimum of 3 months for optimal campaign results.' },
+        { q: 'Can I upgrade or downgrade a package?', a: 'Yes, at any time from the start of the next month. We adapt the package to your current needs.' },
+      ]
+    },
+    {
+      id: 'leistungen',
+      title: 'Services',
+      items: [
+        { q: 'What does a performance marketing agency do?', a: 'A performance marketing agency develops and manages data-driven advertising campaigns on platforms like Meta, Google, TikTok and LinkedIn. All measures are evaluated against measurable KPIs like leads or applications and continuously optimised.' },
+        { q: 'What is the difference between SEO and paid media?', a: 'SEO ensures your website is found organically on Google. This takes 3 to 12 months. Paid media like Google Ads or Meta Ads deliver immediate results for payment. The best strategy combines both.' },
+        { q: 'Does APM Agenta create websites?', a: 'Yes. We develop professional websites from concept to launch. Responsive, fast and optimised for conversion. This service is individually quoted.' },
+        { q: 'Does APM Agenta offer SEO?', a: 'Yes. We offer technical and content search engine optimisation, keyword analysis, on-page SEO, local SEO for Düsseldorf and the surrounding area, and SEO content creation.' },
+      ]
+    },
+    {
+      id: 'recruitment',
+      title: 'Recruitment Marketing',
+      items: [
+        { q: 'How much does recruitment marketing cost?', a: 'Recruitment marketing starts at 649 EUR per month in the Market Domination Suite package. This includes target group analysis, campaign concept, Meta Ads setup and management and monthly reporting.' },
+        { q: 'How long until the first application from a recruiting campaign?', a: 'After a setup period of 7 to 14 days, first applications typically arrive within 2 to 4 weeks after campaign launch. The exact time depends on target group, region and ad budget.' },
+        { q: 'Which industries benefit most from recruitment marketing?', a: 'Particularly effective for healthcare, trades, care services, tech and hospitality. Wherever classic job ads no longer deliver enough applicants.' },
+      ]
+    },
+    {
+      id: 'bafa',
+      title: 'BAFA Funding',
+      items: [
+        { q: 'Who is entitled to BAFA funding?', a: 'SMEs with fewer than 250 employees, annual turnover below 50 million EUR and based in Germany. The business must have been operating for at least 2 years and must not be in financial difficulty.' },
+        { q: 'How much is the BAFA subsidy?', a: 'The assessment basis is a maximum of 3,500 EUR net. In western Germany (incl. Düsseldorf) the subsidy is 50%, so maximum 1,750 EUR. In eastern Germany up to 80%, so maximum 2,800 EUR.' },
+        { q: 'How do I apply for BAFA funding?', a: 'The application must be submitted before consulting begins via the BAFA funding portal. APM Agenta informs you about the process and supports you with the application.' },
+        { q: 'When does the BAFA programme end?', a: 'The programme runs until 31 December 2026. Up to 5 applications are possible per business, maximum 2 per year.' },
+      ]
+    },
+    {
+      id: 'zusammenarbeit',
+      title: 'Working Together',
+      items: [
+        { q: 'How does a collaboration work?', a: 'We start with a free initial consultation. We then create an individual concept. After approval we begin implementation. Monthly reporting calls keep you informed about all results.' },
+        { q: 'How quickly do we get started after the initial consultation?', a: 'After the initial consultation and signing of the contract we typically start setup within 5 to 7 working days. First results are visible after 2 to 4 weeks.' },
+        { q: 'Do I need to invest a lot of my own time?', a: 'No. At the start we need approximately 1 to 2 hours for a briefing and approval of materials. After that the collaboration runs largely independently with monthly check-ins.' },
+      ]
+    },
+  ]
+};
+
+function renderFaqPage(lang) {
+  const data = FAQ_DATA[lang];
+  const cats = document.getElementById('faq-categories');
+  const nav = document.getElementById('faq-sidebar-nav');
+  if (!cats || !nav) return;
+
+  cats.innerHTML = data.map(cat => `
+    <div class="faq-category" id="faqcat-${cat.id}">
+      <div class="faq-cat-title">${cat.title}</div>
+      <div class="faq-cat-list">
+        ${cat.items.map((item, i) => `
+          <div class="faq-item">
+            <button class="faq-btn" onclick="toggleFaq('page-${cat.id}-${i}')">
+              <span class="faq-q">${item.q}</span>
+              <span class="faq-icon" id="fi-page-${cat.id}-${i}">+</span>
+            </button>
+            <div class="faq-answer" id="fa-page-${cat.id}-${i}">
+              <div class="faq-answer-inner">${item.a}</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+
+  nav.innerHTML = data.map(cat => `
+    <a href="#faqcat-${cat.id}" class="faq-sidebar-link">${cat.title}</a>
+  `).join('');
+
+  document.title = lang === 'en' ? 'FAQ | APM Agenta' : 'FAQ | APM Agenta';
+}
+
+function toggleFaq(id) {
+  const ans = document.getElementById('fa-' + id);
+  const icon = document.getElementById('fi-' + id);
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-icon').forEach(ic => ic.classList.remove('open'));
+  if (!isOpen) { ans.classList.add('open'); icon.classList.add('open'); }
+}
+
+const _faqOrigSetLang = setLang;
+setLang = function(lang) { _faqOrigSetLang(lang); renderFaqPage(lang); };
+document.addEventListener('DOMContentLoaded', () => renderFaqPage(localStorage.getItem('apm_lang') || 'de'));
+</script>
+</body>
+</html>
