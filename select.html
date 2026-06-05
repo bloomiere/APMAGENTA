@@ -3,185 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APM Agenta — Für wen sind Sie hier?</title>
+<title>APM Agenta — Marketing für jede Unternehmensgröße</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/fonts/montserrat.css">
 <link rel="stylesheet" href="css/style.css">
 <style>
-/* ---- SELECT PAGE OVERRIDES ---- */
-.select-main {
-  min-height: calc(100vh - 72px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 5%;
-  background: #fff;
-}
+/* ---- PAGE BASE ---- */
+.sel-page { background: #EEF2F5; min-height: 100vh; }
 
-.select-badge {
+/* ---- HERO ---- */
+.sel-hero {
+  background: #EEF2F5;
+  padding: 6rem 5% 4rem;
+  text-align: center;
+}
+.sel-hero-label {
   font-size: 0.55rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.4em;
   text-transform: uppercase;
   font-weight: 600;
-  color: #9ca3af;
-  background: none;
-  padding: 0;
-  margin-bottom: 1.25rem;
-  display: inline-block;
-  animation: fadeUp 0.5s ease both;
+  color: #7a9ab0;
+  margin-bottom: 1.2rem;
+  display: block;
 }
-
-.select-headline {
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+.sel-hero-title {
+  font-size: clamp(2rem, 5vw, 3.8rem);
   font-weight: 300;
-  color: #0f1923;
-  text-align: center;
-  line-height: 1.2;
+  color: #1a2533;
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-bottom: 0.6rem;
-  animation: fadeUp 0.5s ease 0.08s both;
+  margin-bottom: 1rem;
 }
-
-.select-sub {
-  font-size: 0.78rem;
-  color: #9ca3af;
-  text-align: center;
+.sel-hero-sub {
+  font-size: 0.85rem;
+  color: #6b7f90;
   font-weight: 300;
   line-height: 1.75;
-  margin-bottom: 3rem;
-  max-width: 400px;
-  animation: fadeUp 0.5s ease 0.14s both;
+  max-width: 480px;
+  margin: 0 auto 3rem;
 }
 
-/* CARDS GRID */
-.select-cards {
+/* ---- CARDS ---- */
+.sel-cards-wrap {
+  background: #EEF2F5;
+  padding: 0 5% 5rem;
+}
+.sel-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  max-width: 900px;
-  border: 1px solid #e5e7eb;
-  animation: fadeUp 0.5s ease 0.2s both;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-
 .sel-card {
   background: #fff;
-  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.2rem, 2.5vw, 2rem);
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   text-decoration: none;
   color: inherit;
-  border-right: 1px solid #e5e7eb;
-  transition: background 0.25s;
-  position: relative;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
-.sel-card:last-child { border-right: none; }
-.sel-card:hover { background: #f9fafb; }
-.sel-card:hover .sel-arrow { opacity: 1; transform: translateX(4px); }
-.sel-card:hover .sel-num { color: #0f1923; }
-.sel-card.featured { border-top: 2px solid #0f1923; }
-
-.sel-num {
+.sel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,37,51,0.1); }
+.sel-card.featured { border-top: 3px solid #1a2533; }
+.sel-card-num {
   font-size: 0.5rem;
-  letter-spacing: 0.35em;
-  color: #d1d5db;
+  letter-spacing: 0.4em;
+  color: #b0bec8;
   font-weight: 600;
-  margin-bottom: 1.75rem;
-  transition: color 0.2s;
+  margin-bottom: 1.5rem;
 }
-
-.sel-title {
-  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
-  font-weight: 600;
-  color: #0f1923;
+.sel-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2533;
   margin-bottom: 0.35rem;
   letter-spacing: -0.01em;
 }
-
-.sel-size {
-  font-size: 0.68rem;
-  color: #9ca3af;
+.sel-card-size {
+  font-size: 0.7rem;
+  color: #8fa3b3;
   font-weight: 300;
   margin-bottom: 1.5rem;
 }
-
-.sel-divider { height: 1px; background: #f3f4f6; margin-bottom: 1.25rem; }
-
-.sel-features {
+.sel-card-divider { height: 1px; background: #eef2f5; margin-bottom: 1.25rem; }
+.sel-card-features {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  margin-bottom: 1.75rem;
+  gap: 0.5rem;
   flex: 1;
+  margin-bottom: 2rem;
 }
-.sel-features li {
-  font-size: 0.68rem;
-  color: #6b7280;
+.sel-card-features li {
+  font-size: 0.72rem;
+  color: #5a7080;
   font-weight: 300;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  line-height: 1.5;
+  gap: 0.6rem;
 }
-.sel-features li::before {
+.sel-card-features li::before {
   content: '';
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: #8FAEC9;
   flex-shrink: 0;
 }
-
-.sel-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
-}
-
-.sel-price {
-  font-size: 0.68rem;
+.sel-card-cta {
+  display: block;
+  text-align: center;
+  background: #1a2533;
+  color: #fff;
+  padding: 0.85rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   font-weight: 700;
-  color: #0f1923;
-  letter-spacing: 0.04em;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.2s;
+}
+.sel-card:hover .sel-card-cta { background: #2d3f52; }
+.sel-card.featured .sel-card-cta { background: #1a2533; }
+
+/* ---- ABOUT SECTION ---- */
+.sel-about {
+  background: #fff;
+  padding: 5rem 5%;
+}
+.sel-about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+.sel-about-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #7a9ab0;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+}
+.sel-about-title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 300;
+  color: #1a2533;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+.sel-about-text {
+  font-size: 0.82rem;
+  color: #5a7080;
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.sel-about-cta {
+  display: inline-block;
+  background: #1a2533;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.sel-about-cta:hover { background: #2d3f52; }
+.sel-about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.sel-stat {
+  background: #EEF2F5;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.sel-stat-num {
+  font-size: 2.2rem;
+  font-weight: 200;
+  color: #1a2533;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.sel-stat-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8fa3b3;
+  font-weight: 500;
 }
 
-.sel-arrow {
-  font-size: 0.95rem;
-  color: #8FAEC9;
-  opacity: 0;
-  transition: all 0.25s;
+/* ---- FOOTER ---- */
+.sel-footer {
+  background: #fff;
+  border-top: 1px solid #dde4ea;
+  padding: 1.2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+.sel-footer img { height: 28px; width: auto; opacity: 0.7; }
+.sel-footer-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
+.sel-footer-links a {
+  font-size: 0.62rem;
+  color: #8fa3b3;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.sel-footer-links a:hover { color: #1a2533; }
+.sel-footer-copy { font-size: 0.62rem; color: #b0bec8; }
 
-
-  .select-footer-inner { grid-template-columns: 1fr; }
-  .select-footer-bottom { flex-direction: column; align-items: flex-start; }
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .sel-cards { grid-template-columns: 1fr; gap: 1rem; }
+  .sel-about-inner { grid-template-columns: 1fr; gap: 3rem; }
+}
+@media (max-width: 540px) {
+  .sel-hero { padding: 5rem 5% 3rem; }
+  .sel-cards-wrap { padding: 0 5% 3rem; }
+  .sel-about-stats { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
-<body data-page="select">
+<body class="sel-page">
 
-<!-- NAV (same as corporate) -->
+<!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="select.html" class="nav-logo" aria-label="APM Agenta">
       <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
     </a>
     <ul class="nav-links">
-      <li><a href="smb.html" id="nav-smb">Kleines Unternehmen</a></li>
-      <li><a href="index.html" id="nav-corp">Corporate</a></li>
-      <li><a href="enterprise.html" id="nav-ent">Enterprise</a></li>
-      <li><a href="leistungen.html" id="nav-services">Leistungen</a></li>
-      <li><a href="faq.html" id="nav-faq">FAQ</a></li>
+      <li><a href="smb.html">Kleines Unternehmen</a></li>
+      <li><a href="index.html">Corporate</a></li>
+      <li><a href="enterprise.html">Enterprise</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="faq.html">FAQ</a></li>
       <li class="lang-dropdown" id="langDropdownWrap">
         <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
           <span id="lang-current">DE</span>
@@ -190,11 +267,11 @@
           </svg>
         </button>
         <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
-          <li><button class="lang-opt" role="option" aria-selected="true" onclick="setLang('de')">Deutsch</button></li>
-          <li><button class="lang-opt" role="option" aria-selected="false" onclick="setLang('en')">English</button></li>
+          <li><button class="lang-opt" role="option" onclick="setLang('de')">Deutsch</button></li>
+          <li><button class="lang-opt" role="option" onclick="setLang('en')">English</button></li>
         </ul>
       </li>
-      <li><a href="index.html#contact" class="nav-cta-link" id="nav-contact">Kontakt</a></li>
+      <li><a href="index.html#contact" class="nav-cta-link">Kontakt</a></li>
     </ul>
     <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -203,152 +280,167 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <div class="mobile-menu-inner">
-    <ul>
-      <li><a href="smb.html" onclick="closeMobile()" id="mob-smb">Kleines Unternehmen</a></li>
-      <li><a href="index.html" onclick="closeMobile()" id="mob-corp">Corporate</a></li>
-      <li><a href="enterprise.html" onclick="closeMobile()" id="mob-ent">Enterprise</a></li>
-      <li><a href="leistungen.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
-      <li><a href="faq.html" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
-      <li>
-        <div class="mob-lang-row">
-          <button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button>
-          <button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');closeMobile()">EN</button>
-        </div>
-      </li>
-      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta" id="mob-contact">Kontakt</a></li>
-    </ul>
-  </div>
+  <div class="mobile-menu-inner"><ul>
+    <li><a href="smb.html" onclick="closeMobile()">Kleines Unternehmen</a></li>
+    <li><a href="index.html" onclick="closeMobile()">Corporate</a></li>
+    <li><a href="enterprise.html" onclick="closeMobile()">Enterprise</a></li>
+    <li><a href="leistungen.html" onclick="closeMobile()">Leistungen</a></li>
+    <li><a href="faq.html" onclick="closeMobile()">FAQ</a></li>
+    <li><div class="mob-lang-row">
+      <button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button>
+      <button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');closeMobile()">EN</button>
+    </div></li>
+    <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta">Kontakt</a></li>
+  </ul></div>
 </div>
 
-<!-- MAIN CONTENT -->
-<main class="select-main">
-  <span class="select-badge" id="sel-badge">Wählen Sie Ihren Bereich</span>
-  <h1 class="select-headline" id="sel-headline">Für welches Unternehmen<br>suchen Sie Marketing?</h1>
-  <p class="select-sub" id="sel-sub">Maßgeschneiderte Lösungen für jede Unternehmensgröße. Wählen Sie den Bereich der zu Ihnen passt.</p>
+<!-- HERO -->
+<section class="sel-hero">
+  <span class="sel-hero-label" id="sel-label">Marketing für jede Unternehmensgröße</span>
+  <h1 class="sel-hero-title" id="sel-title">Für welches Unternehmen<br>suchen Sie Marketing?</h1>
+  <p class="sel-hero-sub" id="sel-sub">Wählen Sie den Bereich der zu Ihnen passt. Maßgeschneiderte Lösungen mit transparenten Preisen.</p>
+</section>
 
-  <div class="select-cards">
+<!-- CARDS -->
+<div class="sel-cards-wrap">
+  <div class="sel-cards">
 
-    <!-- SMB -->
     <a href="smb.html" class="sel-card">
-      <div class="sel-num">01</div>
-      <div class="sel-title" id="sc1-title">Kleines Unternehmen</div>
-      <div class="sel-size" id="sc1-size">1 bis 20 Mitarbeiter</div>
-      <div class="sel-divider"></div>
-      <ul class="sel-features">
+      <div class="sel-card-num">01</div>
+      <div class="sel-card-title" id="sc1-title">Kleines Unternehmen</div>
+      <div class="sel-card-size" id="sc1-size">1 bis 20 Mitarbeiter</div>
+      <div class="sel-card-divider"></div>
+      <ul class="sel-card-features">
         <li id="sc1-f1">Social Media Management</li>
         <li id="sc1-f2">Meta Ads ohne Aufschlag</li>
         <li id="sc1-f3">Lokale SEO</li>
         <li id="sc1-f4">Monatliches Reporting</li>
       </ul>
-      <div class="sel-bottom">
-        <span class="sel-price" id="sc1-price">Ab 199 EUR / Mo</span>
-        <span class="sel-arrow">→</span>
-      </div>
+      <span class="sel-card-cta" id="sc1-cta">Ab 199 EUR / Mo →</span>
     </a>
 
-    <!-- CORPORATE -->
     <a href="index.html" class="sel-card featured">
-      <div class="sel-num">02</div>
-      <div class="sel-title" id="sc2-title">Corporate</div>
-      <div class="sel-size" id="sc2-size">20 bis 250 Mitarbeiter</div>
-      <div class="sel-divider"></div>
-      <ul class="sel-features">
+      <div class="sel-card-num">02</div>
+      <div class="sel-card-title" id="sc2-title">Corporate</div>
+      <div class="sel-card-size" id="sc2-size">20 bis 250 Mitarbeiter</div>
+      <div class="sel-card-divider"></div>
+      <ul class="sel-card-features">
         <li id="sc2-f1">Recruitment Marketing</li>
         <li id="sc2-f2">Employer Branding</li>
         <li id="sc2-f3">Performance Marketing</li>
         <li id="sc2-f4">BAFA-Förderung</li>
       </ul>
-      <div class="sel-bottom">
-        <span class="sel-price" id="sc2-price">Ab 399 EUR / Mo</span>
-        <span class="sel-arrow">→</span>
-      </div>
+      <span class="sel-card-cta" id="sc2-cta">Ab 399 EUR / Mo →</span>
     </a>
 
-    <!-- ENTERPRISE -->
     <a href="enterprise.html" class="sel-card">
-      <div class="sel-num">03</div>
-      <div class="sel-title" id="sc3-title">Enterprise</div>
-      <div class="sel-size" id="sc3-size">250+ Mitarbeiter</div>
-      <div class="sel-divider"></div>
-      <ul class="sel-features">
+      <div class="sel-card-num">03</div>
+      <div class="sel-card-title" id="sc3-title">Enterprise</div>
+      <div class="sel-card-size" id="sc3-size">250+ Mitarbeiter</div>
+      <div class="sel-card-divider"></div>
+      <ul class="sel-card-features">
         <li id="sc3-f1">Dediziertes Team</li>
         <li id="sc3-f2">Individuelle Strategie</li>
         <li id="sc3-f3">Full-Service Marketing</li>
         <li id="sc3-f4">White Glove Service</li>
       </ul>
-      <div class="sel-bottom">
-        <span class="sel-price" id="sc3-price">Auf Anfrage</span>
-        <span class="sel-arrow">→</span>
-      </div>
+      <span class="sel-card-cta" id="sc3-cta">Auf Anfrage →</span>
     </a>
 
   </div>
-</main>
+</div>
 
-<footer style="border-top:1px solid #e5e7eb;padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;background:#fff;">
-  <img src="assets/logo.png" alt="APM Agenta" style="height:28px;width:auto;opacity:0.8;">
-  <div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;">
-    <a href="impressum.html" style="font-size:0.62rem;color:#9ca3af;text-decoration:none;">Impressum</a>
-    <a href="datenschutz.html" style="font-size:0.62rem;color:#9ca3af;text-decoration:none;">Datenschutz</a>
-    <a href="agb.html" style="font-size:0.62rem;color:#9ca3af;text-decoration:none;">AGB</a>
-    <span style="font-size:0.62rem;color:#d1d5db;">© 2026 APM AGENTA</span>
+<!-- ABOUT SECTION -->
+<section class="sel-about">
+  <div class="sel-about-inner">
+    <div>
+      <span class="sel-about-label" id="about-label">Über APM Agenta</span>
+      <h2 class="sel-about-title" id="about-title">Transparentes Marketing ohne versteckte Kosten.</h2>
+      <p class="sel-about-text" id="about-text">APM Agenta wurde gegründet weil professionelles Marketing für alle zugänglich sein sollte. Wir arbeiten mit kleinen Startups und großen Unternehmen — immer mit denselben Prinzipien: klare Preise, messbare Ergebnisse und kein Aufschlag auf Werbebudgets.</p>
+      <a href="about.html" class="sel-about-cta" id="about-cta">Mehr über uns</a>
+    </div>
+    <div class="sel-about-stats">
+      <div class="sel-stat">
+        <div class="sel-stat-num">0%</div>
+        <div class="sel-stat-label" id="stat1">Aufschlag auf Werbebudget</div>
+      </div>
+      <div class="sel-stat">
+        <div class="sel-stat-num">199€</div>
+        <div class="sel-stat-label" id="stat2">Ab pro Monat</div>
+      </div>
+      <div class="sel-stat">
+        <div class="sel-stat-num">24h</div>
+        <div class="sel-stat-label" id="stat3">Reaktionszeit</div>
+      </div>
+      <div class="sel-stat">
+        <div class="sel-stat-num">3</div>
+        <div class="sel-stat-label" id="stat4">Spezialisierte Pakete</div>
+      </div>
+    </div>
   </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="sel-footer">
+  <img src="assets/logo.png" alt="APM Agenta">
+  <div class="sel-footer-links">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="agb.html">AGB</a>
+  </div>
+  <span class="sel-footer-copy" id="sel-copy">© 2026 APM AGENTA</span>
 </footer>
 
 <script src="js/main.js"></script>
 <script>
 const SEL_T = {
   de: {
-    'sel-badge': 'Wählen Sie Ihren Bereich',
-    'sel-headline': 'Für welches Unternehmen<br>suchen Sie Marketing?',
-    'sel-sub': 'Maßgeschneiderte Lösungen für jede Unternehmensgröße. Wählen Sie den Bereich der zu Ihnen passt.',
-    'sc1-title': 'Kleines Unternehmen', 'sc1-size': '1 bis 20 Mitarbeiter', 'sc1-price': 'Ab 199 EUR / Mo',
+    'sel-label': 'Marketing für jede Unternehmensgröße',
+    'sel-title': 'Für welches Unternehmen<br>suchen Sie Marketing?',
+    'sel-sub': 'Wählen Sie den Bereich der zu Ihnen passt. Maßgeschneiderte Lösungen mit transparenten Preisen.',
+    'sc1-title': 'Kleines Unternehmen', 'sc1-size': '1 bis 20 Mitarbeiter', 'sc1-cta': 'Ab 199 EUR / Mo →',
     'sc1-f1': 'Social Media Management', 'sc1-f2': 'Meta Ads ohne Aufschlag', 'sc1-f3': 'Lokale SEO', 'sc1-f4': 'Monatliches Reporting',
-    'sc2-title': 'Corporate', 'sc2-size': '20 bis 250 Mitarbeiter', 'sc2-price': 'Ab 399 EUR / Mo',
+    'sc2-title': 'Corporate', 'sc2-size': '20 bis 250 Mitarbeiter', 'sc2-cta': 'Ab 399 EUR / Mo →',
     'sc2-f1': 'Recruitment Marketing', 'sc2-f2': 'Employer Branding', 'sc2-f3': 'Performance Marketing', 'sc2-f4': 'BAFA-Förderung',
-    'sc3-title': 'Enterprise', 'sc3-size': '250+ Mitarbeiter', 'sc3-price': 'Auf Anfrage',
+    'sc3-title': 'Enterprise', 'sc3-size': '250+ Mitarbeiter', 'sc3-cta': 'Auf Anfrage →',
     'sc3-f1': 'Dediziertes Team', 'sc3-f2': 'Individuelle Strategie', 'sc3-f3': 'Full-Service Marketing', 'sc3-f4': 'White Glove Service',
-    'sf-desc': 'Professionelles Marketing für jede Unternehmensgröße. Transparent, messbar, ohne versteckte Kosten.',
-    'sf-col1': 'Bereiche', 'sf-col2': 'Leistungen', 'sf-col3': 'Kontakt',
-    'sfl-1': 'Kleines Unternehmen', 'sfl-2': 'Corporate', 'sfl-3': 'Enterprise',
-    'sfl-4': 'Alle Leistungen', 'sfl-5': 'BAFA-Förderung', 'sfl-6': 'Blog & Insights', 'sfl-7': 'FAQ',
-    'sfl-cal': 'Gespräch buchen', 'sfl-about': 'Über uns',
-    'sf-copy': '© 2026 APM AGENTA. Alle Rechte vorbehalten.',
+    'about-label': 'Über APM Agenta', 'about-title': 'Transparentes Marketing ohne versteckte Kosten.',
+    'about-text': 'APM Agenta wurde gegründet weil professionelles Marketing für alle zugänglich sein sollte. Wir arbeiten mit kleinen Startups und großen Unternehmen — immer mit denselben Prinzipien: klare Preise, messbare Ergebnisse und kein Aufschlag auf Werbebudgets.',
+    'about-cta': 'Mehr über uns',
+    'stat1': 'Aufschlag auf Werbebudget', 'stat2': 'Ab pro Monat', 'stat3': 'Reaktionszeit', 'stat4': 'Spezialisierte Pakete',
+    'sel-copy': '© 2026 APM AGENTA',
   },
   en: {
-    'sel-badge': 'Choose Your Segment',
-    'sel-headline': 'Which business are you<br>looking for marketing for?',
-    'sel-sub': 'Tailored solutions for every business size. Choose the segment that fits you.',
-    'sc1-title': 'Small Business', 'sc1-size': '1 to 20 employees', 'sc1-price': 'From 199 EUR / mo',
+    'sel-label': 'Marketing for every business size',
+    'sel-title': 'Which business are you<br>looking for marketing for?',
+    'sel-sub': 'Choose the segment that fits you. Tailored solutions with transparent pricing.',
+    'sc1-title': 'Small Business', 'sc1-size': '1 to 20 employees', 'sc1-cta': 'From 199 EUR / mo →',
     'sc1-f1': 'Social Media Management', 'sc1-f2': 'Meta Ads without markup', 'sc1-f3': 'Local SEO', 'sc1-f4': 'Monthly Reporting',
-    'sc2-title': 'Corporate', 'sc2-size': '20 to 250 employees', 'sc2-price': 'From 399 EUR / mo',
+    'sc2-title': 'Corporate', 'sc2-size': '20 to 250 employees', 'sc2-cta': 'From 399 EUR / mo →',
     'sc2-f1': 'Recruitment Marketing', 'sc2-f2': 'Employer Branding', 'sc2-f3': 'Performance Marketing', 'sc2-f4': 'BAFA Funding',
-    'sc3-title': 'Enterprise', 'sc3-size': '250+ employees', 'sc3-price': 'On Request',
+    'sc3-title': 'Enterprise', 'sc3-size': '250+ employees', 'sc3-cta': 'On Request →',
     'sc3-f1': 'Dedicated Team', 'sc3-f2': 'Individual Strategy', 'sc3-f3': 'Full-Service Marketing', 'sc3-f4': 'White Glove Service',
-    'sf-desc': 'Professional marketing for every business size. Transparent, measurable, without hidden costs.',
-    'sf-col1': 'Segments', 'sf-col2': 'Services', 'sf-col3': 'Contact',
-    'sfl-1': 'Small Business', 'sfl-2': 'Corporate', 'sfl-3': 'Enterprise',
-    'sfl-4': 'All Services', 'sfl-5': 'BAFA Funding', 'sfl-6': 'Blog & Insights', 'sfl-7': 'FAQ',
-    'sfl-cal': 'Book a Call', 'sfl-about': 'About Us',
-    'sf-copy': '© 2026 APM AGENTA. All rights reserved.',
+    'about-label': 'About APM Agenta', 'about-title': 'Transparent marketing without hidden costs.',
+    'about-text': 'APM Agenta was founded because professional marketing should be accessible to everyone. We work with small startups and large companies — always with the same principles: clear pricing, measurable results and no markup on ad budgets.',
+    'about-cta': 'More about us',
+    'stat1': 'Ad budget markup', 'stat2': 'Starting per month', 'stat3': 'Response time', 'stat4': 'Specialised packages',
+    'sel-copy': '© 2026 APM AGENTA',
   }
 };
 
-function applySelectLang(lang) {
+function applySelLang(lang) {
   const t = SEL_T[lang];
+  document.title = lang === 'en' ? 'APM Agenta — Marketing for Every Business' : 'APM Agenta — Marketing für jede Unternehmensgröße';
   Object.entries(t).forEach(([id, val]) => {
     const el = document.getElementById(id);
     if (!el) return;
-    if (id === 'sel-headline') { el.innerHTML = val; }
-    else { el.textContent = val; }
+    if (id === 'sel-title') { el.innerHTML = val; } else { el.textContent = val; }
   });
-  document.title = lang === 'en' ? 'APM Agenta — Who are you here for?' : 'APM Agenta — Für wen sind Sie hier?';
 }
 
-const _selOrig = setLang;
-setLang = function(lang) { _selOrig(lang); applySelectLang(lang); };
-document.addEventListener('DOMContentLoaded', () => applySelectLang(localStorage.getItem('apm_lang') || 'de'));
+const _sOrig = setLang;
+setLang = function(lang) { _sOrig(lang); applySelLang(lang); };
+document.addEventListener('DOMContentLoaded', () => applySelLang(localStorage.getItem('apm_lang') || 'de'));
 </script>
 </body>
 </html>
