@@ -6,6 +6,7 @@
 <title>APM Agenta — Für wen sind Sie hier?</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <link rel="stylesheet" href="assets/fonts/montserrat.css">
+<link rel="stylesheet" href="css/style.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { height: 100%; font-family: 'Montserrat', sans-serif; background: #fff; color: #0f1923; }
@@ -16,18 +17,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem 5%;
+  padding: 7rem 5% 3rem;
 }
 
-/* LOGO */
-.logo {
-  position: fixed;
-  top: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-.logo img { height: 70px; width: auto; }
+
 
 /* BADGE */
 .badge {
@@ -202,9 +195,37 @@ body {
 </head>
 <body>
 
-<a href="index.html" class="logo">
-  <img src="assets/logo.png" alt="APM Agenta">
-</a>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="APM Agenta">
+      <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="bafa.html">BAFA</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#contact" class="nav-cta-link">Kontakt</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <ul>
+      <li><a href="about.html" onclick="closeMobile()">Über uns</a></li>
+      <li><a href="leistungen.html" onclick="closeMobile()">Leistungen</a></li>
+      <li><a href="faq.html" onclick="closeMobile()">FAQ</a></li>
+      <li><a href="bafa.html" onclick="closeMobile()">BAFA</a></li>
+      <li><a href="blog.html" onclick="closeMobile()">Blog</a></li>
+      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta">Kontakt</a></li>
+    </ul>
+  </div>
+</div>
 
 <span class="badge">Wählen Sie Ihren Bereich</span>
 <h1 class="headline">Für welches Unternehmen<br>suchen Sie Marketing?</h1>
@@ -268,9 +289,57 @@ body {
 
 </div>
 
-<div class="note">
-  APM Agenta · Düsseldorf · <a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a>
-</div>
 
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <img src="assets/logo.png" alt="APM Agenta" class="footer-logo-img" width="100" height="34">
+        <div class="footer-brand">APM Agenta</div>
+        <div class="footer-tagline">Performance Marketing</div>
+        <p class="footer-desc" id="footer-desc">Datenbasierte Marketing-Strategien für Unternehmen die professionelles Marketing verdienen.</p>
+      </div>
+      <div>
+        <div class="footer-col-title" id="ft-col1">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="services.html" id="ftl-1">Recruitment Marketing</a></li>
+          <li><a href="services.html" id="ftl-2">Employer Branding</a></li>
+          <li><a href="services.html" id="ftl-3">Paid Media</a></li>
+          <li><a href="services.html" id="ftl-4">Social Media</a></li>
+          <li><a href="bafa.html" id="ftl-5">BAFA Beratung</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" id="ft-col2">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="about.html" id="ftc-1">Über APM Agenta</a></li>
+          <li><a href="industries.html" id="ftc-2">Branchen</a></li>
+          <li><a href="#pricing" id="ftc-3">Pakete</a></li>
+          <li><a href="#faq" id="ftc-4">FAQ</a></li>
+          <li><a href="#contact" id="ftc-5">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" id="ft-col3">Rechtliches</div>
+        <ul class="footer-links">
+          <li><a href="impressum.html" id="ftleg-1">Impressum</a></li>
+          <li><a href="datenschutz.html" id="ftleg-2">Datenschutzerklärung</a></li>
+          <li><a href="agb.html" id="ftleg-3">AGB</a></li>
+          <li><button class="cookie-settings-link" onclick="reopenCookieBanner()" id="ft-cookies">Cookie-Einstellungen</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy" id="ft-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy">
+        <a href="impressum.html" id="fb-imp">Impressum</a> ·
+        <a href="datenschutz.html" id="fb-dsg">Datenschutz</a> ·
+        <a href="agb.html" id="fb-agb">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
