@@ -5,25 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>APM Agenta — Für wen sind Sie hier?</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/fonts/montserrat.css">
 <link rel="stylesheet" href="css/style.css">
 <style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { height: 100%; font-family: 'Montserrat', sans-serif; background: #fff; color: #0f1923; }
-
-body {
-  min-height: 100vh;
+/* ---- SELECT PAGE OVERRIDES ---- */
+.select-main {
+  min-height: calc(100vh - 72px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 7rem 5% 3rem;
+  padding: 4rem 5%;
+  background: #fff;
 }
 
-
-
-/* BADGE */
-.badge {
+.select-badge {
   font-size: 0.55rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -31,101 +29,96 @@ body {
   color: #6b7280;
   background: #f3f4f6;
   padding: 0.45rem 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   display: inline-block;
-  animation: fadeUp 0.6s ease both;
+  animation: fadeUp 0.5s ease both;
 }
 
-/* HEADLINE */
-.headline {
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+.select-headline {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   font-weight: 300;
   color: #0f1923;
   text-align: center;
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin-bottom: 0.6rem;
-  animation: fadeUp 0.6s ease 0.1s both;
+  animation: fadeUp 0.5s ease 0.08s both;
 }
 
-.sub {
-  font-size: 0.8rem;
+.select-sub {
+  font-size: 0.78rem;
   color: #9ca3af;
   text-align: center;
   font-weight: 300;
-  line-height: 1.7;
-  margin-bottom: 3.5rem;
-  max-width: 420px;
-  animation: fadeUp 0.6s ease 0.15s both;
+  line-height: 1.75;
+  margin-bottom: 3rem;
+  max-width: 400px;
+  animation: fadeUp 0.5s ease 0.14s both;
 }
 
-/* CARDS */
-.cards {
+/* CARDS GRID */
+.select-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  max-width: 860px;
+  max-width: 900px;
   border: 1px solid #e5e7eb;
-  animation: fadeUp 0.6s ease 0.2s both;
+  animation: fadeUp 0.5s ease 0.2s both;
 }
 
-.card {
+.sel-card {
   background: #fff;
-  padding: 2.5rem 2rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.2rem, 2.5vw, 2rem);
   display: flex;
   flex-direction: column;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
   border-right: 1px solid #e5e7eb;
-  transition: background 0.25s, transform 0.25s;
+  transition: background 0.25s;
   position: relative;
 }
-.card:last-child { border-right: none; }
-.card:hover { background: #f9fafb; }
-.card:hover .card-arrow { opacity: 1; transform: translateX(4px); }
-.card:hover .card-num { color: #0f1923; }
+.sel-card:last-child { border-right: none; }
+.sel-card:hover { background: #f9fafb; }
+.sel-card:hover .sel-arrow { opacity: 1; transform: translateX(4px); }
+.sel-card:hover .sel-num { color: #0f1923; }
+.sel-card.featured { border-top: 2px solid #0f1923; }
 
-.card-num {
-  font-size: 0.52rem;
+.sel-num {
+  font-size: 0.5rem;
   letter-spacing: 0.35em;
   color: #d1d5db;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   transition: color 0.2s;
 }
 
-.card-title {
-  font-size: 1rem;
+.sel-title {
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
   font-weight: 600;
   color: #0f1923;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
   letter-spacing: -0.01em;
 }
 
-.card-size {
-  font-size: 0.7rem;
+.sel-size {
+  font-size: 0.68rem;
   color: #9ca3af;
   font-weight: 300;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.card-divider {
-  height: 1px;
-  background: #f3f4f6;
   margin-bottom: 1.5rem;
 }
 
-.card-features {
+.sel-divider { height: 1px; background: #f3f4f6; margin-bottom: 1.25rem; }
+
+.sel-features {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  gap: 0.45rem;
+  margin-bottom: 1.75rem;
   flex: 1;
 }
-.card-features li {
+.sel-features li {
   font-size: 0.68rem;
   color: #6b7280;
   font-weight: 300;
@@ -134,7 +127,7 @@ body {
   gap: 0.5rem;
   line-height: 1.5;
 }
-.card-features li::before {
+.sel-features li::before {
   content: '';
   width: 4px;
   height: 4px;
@@ -143,70 +136,165 @@ body {
   flex-shrink: 0;
 }
 
-.card-bottom {
+.sel-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
 }
 
-.card-price {
+.sel-price {
   font-size: 0.68rem;
   font-weight: 700;
   color: #0f1923;
   letter-spacing: 0.04em;
 }
 
-.card-arrow {
-  font-size: 1rem;
+.sel-arrow {
+  font-size: 0.95rem;
   color: #8FAEC9;
   opacity: 0;
   transition: all 0.25s;
 }
 
-/* Middle card accent */
-.card-corp {
-  border-top: 2px solid #0f1923;
-}
-
-/* NOTE */
-.note {
-  font-size: 0.55rem;
-  color: #d1d5db;
-  margin-top: 2.5rem;
-  letter-spacing: 0.12em;
-  text-align: center;
-  animation: fadeUp 0.6s ease 0.3s both;
-}
-.note a { color: #9ca3af; text-decoration: none; }
-
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 700px) {
-  .cards { grid-template-columns: 1fr; }
-  .card { border-right: none; border-bottom: 1px solid #e5e7eb; }
-  .card:last-child { border-bottom: none; }
-  .card-corp { border-top: 2px solid #0f1923; }
+/* ---- SELECT FOOTER ---- */
+.select-footer {
+  background: #0f1923;
+  padding: 3.5rem 5% 2rem;
+  margin-top: auto;
+}
+
+.select-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(143,174,201,0.12);
+}
+
+.sf-brand img {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+.sf-tagline {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(143,174,201,0.5);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.sf-desc {
+  font-size: 0.74rem;
+  color: rgba(143,174,201,0.45);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.sf-col-title {
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(143,174,201,0.5);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.sf-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sf-links a {
+  font-size: 0.74rem;
+  color: rgba(143,174,201,0.6);
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.2s;
+}
+.sf-links a:hover { color: #fff; }
+
+.select-footer-bottom {
+  max-width: 1200px;
+  margin: 1.5rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sf-copy {
+  font-size: 0.62rem;
+  color: rgba(143,174,201,0.3);
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+
+.sf-copy a {
+  color: rgba(143,174,201,0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.sf-copy a:hover { color: rgba(143,174,201,0.6); }
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .select-cards { grid-template-columns: 1fr; }
+  .sel-card { border-right: none; border-bottom: 1px solid #e5e7eb; }
+  .sel-card:last-child { border-bottom: none; }
+  .sel-card.featured { border-top: 2px solid #0f1923; }
+  .select-footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+@media (max-width: 540px) {
+  .select-main { padding: 3rem 5%; }
+  .select-footer-inner { grid-template-columns: 1fr; }
+  .select-footer-bottom { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
-<body>
+<body data-page="select">
 
+<!-- NAV (same as corporate) -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="APM Agenta">
+    <a href="select.html" class="nav-logo" aria-label="APM Agenta">
       <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
     </a>
     <ul class="nav-links">
-      <li><a href="about.html">Über uns</a></li>
-      <li><a href="leistungen.html">Leistungen</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="bafa.html">BAFA</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="index.html#contact" class="nav-cta-link">Kontakt</a></li>
+      <li><a href="about.html" id="nav-about">Über uns</a></li>
+      <li><a href="leistungen.html" id="nav-services">Leistungen</a></li>
+      <li><a href="faq.html" id="nav-faq">FAQ</a></li>
+      <li><a href="bafa.html" id="nav-bafa">BAFA</a></li>
+      <li><a href="blog.html" id="nav-blog">Blog</a></li>
+      <li class="lang-dropdown" id="langDropdownWrap">
+        <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="lang-current">DE</span>
+          <svg class="lang-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+          <li><button class="lang-opt" role="option" aria-selected="true" onclick="setLang('de')">Deutsch</button></li>
+          <li><button class="lang-opt" role="option" aria-selected="false" onclick="setLang('en')">English</button></li>
+        </ul>
+      </li>
+      <li><a href="index.html#contact" class="nav-cta-link" id="nav-contact">Kontakt</a></li>
     </ul>
     <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -217,129 +305,184 @@ body {
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <div class="mobile-menu-inner">
     <ul>
-      <li><a href="about.html" onclick="closeMobile()">Über uns</a></li>
-      <li><a href="leistungen.html" onclick="closeMobile()">Leistungen</a></li>
-      <li><a href="faq.html" onclick="closeMobile()">FAQ</a></li>
-      <li><a href="bafa.html" onclick="closeMobile()">BAFA</a></li>
-      <li><a href="blog.html" onclick="closeMobile()">Blog</a></li>
-      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta">Kontakt</a></li>
+      <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
+      <li><a href="leistungen.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
+      <li><a href="faq.html" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
+      <li><a href="bafa.html" onclick="closeMobile()" id="mob-bafa">BAFA</a></li>
+      <li><a href="blog.html" onclick="closeMobile()" id="mob-blog">Blog</a></li>
+      <li>
+        <div class="mob-lang-row">
+          <button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button>
+          <button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');closeMobile()">EN</button>
+        </div>
+      </li>
+      <li><a href="index.html#contact" onclick="closeMobile()" class="mobile-cta" id="mob-contact">Kontakt</a></li>
     </ul>
   </div>
 </div>
 
-<span class="badge">Wählen Sie Ihren Bereich</span>
-<h1 class="headline">Für welches Unternehmen<br>suchen Sie Marketing?</h1>
-<p class="sub">Maßgeschneiderte Lösungen für jede Unternehmensgröße. Wählen Sie den Bereich der zu Ihnen passt.</p>
+<!-- MAIN CONTENT -->
+<main class="select-main">
+  <span class="select-badge" id="sel-badge">Wählen Sie Ihren Bereich</span>
+  <h1 class="select-headline" id="sel-headline">Für welches Unternehmen<br>suchen Sie Marketing?</h1>
+  <p class="select-sub" id="sel-sub">Maßgeschneiderte Lösungen für jede Unternehmensgröße. Wählen Sie den Bereich der zu Ihnen passt.</p>
 
-<div class="cards">
+  <div class="select-cards">
 
-  <!-- SMB -->
-  <a href="smb.html" class="card">
-    <div class="card-num">01</div>
-    <div class="card-title">Kleines Unternehmen</div>
-    <div class="card-size">1 bis 20 Mitarbeiter</div>
-    <div class="card-divider"></div>
-    <ul class="card-features">
-      <li>Social Media Management</li>
-      <li>Meta Ads ohne Aufschlag</li>
-      <li>Lokale SEO</li>
-      <li>Monatliches Reporting</li>
-    </ul>
-    <div class="card-bottom">
-      <span class="card-price">Ab 199 EUR / Mo</span>
-      <span class="card-arrow">→</span>
+    <!-- SMB -->
+    <a href="smb.html" class="sel-card">
+      <div class="sel-num">01</div>
+      <div class="sel-title" id="sc1-title">Kleines Unternehmen</div>
+      <div class="sel-size" id="sc1-size">1 bis 20 Mitarbeiter</div>
+      <div class="sel-divider"></div>
+      <ul class="sel-features">
+        <li id="sc1-f1">Social Media Management</li>
+        <li id="sc1-f2">Meta Ads ohne Aufschlag</li>
+        <li id="sc1-f3">Lokale SEO</li>
+        <li id="sc1-f4">Monatliches Reporting</li>
+      </ul>
+      <div class="sel-bottom">
+        <span class="sel-price" id="sc1-price">Ab 199 EUR / Mo</span>
+        <span class="sel-arrow">→</span>
+      </div>
+    </a>
+
+    <!-- CORPORATE -->
+    <a href="index.html" class="sel-card featured">
+      <div class="sel-num">02</div>
+      <div class="sel-title" id="sc2-title">Corporate</div>
+      <div class="sel-size" id="sc2-size">20 bis 250 Mitarbeiter</div>
+      <div class="sel-divider"></div>
+      <ul class="sel-features">
+        <li id="sc2-f1">Recruitment Marketing</li>
+        <li id="sc2-f2">Employer Branding</li>
+        <li id="sc2-f3">Performance Marketing</li>
+        <li id="sc2-f4">BAFA-Förderung</li>
+      </ul>
+      <div class="sel-bottom">
+        <span class="sel-price" id="sc2-price">Ab 399 EUR / Mo</span>
+        <span class="sel-arrow">→</span>
+      </div>
+    </a>
+
+    <!-- ENTERPRISE -->
+    <a href="enterprise.html" class="sel-card">
+      <div class="sel-num">03</div>
+      <div class="sel-title" id="sc3-title">Enterprise</div>
+      <div class="sel-size" id="sc3-size">250+ Mitarbeiter</div>
+      <div class="sel-divider"></div>
+      <ul class="sel-features">
+        <li id="sc3-f1">Dediziertes Team</li>
+        <li id="sc3-f2">Individuelle Strategie</li>
+        <li id="sc3-f3">Full-Service Marketing</li>
+        <li id="sc3-f4">White Glove Service</li>
+      </ul>
+      <div class="sel-bottom">
+        <span class="sel-price" id="sc3-price">Auf Anfrage</span>
+        <span class="sel-arrow">→</span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<!-- CUSTOM FOOTER FOR SELECT PAGE -->
+<footer class="select-footer">
+  <div class="select-footer-inner">
+    <div class="sf-brand">
+      <img src="assets/logo.png" alt="APM Agenta">
+      <div class="sf-tagline">Performance Marketing</div>
+      <p class="sf-desc" id="sf-desc">Professionelles Marketing für jede Unternehmensgröße. Transparent, messbar, ohne versteckte Kosten.</p>
     </div>
-  </a>
-
-  <!-- CORPORATE -->
-  <a href="index.html" class="card card-corp">
-    <div class="card-num">02</div>
-    <div class="card-title">Corporate</div>
-    <div class="card-size">20 bis 250 Mitarbeiter</div>
-    <div class="card-divider"></div>
-    <ul class="card-features">
-      <li>Recruitment Marketing</li>
-      <li>Employer Branding</li>
-      <li>Performance Marketing</li>
-      <li>BAFA-Förderung</li>
-    </ul>
-    <div class="card-bottom">
-      <span class="card-price">Ab 399 EUR / Mo</span>
-      <span class="card-arrow">→</span>
+    <div>
+      <div class="sf-col-title" id="sf-col1">Bereiche</div>
+      <ul class="sf-links">
+        <li><a href="smb.html" id="sfl-1">Kleines Unternehmen</a></li>
+        <li><a href="index.html" id="sfl-2">Corporate</a></li>
+        <li><a href="enterprise.html" id="sfl-3">Enterprise</a></li>
+      </ul>
     </div>
-  </a>
-
-  <!-- ENTERPRISE -->
-  <a href="enterprise.html" class="card">
-    <div class="card-num">03</div>
-    <div class="card-title">Enterprise</div>
-    <div class="card-size">250+ Mitarbeiter</div>
-    <div class="card-divider"></div>
-    <ul class="card-features">
-      <li>Dediziertes Team</li>
-      <li>Individuelle Strategie</li>
-      <li>Full-Service Marketing</li>
-      <li>White Glove Service</li>
-    </ul>
-    <div class="card-bottom">
-      <span class="card-price">Auf Anfrage</span>
-      <span class="card-arrow">→</span>
+    <div>
+      <div class="sf-col-title" id="sf-col2">Leistungen</div>
+      <ul class="sf-links">
+        <li><a href="leistungen.html" id="sfl-4">Alle Leistungen</a></li>
+        <li><a href="bafa.html" id="sfl-5">BAFA-Förderung</a></li>
+        <li><a href="blog.html" id="sfl-6">Blog & Insights</a></li>
+        <li><a href="faq.html" id="sfl-7">FAQ</a></li>
+      </ul>
     </div>
-  </a>
-
-</div>
-
-
-
-<footer>
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand-col">
-        <img src="assets/logo.png" alt="APM Agenta" class="footer-logo-img" width="100" height="34">
-        <div class="footer-brand">APM Agenta</div>
-        <div class="footer-tagline">Performance Marketing</div>
-        <p class="footer-desc" id="footer-desc">Datenbasierte Marketing-Strategien für Unternehmen die professionelles Marketing verdienen.</p>
-      </div>
-      <div>
-        <div class="footer-col-title" id="ft-col1">Leistungen</div>
-        <ul class="footer-links">
-          <li><a href="services.html" id="ftl-1">Recruitment Marketing</a></li>
-          <li><a href="services.html" id="ftl-2">Employer Branding</a></li>
-          <li><a href="services.html" id="ftl-3">Paid Media</a></li>
-          <li><a href="services.html" id="ftl-4">Social Media</a></li>
-          <li><a href="bafa.html" id="ftl-5">BAFA Beratung</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title" id="ft-col2">Unternehmen</div>
-        <ul class="footer-links">
-          <li><a href="about.html" id="ftc-1">Über APM Agenta</a></li>
-          <li><a href="industries.html" id="ftc-2">Branchen</a></li>
-          <li><a href="#pricing" id="ftc-3">Pakete</a></li>
-          <li><a href="#faq" id="ftc-4">FAQ</a></li>
-          <li><a href="#contact" id="ftc-5">Kontakt</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title" id="ft-col3">Rechtliches</div>
-        <ul class="footer-links">
-          <li><a href="impressum.html" id="ftleg-1">Impressum</a></li>
-          <li><a href="datenschutz.html" id="ftleg-2">Datenschutzerklärung</a></li>
-          <li><a href="agb.html" id="ftleg-3">AGB</a></li>
-          <li><button class="cookie-settings-link" onclick="reopenCookieBanner()" id="ft-cookies">Cookie-Einstellungen</button></li>
-        </ul>
-      </div>
+    <div>
+      <div class="sf-col-title" id="sf-col3">Kontakt</div>
+      <ul class="sf-links">
+        <li><a href="mailto:contact@apmagenta.com">contact@apmagenta.com</a></li>
+        <li><a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" rel="noopener" id="sfl-cal">Gespräch buchen</a></li>
+        <li><a href="about.html" id="sfl-about">Über uns</a></li>
+      </ul>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-copy" id="ft-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
-      <div class="footer-copy">
-        <a href="impressum.html" id="fb-imp">Impressum</a> ·
-        <a href="datenschutz.html" id="fb-dsg">Datenschutz</a> ·
-        <a href="agb.html" id="fb-agb">AGB</a>
-      </div>
+  </div>
+  <div class="select-footer-bottom">
+    <div class="sf-copy" id="sf-copy">© 2026 APM AGENTA. Alle Rechte vorbehalten.</div>
+    <div class="sf-copy">
+      <a href="impressum.html">Impressum</a> &nbsp;·&nbsp;
+      <a href="datenschutz.html">Datenschutz</a> &nbsp;·&nbsp;
+      <a href="agb.html">AGB</a>
     </div>
   </div>
 </footer>
+
 <script src="js/main.js"></script>
+<script>
+const SEL_T = {
+  de: {
+    'sel-badge': 'Wählen Sie Ihren Bereich',
+    'sel-headline': 'Für welches Unternehmen<br>suchen Sie Marketing?',
+    'sel-sub': 'Maßgeschneiderte Lösungen für jede Unternehmensgröße. Wählen Sie den Bereich der zu Ihnen passt.',
+    'sc1-title': 'Kleines Unternehmen', 'sc1-size': '1 bis 20 Mitarbeiter', 'sc1-price': 'Ab 199 EUR / Mo',
+    'sc1-f1': 'Social Media Management', 'sc1-f2': 'Meta Ads ohne Aufschlag', 'sc1-f3': 'Lokale SEO', 'sc1-f4': 'Monatliches Reporting',
+    'sc2-title': 'Corporate', 'sc2-size': '20 bis 250 Mitarbeiter', 'sc2-price': 'Ab 399 EUR / Mo',
+    'sc2-f1': 'Recruitment Marketing', 'sc2-f2': 'Employer Branding', 'sc2-f3': 'Performance Marketing', 'sc2-f4': 'BAFA-Förderung',
+    'sc3-title': 'Enterprise', 'sc3-size': '250+ Mitarbeiter', 'sc3-price': 'Auf Anfrage',
+    'sc3-f1': 'Dediziertes Team', 'sc3-f2': 'Individuelle Strategie', 'sc3-f3': 'Full-Service Marketing', 'sc3-f4': 'White Glove Service',
+    'sf-desc': 'Professionelles Marketing für jede Unternehmensgröße. Transparent, messbar, ohne versteckte Kosten.',
+    'sf-col1': 'Bereiche', 'sf-col2': 'Leistungen', 'sf-col3': 'Kontakt',
+    'sfl-1': 'Kleines Unternehmen', 'sfl-2': 'Corporate', 'sfl-3': 'Enterprise',
+    'sfl-4': 'Alle Leistungen', 'sfl-5': 'BAFA-Förderung', 'sfl-6': 'Blog & Insights', 'sfl-7': 'FAQ',
+    'sfl-cal': 'Gespräch buchen', 'sfl-about': 'Über uns',
+    'sf-copy': '© 2026 APM AGENTA. Alle Rechte vorbehalten.',
+  },
+  en: {
+    'sel-badge': 'Choose Your Segment',
+    'sel-headline': 'Which business are you<br>looking for marketing for?',
+    'sel-sub': 'Tailored solutions for every business size. Choose the segment that fits you.',
+    'sc1-title': 'Small Business', 'sc1-size': '1 to 20 employees', 'sc1-price': 'From 199 EUR / mo',
+    'sc1-f1': 'Social Media Management', 'sc1-f2': 'Meta Ads without markup', 'sc1-f3': 'Local SEO', 'sc1-f4': 'Monthly Reporting',
+    'sc2-title': 'Corporate', 'sc2-size': '20 to 250 employees', 'sc2-price': 'From 399 EUR / mo',
+    'sc2-f1': 'Recruitment Marketing', 'sc2-f2': 'Employer Branding', 'sc2-f3': 'Performance Marketing', 'sc2-f4': 'BAFA Funding',
+    'sc3-title': 'Enterprise', 'sc3-size': '250+ employees', 'sc3-price': 'On Request',
+    'sc3-f1': 'Dedicated Team', 'sc3-f2': 'Individual Strategy', 'sc3-f3': 'Full-Service Marketing', 'sc3-f4': 'White Glove Service',
+    'sf-desc': 'Professional marketing for every business size. Transparent, measurable, without hidden costs.',
+    'sf-col1': 'Segments', 'sf-col2': 'Services', 'sf-col3': 'Contact',
+    'sfl-1': 'Small Business', 'sfl-2': 'Corporate', 'sfl-3': 'Enterprise',
+    'sfl-4': 'All Services', 'sfl-5': 'BAFA Funding', 'sfl-6': 'Blog & Insights', 'sfl-7': 'FAQ',
+    'sfl-cal': 'Book a Call', 'sfl-about': 'About Us',
+    'sf-copy': '© 2026 APM AGENTA. All rights reserved.',
+  }
+};
+
+function applySelectLang(lang) {
+  const t = SEL_T[lang];
+  Object.entries(t).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (id === 'sel-headline') { el.innerHTML = val; }
+    else { el.textContent = val; }
+  });
+  document.title = lang === 'en' ? 'APM Agenta — Who are you here for?' : 'APM Agenta — Für wen sind Sie hier?';
+}
+
+const _selOrig = setLang;
+setLang = function(lang) { _selOrig(lang); applySelectLang(lang); };
+document.addEventListener('DOMContentLoaded', () => applySelectLang(localStorage.getItem('apm_lang') || 'de'));
+</script>
 </body>
 </html>
