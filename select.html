@@ -164,7 +164,8 @@
 
 /* ---- SELECT FOOTER ---- */
 .select-footer {
-  background: #0f1923;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
   padding: 3.5rem 5% 2rem;
   margin-top: auto;
 }
@@ -176,14 +177,12 @@
   grid-template-columns: 1.4fr repeat(3, 1fr);
   gap: 3rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(143,174,201,0.12);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .sf-brand img {
   height: 36px;
   width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
   margin-bottom: 1rem;
 }
 
@@ -191,14 +190,14 @@
   font-size: 0.6rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(143,174,201,0.5);
+  color: #9ca3af;
   font-weight: 500;
   margin-bottom: 0.75rem;
 }
 
 .sf-desc {
   font-size: 0.74rem;
-  color: rgba(143,174,201,0.45);
+  color: #9ca3af;
   line-height: 1.8;
   font-weight: 300;
 }
@@ -207,8 +206,8 @@
   font-size: 0.55rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(143,174,201,0.5);
-  font-weight: 600;
+  color: #0f1923;
+  font-weight: 700;
   margin-bottom: 1.25rem;
 }
 
@@ -221,12 +220,12 @@
 
 .sf-links a {
   font-size: 0.74rem;
-  color: rgba(143,174,201,0.6);
+  color: #6b7280;
   text-decoration: none;
   font-weight: 300;
   transition: color 0.2s;
 }
-.sf-links a:hover { color: #fff; }
+.sf-links a:hover { color: #0f1923; }
 
 .select-footer-bottom {
   max-width: 1200px;
@@ -240,17 +239,17 @@
 
 .sf-copy {
   font-size: 0.62rem;
-  color: rgba(143,174,201,0.3);
+  color: #9ca3af;
   letter-spacing: 0.1em;
   font-weight: 300;
 }
 
 .sf-copy a {
-  color: rgba(143,174,201,0.3);
+  color: #9ca3af;
   text-decoration: none;
   transition: color 0.2s;
 }
-.sf-copy a:hover { color: rgba(143,174,201,0.6); }
+.sf-copy a:hover { color: #0f1923; }
 
 /* RESPONSIVE */
 @media (max-width: 860px) {
@@ -277,11 +276,11 @@
       <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
     </a>
     <ul class="nav-links">
-      <li><a href="about.html" id="nav-about">Über uns</a></li>
+      <li><a href="smb.html" id="nav-smb">Kleines Unternehmen</a></li>
+      <li><a href="index.html" id="nav-corp">Corporate</a></li>
+      <li><a href="enterprise.html" id="nav-ent">Enterprise</a></li>
       <li><a href="leistungen.html" id="nav-services">Leistungen</a></li>
       <li><a href="faq.html" id="nav-faq">FAQ</a></li>
-      <li><a href="bafa.html" id="nav-bafa">BAFA</a></li>
-      <li><a href="blog.html" id="nav-blog">Blog</a></li>
       <li class="lang-dropdown" id="langDropdownWrap">
         <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
           <span id="lang-current">DE</span>
@@ -305,11 +304,11 @@
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <div class="mobile-menu-inner">
     <ul>
-      <li><a href="about.html" onclick="closeMobile()" id="mob-about">Über uns</a></li>
+      <li><a href="smb.html" onclick="closeMobile()" id="mob-smb">Kleines Unternehmen</a></li>
+      <li><a href="index.html" onclick="closeMobile()" id="mob-corp">Corporate</a></li>
+      <li><a href="enterprise.html" onclick="closeMobile()" id="mob-ent">Enterprise</a></li>
       <li><a href="leistungen.html" onclick="closeMobile()" id="mob-services">Leistungen</a></li>
       <li><a href="faq.html" onclick="closeMobile()" id="mob-faq">FAQ</a></li>
-      <li><a href="bafa.html" onclick="closeMobile()" id="mob-bafa">BAFA</a></li>
-      <li><a href="blog.html" onclick="closeMobile()" id="mob-blog">Blog</a></li>
       <li>
         <div class="mob-lang-row">
           <button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button>
