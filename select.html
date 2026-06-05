@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APM Agenta — Für wen sind Sie hier?</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="assets/fonts/montserrat.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --smb-primary: #F97316;
+  --smb-light: #FFF7ED;
+  --corp-navy: #0f1923;
+  --corp-glacier: #8FAEC9;
+  --ent-black: #080808;
+  --ent-white: #F5F5F0;
+}
+
+html, body { height: 100%; font-family: 'Montserrat', sans-serif; }
+
+.selector {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Logo top center */
+.selector-logo {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+.selector-logo img { height: 40px; width: auto; filter: brightness(0) invert(1); }
+
+/* Each tier panel */
+.tier {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 3rem 4rem;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  transition: flex 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+/* SMB */
+.tier-smb {
+  background: #FFF7ED;
+  border-right: 1px solid rgba(249,115,22,0.15);
+}
+.tier-smb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.tier-smb:hover::before { opacity: 1; }
+.tier-smb .tier-accent { color: #F97316; }
+.tier-smb .tier-number { color: rgba(249,115,22,0.12); }
+.tier-smb .tier-title { color: #1C1917; }
+.tier-smb .tier-sub { color: #78716C; }
+.tier-smb .tier-cta { background: #F97316; color: #fff; }
+.tier-smb .tier-cta:hover { background: #EA580C; }
+.tier-smb .tier-divider { background: rgba(249,115,22,0.2); }
+.tier-smb .tier-tag { background: rgba(249,115,22,0.1); color: #C2410C; }
+
+/* CORPORATE */
+.tier-corp {
+  background: #0f1923;
+  border-right: 1px solid rgba(143,174,201,0.15);
+}
+.tier-corp::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0f1923 0%, #1a2d3d 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.tier-corp:hover::before { opacity: 1; }
+.tier-corp .tier-accent { color: #8FAEC9; }
+.tier-corp .tier-number { color: rgba(143,174,201,0.06); }
+.tier-corp .tier-title { color: #F1F5F9; }
+.tier-corp .tier-sub { color: rgba(143,174,201,0.6); }
+.tier-corp .tier-cta { background: #8FAEC9; color: #0f1923; }
+.tier-corp .tier-cta:hover { background: #6B8CAE; }
+.tier-corp .tier-divider { background: rgba(143,174,201,0.15); }
+.tier-corp .tier-tag { background: rgba(143,174,201,0.1); color: #8FAEC9; }
+
+/* ENTERPRISE */
+.tier-ent {
+  background: #080808;
+}
+.tier-ent::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #080808 0%, #141414 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.tier-ent:hover::before { opacity: 1; }
+.tier-ent .tier-accent { color: #F5F5F0; }
+.tier-ent .tier-number { color: rgba(245,245,240,0.04); }
+.tier-ent .tier-title { color: #F5F5F0; }
+.tier-ent .tier-sub { color: rgba(245,245,240,0.45); }
+.tier-ent .tier-cta { background: transparent; color: #F5F5F0; border: 1px solid rgba(245,245,240,0.3); }
+.tier-ent .tier-cta:hover { background: #F5F5F0; color: #080808; }
+.tier-ent .tier-divider { background: rgba(245,245,240,0.08); }
+.tier-ent .tier-tag { background: rgba(245,245,240,0.06); color: rgba(245,245,240,0.5); }
+
+/* Content */
+.tier-content { position: relative; z-index: 2; text-align: center; max-width: 280px; }
+
+.tier-number {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.tier-accent {
+  font-size: 0.58rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.tier-title {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.tier-divider {
+  width: 2rem;
+  height: 1px;
+  margin: 1.25rem auto;
+}
+
+.tier-sub {
+  font-size: 0.78rem;
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.tier-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.tier-tag {
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+}
+
+.tier-cta {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+/* Vertical label */
+.tier-label-v {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.5rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.3;
+  white-space: nowrap;
+}
+.tier-smb .tier-label-v { color: #92400E; }
+.tier-corp .tier-label-v { color: #8FAEC9; }
+.tier-ent .tier-label-v { color: #F5F5F0; }
+
+/* Hover expand effect */
+.selector:has(.tier-smb:hover) .tier-smb,
+.selector:has(.tier-corp:hover) .tier-corp,
+.selector:has(.tier-ent:hover) .tier-ent { flex: 1.4; }
+
+.selector:has(.tier-smb:hover) .tier-corp,
+.selector:has(.tier-smb:hover) .tier-ent,
+.selector:has(.tier-corp:hover) .tier-smb,
+.selector:has(.tier-corp:hover) .tier-ent,
+.selector:has(.tier-ent:hover) .tier-smb,
+.selector:has(.tier-ent:hover) .tier-corp { flex: 0.8; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .selector { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); min-height: 100vh; }
+  .tier { padding: 4rem 2rem; min-height: 33.33vh; }
+  .tier-number { font-size: 5rem; }
+  .selector:has(.tier-smb:hover) .tier-smb,
+  .selector:has(.tier-corp:hover) .tier-corp,
+  .selector:has(.tier-ent:hover) .tier-ent { flex: unset; }
+}
+
+/* Entrance animation */
+.tier { animation: fadeUp 0.8s ease both; }
+.tier-smb { animation-delay: 0.1s; }
+.tier-corp { animation-delay: 0.25s; }
+.tier-ent { animation-delay: 0.4s; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="selector-logo">
+  <img src="assets/logo.png" alt="APM Agenta">
+</a>
+
+<div class="selector">
+
+  <!-- SMB -->
+  <a href="smb.html" class="tier tier-smb">
+    <div class="tier-number">01</div>
+    <div class="tier-content">
+      <span class="tier-accent">Klein & Wachsend</span>
+      <h2 class="tier-title">Für kleine Unternehmen</h2>
+      <div class="tier-divider"></div>
+      <p class="tier-sub">Einstieg in professionelles Marketing. Klare Pakete, faire Preise, sofortige Wirkung.</p>
+      <div class="tier-tags">
+        <span class="tier-tag">1 bis 20 Mitarbeiter</span>
+        <span class="tier-tag">Ab 199 EUR/Mo</span>
+        <span class="tier-tag">Schnell starten</span>
+      </div>
+      <span class="tier-cta">Ich bin dabei →</span>
+    </div>
+    <span class="tier-label-v">Small Business</span>
+  </a>
+
+  <!-- CORPORATE -->
+  <a href="index.html" class="tier tier-corp">
+    <div class="tier-number">02</div>
+    <div class="tier-content">
+      <span class="tier-accent">Etabliert & Skalierend</span>
+      <h2 class="tier-title">Für mittlere Unternehmen</h2>
+      <div class="tier-divider"></div>
+      <p class="tier-sub">Ganzheitliche Marketing-Strategie. Recruitment, Branding, Performance — alles aus einer Hand.</p>
+      <div class="tier-tags">
+        <span class="tier-tag">20 bis 250 Mitarbeiter</span>
+        <span class="tier-tag">Ab 399 EUR/Mo</span>
+        <span class="tier-tag">Full Service</span>
+      </div>
+      <span class="tier-cta">Das bin ich →</span>
+    </div>
+    <span class="tier-label-v">Corporate</span>
+  </a>
+
+  <!-- ENTERPRISE -->
+  <a href="enterprise.html" class="tier tier-ent">
+    <div class="tier-number">03</div>
+    <div class="tier-content">
+      <span class="tier-accent">Enterprise & Premium</span>
+      <h2 class="tier-title">Für große Unternehmen</h2>
+      <div class="tier-divider"></div>
+      <p class="tier-sub">Dediziertes Team, individuelle Strategie, keine Kompromisse. Auf Anfrage.</p>
+      <div class="tier-tags">
+        <span class="tier-tag">250+ Mitarbeiter</span>
+        <span class="tier-tag">Auf Anfrage</span>
+        <span class="tier-tag">White Glove</span>
+      </div>
+      <span class="tier-cta">Kontakt aufnehmen →</span>
+    </div>
+    <span class="tier-label-v">Enterprise</span>
+  </a>
+
+</div>
+
+</body>
+</html>

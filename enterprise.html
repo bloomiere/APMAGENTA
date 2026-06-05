@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APM Agenta — Enterprise</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="assets/fonts/montserrat.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --black: #080808;
+  --off-black: #111111;
+  --mid: #1C1C1C;
+  --border: rgba(245,245,240,0.08);
+  --white: #F5F5F0;
+  --muted: rgba(245,245,240,0.4);
+  --accent: rgba(245,245,240,0.7);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; background: var(--black); color: var(--white); }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 6%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); background: rgba(8,8,8,0.95); backdrop-filter: blur(20px); }
+.nav-logo img { height: 34px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+.nav-back { font-size: 0.55rem; letter-spacing: 0.35em; text-transform: uppercase; font-weight: 600; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.nav-back:hover { color: var(--white); }
+.nav-cta { font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: var(--white); text-decoration: none; border-bottom: 1px solid rgba(245,245,240,0.3); padding-bottom: 2px; transition: border-color 0.2s; }
+.nav-cta:hover { border-color: var(--white); }
+
+/* HERO */
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 6% 7rem; position: relative; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: var(--black); }
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(245,245,240,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(245,245,240,0.025) 1px, transparent 1px); background-size: 80px 80px; }
+.hero-content { position: relative; z-index: 2; max-width: 900px; }
+.hero-label { font-size: 0.5rem; letter-spacing: 0.5em; text-transform: uppercase; font-weight: 600; color: var(--muted); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1rem; }
+.hero-label::before { content: ''; width: 3rem; height: 1px; background: var(--muted); }
+.hero-title { font-size: clamp(3rem, 7vw, 7rem); font-weight: 200; color: var(--white); line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 3rem; }
+.hero-title em { font-style: italic; color: var(--accent); }
+.hero-sub { font-size: 0.82rem; color: var(--muted); line-height: 1.9; font-weight: 300; max-width: 480px; margin-bottom: 3.5rem; border-left: 1px solid var(--border); padding-left: 1.5rem; }
+.hero-cta { display: inline-block; color: var(--white); text-decoration: none; font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; border: 1px solid rgba(245,245,240,0.2); padding: 1.1rem 2.5rem; transition: all 0.3s; }
+.hero-cta:hover { background: var(--white); color: var(--black); }
+.hero-scroll { position: absolute; bottom: 3rem; right: 6%; font-size: 0.5rem; letter-spacing: 0.3em; color: var(--muted); text-transform: uppercase; writing-mode: vertical-rl; }
+
+/* MANIFESTO */
+.manifesto { padding: 8rem 6%; border-top: 1px solid var(--border); }
+.manifesto-text { font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 200; color: var(--white); line-height: 1.5; letter-spacing: -0.01em; max-width: 900px; }
+.manifesto-text em { font-style: italic; color: var(--accent); }
+.manifesto-text strong { font-weight: 600; }
+
+/* CAPABILITIES */
+.capabilities { padding: 8rem 6%; border-top: 1px solid var(--border); display: grid; grid-template-columns: 280px 1fr; gap: 8rem; align-items: start; }
+.cap-label { font-size: 0.5rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--muted); font-weight: 600; position: sticky; top: 8rem; }
+.cap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
+.cap-item { padding: 2.5rem; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); transition: background 0.3s; }
+.cap-item:hover { background: rgba(245,245,240,0.02); }
+.cap-item:nth-child(even) { border-right: none; }
+.cap-num { font-size: 0.5rem; letter-spacing: 0.3em; color: var(--muted); font-weight: 600; margin-bottom: 1rem; }
+.cap-title { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
+.cap-desc { font-size: 0.74rem; color: var(--muted); line-height: 1.8; font-weight: 300; }
+
+/* PROCESS */
+.process { padding: 8rem 6%; border-top: 1px solid var(--border); }
+.process-label { font-size: 0.5rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 4rem; }
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--border); }
+.process-step { padding: 3rem 2rem; border-right: 1px solid var(--border); }
+.process-step:last-child { border-right: none; }
+.step-num { font-size: 3rem; font-weight: 200; color: rgba(245,245,240,0.08); line-height: 1; margin-bottom: 1.5rem; }
+.step-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
+.step-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.8; font-weight: 300; }
+
+/* CONTACT */
+.contact { padding: 8rem 6%; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: center; }
+.contact-title { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 200; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+.contact-title em { font-style: italic; color: var(--accent); }
+.contact-sub { font-size: 0.8rem; color: var(--muted); line-height: 1.85; font-weight: 300; }
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-label { font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.form-input { background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--white); padding: 0.75rem 0; font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 300; outline: none; transition: border-color 0.2s; }
+.form-input:focus { border-bottom-color: rgba(245,245,240,0.4); }
+.form-input::placeholder { color: var(--muted); }
+.form-submit { margin-top: 1rem; background: transparent; border: 1px solid rgba(245,245,240,0.2); color: var(--white); padding: 1.1rem; font-family: 'Montserrat', sans-serif; font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; cursor: pointer; transition: all 0.3s; }
+.form-submit:hover { background: var(--white); color: var(--black); }
+
+/* FOOTER */
+footer { border-top: 1px solid var(--border); padding: 2.5rem 6%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.6rem; letter-spacing: 0.15em; color: var(--muted); font-weight: 400; }
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a { font-size: 0.6rem; letter-spacing: 0.15em; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+
+@media (max-width: 900px) {
+  .capabilities { grid-template-columns: 1fr; gap: 3rem; }
+  .cap-label { position: static; }
+  .cap-grid { grid-template-columns: 1fr; }
+  .cap-item { border-right: none; }
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+  .process-step { border-bottom: 1px solid var(--border); }
+  .contact { grid-template-columns: 1fr; gap: 4rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="APM Agenta"></a>
+  <a href="select.html" class="nav-back">← Alle Pakete</a>
+  <a href="mailto:contact@apmagenta.com" class="nav-cta">Kontakt aufnehmen</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-label">Enterprise — Premium</div>
+    <h1 class="hero-title">Marketing<br>ohne<br><em>Kompromisse.</em></h1>
+    <p class="hero-sub">Für Unternehmen die den Unterschied zwischen gutem und außergewöhnlichem Marketing kennen. Dediziertes Team, individuelle Strategie, messbare Ergebnisse.</p>
+    <a href="mailto:contact@apmagenta.com" class="hero-cta">Gespräch anfragen</a>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</div>
+
+<div class="manifesto">
+  <p class="manifesto-text">Wir glauben dass <em>Exzellenz</em> keine Frage des Budgets ist, sondern des <strong>Anspruchs</strong>. Für Unternehmen die führen wollen statt zu folgen.</p>
+</div>
+
+<div class="capabilities" id="leistungen">
+  <div class="cap-label">Leistungen</div>
+  <div class="cap-grid">
+    <div class="cap-item">
+      <div class="cap-num">01</div>
+      <div class="cap-title">Strategische Beratung</div>
+      <p class="cap-desc">Ganzheitliche Marketing-Strategie basierend auf Marktanalyse, Wettbewerbsforschung und Ihren Unternehmenszielen.</p>
+    </div>
+    <div class="cap-item">
+      <div class="cap-num">02</div>
+      <div class="cap-title">Performance Marketing</div>
+      <p class="cap-desc">Präzisionskampagnen auf allen relevanten Plattformen. Dediziertes Team, tägliche Optimierung, wöchentliches Reporting.</p>
+    </div>
+    <div class="cap-item">
+      <div class="cap-num">03</div>
+      <div class="cap-title">Branding und Identity</div>
+      <p class="cap-desc">Entwicklung oder Neupositionierung Ihrer Marke. Corporate Design, Brand Guidelines, vollständige CI-Entwicklung.</p>
+    </div>
+    <div class="cap-item">
+      <div class="cap-num">04</div>
+      <div class="cap-title">Recruitment Marketing</div>
+      <p class="cap-desc">Automatisierte Recruiting-Pipelines für Fachkräftegewinnung im großen Maßstab. Employer Branding inklusive.</p>
+    </div>
+    <div class="cap-item">
+      <div class="cap-num">05</div>
+      <div class="cap-title">Website und Digital</div>
+      <p class="cap-desc">Professionelle Web-Präsenz, SEO-Strategie und digitale Transformation. Von der Konzeption bis zum Launch.</p>
+    </div>
+    <div class="cap-item">
+      <div class="cap-num">06</div>
+      <div class="cap-title">Content und Produktion</div>
+      <p class="cap-desc">Hochwertige Video- und Fotoproduktion, Copywriting und Content-Strategie für alle Kanäle.</p>
+    </div>
+  </div>
+</div>
+
+<div class="process" id="prozess">
+  <div class="process-label">Zusammenarbeit</div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Discovery</div>
+      <p class="step-desc">Tiefgreifende Analyse Ihrer Situation, Ziele und des Wettbewerbsumfelds.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Strategie</div>
+      <p class="step-desc">Entwicklung einer maßgeschneiderten Strategie mit klaren KPIs und Meilensteinen.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Execution</div>
+      <p class="step-desc">Umsetzung durch ein dediziertes Team mit wöchentlichem Reporting.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-title">Optimierung</div>
+      <p class="step-desc">Kontinuierliche datenbasierte Verbesserung und monatliche Strategy Reviews.</p>
+    </div>
+  </div>
+</div>
+
+<div class="contact" id="kontakt">
+  <div>
+    <h2 class="contact-title">Lassen Sie uns<br><em>sprechen.</em></h2>
+    <p class="contact-sub">Enterprise-Projekte beginnen mit einem vertraulichen Erstgespräch. Keine Verpflichtung, kein Druck. Nur ein offenes Gespräch über Ihre Ziele.</p>
+  </div>
+  <form class="contact-form" action="https://formspree.io/f/xykvekev" method="POST">
+    <input type="hidden" name="_subject" value="Enterprise Anfrage">
+    <input type="hidden" name="source" value="Enterprise Page">
+    <div class="form-field">
+      <label class="form-label">Name</label>
+      <input type="text" name="name" class="form-input" placeholder="Ihr vollständiger Name" required>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Unternehmen</label>
+      <input type="text" name="company" class="form-input" placeholder="Ihr Unternehmen" required>
+    </div>
+    <div class="form-field">
+      <label class="form-label">E-Mail</label>
+      <input type="email" name="email" class="form-input" placeholder="ihre@email.de" required>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Ihr Anliegen</label>
+      <input type="text" name="message" class="form-input" placeholder="Kurze Beschreibung Ihres Projekts">
+    </div>
+    <button type="submit" class="form-submit">Anfrage senden</button>
+  </form>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 APM AGENTA — Enterprise</div>
+  <div class="footer-links">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="select.html">Alle Pakete</a>
+  </div>
+</footer>
+
+</body>
+</html>
