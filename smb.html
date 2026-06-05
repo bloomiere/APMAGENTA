@@ -3,212 +3,595 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APM Agenta — Für kleine Unternehmen</title>
+<title>APM Agenta — Marketing für Kleine Unternehmen</title>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/fonts/montserrat.css">
+<link rel="stylesheet" href="css/style.css">
 <style>
+/* ── RESET & BASE ─────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --orange: #F97316;
-  --orange-dark: #EA580C;
-  --orange-light: #FFF7ED;
-  --orange-mid: #FED7AA;
-  --text: #1C1917;
-  --muted: #78716C;
-  --border: #E7E5E4;
-  --white: #FFFFFF;
+  --bg:    #EEF2F5;
+  --white: #ffffff;
+  --dark:  #1a2533;
+  --mid:   #5a7080;
+  --light: #8fa3b3;
+  --pale:  #dde4ea;
 }
-html { scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--text); }
+body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--dark); }
 
-/* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.2rem 5%; display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-.nav-logo img { height: 36px; width: auto; }
-.nav-back { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: var(--orange); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
-.nav-back::before { content: '←'; }
-.nav-cta { background: var(--orange); color: var(--white); padding: 0.65rem 1.4rem; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; font-family: 'Montserrat', sans-serif; text-decoration: none; transition: background 0.2s; }
-.nav-cta:hover { background: var(--orange-dark); }
+/* ── HERO ─────────────────────────────────────── */
+.smb-hero {
+  background: var(--bg);
+  min-height: 52vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7rem 5% 4rem;
+}
+.smb-hero-eyebrow {
+  font-size: 0.52rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--light);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+.smb-hero-title {
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 300;
+  color: var(--dark);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.2rem;
+}
+.smb-hero-sub {
+  font-size: 0.85rem;
+  color: var(--mid);
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 460px;
+  margin: 0 auto 2.5rem;
+}
+.smb-hero-cta {
+  display: inline-block;
+  background: var(--dark);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.2s;
+}
+.smb-hero-cta:hover { background: #2d3f52; }
 
-/* HERO */
-.hero { padding: 9rem 5% 6rem; background: var(--orange-light); position: relative; overflow: hidden; }
-.hero::after { content: ''; position: absolute; right: -5rem; top: -5rem; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%); pointer-events: none; }
-.hero-eyebrow { font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase; font-weight: 700; color: var(--orange); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.75rem; }
-.hero-eyebrow::before { content: ''; width: 2rem; height: 2px; background: var(--orange); }
-.hero-title { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 300; color: var(--text); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 1.5rem; max-width: 700px; }
-.hero-title strong { font-weight: 800; color: var(--orange); }
-.hero-sub { font-size: 0.95rem; color: var(--muted); line-height: 1.85; font-weight: 300; max-width: 500px; margin-bottom: 2.5rem; }
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-primary { display: inline-block; background: var(--orange); color: var(--white); padding: 1rem 2.2rem; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; font-family: 'Montserrat', sans-serif; text-decoration: none; transition: background 0.2s; }
-.btn-primary:hover { background: var(--orange-dark); }
-.btn-outline { display: inline-block; border: 1.5px solid var(--orange); color: var(--orange); padding: 1rem 2.2rem; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; font-family: 'Montserrat', sans-serif; text-decoration: none; transition: all 0.2s; }
-.btn-outline:hover { background: var(--orange); color: var(--white); }
+/* ── HEADLINE SECTION ─────────────────────────── */
+.smb-headline {
+  background: var(--white);
+  padding: 5rem 5%;
+  text-align: center;
+}
+.smb-headline h2 {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+.smb-headline-italic {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  margin-bottom: 1rem;
+  display: block;
+}
+.smb-headline p {
+  font-size: 0.82rem;
+  color: var(--mid);
+  font-weight: 300;
+  line-height: 1.9;
+  max-width: 540px;
+  margin: 0 auto;
+}
 
-/* STATS */
-.stats-bar { background: var(--orange); padding: 2.5rem 5%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-.stat { text-align: center; }
-.stat-num { font-size: 2.2rem; font-weight: 800; color: var(--white); letter-spacing: -0.02em; }
-.stat-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); font-weight: 500; margin-top: 0.3rem; }
+/* ── PARALLAX BANNER ──────────────────────────── */
+.smb-parallax {
+  background: var(--bg);
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.smb-parallax-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.smb-parallax-line {
+  width: 1px;
+  height: 48px;
+  background: var(--pale);
+}
+.smb-parallax-dot {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: var(--light);
+}
+.smb-parallax-text {
+  font-size: 0.52rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--light);
+  font-weight: 600;
+}
 
-/* SECTIONS */
-.section { padding: 6rem 5%; }
-.section.light { background: var(--white); }
-.section.warm { background: var(--orange-light); }
-.eyebrow { font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase; font-weight: 700; color: var(--orange); margin-bottom: 0.75rem; }
-.section-title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--text); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem; }
-.section-title strong { font-weight: 800; }
-.section-sub { font-size: 0.85rem; color: var(--muted); line-height: 1.85; font-weight: 300; max-width: 560px; margin-bottom: 3rem; }
+/* ── PACKAGES / CARDS ─────────────────────────── */
+.smb-packages {
+  background: var(--white);
+  padding: 5rem 5%;
+}
+.smb-packages-label {
+  font-size: 0.52rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--light);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.smb-packages h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  color: var(--dark);
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+}
+.smb-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.smb-card {
+  background: var(--bg);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s, box-shadow 0.25s;
+  cursor: pointer;
+}
+.smb-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(26,37,51,0.09); }
+.smb-card.featured { background: var(--dark); }
+.smb-card.featured * { color: #fff !important; }
+.smb-card.featured .smb-card-divider { background: rgba(255,255,255,0.12); }
+.smb-card.featured .smb-card-feature::before { background: rgba(255,255,255,0.4) !important; }
+.smb-card.featured .smb-card-cta { background: #fff; color: var(--dark) !important; }
+.smb-card.featured .smb-card-cta:hover { background: var(--bg); }
+.smb-card-badge {
+  position: absolute;
+  top: -1px;
+  right: 1.5rem;
+  background: var(--light);
+  color: #fff !important;
+  font-size: 0.48rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+}
+.smb-card-num {
+  font-size: 0.5rem;
+  letter-spacing: 0.4em;
+  color: var(--pale);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.smb-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+.smb-card-price {
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: var(--dark);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.2rem;
+  line-height: 1;
+}
+.smb-card-price span { font-size: 0.7rem; font-weight: 400; }
+.smb-card-desc {
+  font-size: 0.68rem;
+  color: var(--mid);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.smb-card-divider { height: 1px; background: var(--pale); margin-bottom: 1.25rem; }
+.smb-card-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  margin-bottom: 2rem;
+}
+.smb-card-feature {
+  font-size: 0.7rem;
+  color: var(--mid);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.smb-card-feature::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--light);
+  flex-shrink: 0;
+}
+.smb-card-cta {
+  display: block;
+  text-align: center;
+  background: var(--dark);
+  color: #fff;
+  padding: 0.85rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.smb-card:not(.featured) .smb-card-cta:hover { background: #2d3f52; }
 
-/* SERVICE GRID */
-.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.svc-card { background: var(--white); border: 1.5px solid var(--border); padding: 2rem; transition: border-color 0.3s, transform 0.3s; }
-.svc-card:hover { border-color: var(--orange); transform: translateY(-4px); }
-.svc-icon { width: 40px; height: 40px; background: var(--orange-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.2rem; }
-.svc-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); margin-bottom: 0.6rem; }
-.svc-desc { font-size: 0.76rem; color: var(--muted); line-height: 1.8; font-weight: 300; }
+/* ── FULL-WIDTH BANNER ────────────────────────── */
+.smb-banner {
+  background: var(--bg);
+  padding: 4rem 5%;
+  text-align: center;
+  border-top: 1px solid var(--pale);
+  border-bottom: 1px solid var(--pale);
+}
+.smb-banner h3 {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+.smb-banner p {
+  font-size: 0.78rem;
+  color: var(--mid);
+  font-weight: 300;
+  max-width: 420px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+.smb-banner-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+.smb-banner-stat-num {
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--dark);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.smb-banner-stat-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--light);
+  font-weight: 500;
+}
 
-/* PRICING */
-.pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 800px; }
-.price-card { border: 1.5px solid var(--border); padding: 2.5rem; background: var(--white); position: relative; }
-.price-card.featured { border-color: var(--orange); }
-.price-badge { position: absolute; top: -1px; right: 2rem; background: var(--orange); color: var(--white); font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; padding: 0.3rem 0.75rem; }
-.price-name { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--orange); font-weight: 700; margin-bottom: 0.5rem; }
-.price-num { font-size: 3rem; font-weight: 200; color: var(--text); letter-spacing: -0.03em; line-height: 1; }
-.price-num span { font-size: 1rem; font-weight: 400; color: var(--muted); }
-.price-divider { height: 1px; background: var(--border); margin: 1.5rem 0; }
-.price-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
-.price-features li { font-size: 0.75rem; color: var(--text); font-weight: 300; display: flex; gap: 0.6rem; align-items: flex-start; }
-.price-features li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
-.price-cta { display: block; text-align: center; background: var(--orange-light); color: var(--orange-dark); padding: 0.85rem; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; font-family: 'Montserrat', sans-serif; text-decoration: none; transition: all 0.2s; }
-.price-card.featured .price-cta { background: var(--orange); color: var(--white); }
-.price-cta:hover { background: var(--orange); color: var(--white); }
+/* ── CONTACT / LEAD SECTION ───────────────────── */
+.smb-contact {
+  background: var(--white);
+  padding: 5rem 5%;
+  text-align: center;
+}
+.smb-contact h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.smb-contact-sub {
+  font-size: 0.78rem;
+  color: var(--mid);
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  display: block;
+  font-weight: 300;
+}
+.smb-form {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.smb-form input {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--pale);
+  background: var(--bg);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  color: var(--dark);
+  outline: none;
+}
+.smb-form input::placeholder { color: var(--light); }
+.smb-form input:focus { border-color: var(--light); }
+.smb-form button {
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.smb-form button:hover { background: #2d3f52; }
+.smb-form-note {
+  font-size: 0.6rem;
+  color: var(--light);
+  margin-top: 1rem;
+  display: block;
+  font-weight: 300;
+}
 
-/* CTA BAND */
-.cta-band { background: var(--text); padding: 5rem 5%; text-align: center; }
-.cta-band h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; color: var(--white); margin-bottom: 0.75rem; }
-.cta-band h2 strong { font-weight: 800; color: var(--orange); }
-.cta-band p { font-size: 0.85rem; color: rgba(255,255,255,0.55); font-weight: 300; max-width: 400px; margin: 0 auto 2rem; line-height: 1.8; }
+/* ── FOOTER ───────────────────────────────────── */
+.smb-footer {
+  background: var(--white);
+  border-top: 1px solid var(--pale);
+  padding: 1.2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.smb-footer img { height: 28px; width: auto; opacity: 0.7; }
+.smb-footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.smb-footer-links a { font-size: 0.62rem; color: var(--light); text-decoration: none; transition: color 0.2s; }
+.smb-footer-links a:hover { color: var(--dark); }
+.smb-footer-copy { font-size: 0.62rem; color: var(--pale); }
 
-/* FOOTER */
-footer { background: var(--orange-light); border-top: 1px solid var(--border); padding: 2rem 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-.footer-copy { font-size: 0.7rem; color: var(--muted); font-weight: 300; }
-.footer-links { display: flex; gap: 1.5rem; }
-.footer-links a { font-size: 0.7rem; color: var(--muted); text-decoration: none; }
-
-@media (max-width: 900px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } .stats-bar { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .svc-grid, .pricing-grid { grid-template-columns: 1fr; } .stats-bar { grid-template-columns: repeat(2, 1fr); } .hero-btns { flex-direction: column; } }
+/* ── RESPONSIVE ───────────────────────────────── */
+@media (max-width: 860px) {
+  .smb-cards { grid-template-columns: 1fr; }
+  .smb-banner-stats { gap: 2rem; }
+}
+@media (max-width: 540px) {
+  .smb-hero { padding: 6rem 5% 3rem; }
+  .smb-form { flex-direction: column; }
+  .smb-form input, .smb-form button { width: 100%; }
+}
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="APM Agenta"></a>
-  <a href="select.html" class="nav-back">Alle Pakete</a>
-  <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="nav-cta">Gespräch buchen</a>
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="select.html" class="nav-logo" aria-label="APM Agenta">
+      <img src="assets/logo.png" alt="APM Agenta" class="nav-logo-img" width="200" height="68">
+    </a>
+    <ul class="nav-links">
+      <li><a href="select.html">Zurück zur Übersicht</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="bafa.html">BAFA</a></li>
+      <li class="lang-dropdown" id="langDropdownWrap">
+        <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="lang-current">DE</span>
+          <svg class="lang-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+          <li><button class="lang-opt" role="option" onclick="setLang('de')">Deutsch</button></li>
+          <li><button class="lang-opt" role="option" onclick="setLang('en')">English</button></li>
+        </ul>
+      </li>
+      <li><a href="#smb-contact" class="nav-cta-link">Kostenlos starten</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-eyebrow">Für kleine Unternehmen</div>
-  <h1 class="hero-title">Marketing das<br><strong>wirklich wirkt.</strong><br>Ohne Agenturpreise.</h1>
-  <p class="hero-sub">Klare Pakete. Faire Preise. Keine versteckten Kosten. Wir machen professionelles Marketing zugänglich für Unternehmen die gerade erst durchstarten.</p>
-  <div class="hero-btns">
-    <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="btn-primary">Kostenloses Erstgespräch</a>
-    <a href="#leistungen" class="btn-outline">Leistungen ansehen</a>
-  </div>
-</section>
-
-<div class="stats-bar">
-  <div class="stat"><div class="stat-num">199€</div><div class="stat-label">Ab pro Monat</div></div>
-  <div class="stat"><div class="stat-num">0%</div><div class="stat-label">Aufschlag auf Werbebudget</div></div>
-  <div class="stat"><div class="stat-num">24h</div><div class="stat-label">Reaktionszeit</div></div>
-  <div class="stat"><div class="stat-num">1 Mo.</div><div class="stat-label">Kündigungsfrist</div></div>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner"><ul>
+    <li><a href="select.html" onclick="closeMobile()">Zurück zur Übersicht</a></li>
+    <li><a href="leistungen.html" onclick="closeMobile()">Leistungen</a></li>
+    <li><a href="faq.html" onclick="closeMobile()">FAQ</a></li>
+    <li><a href="bafa.html" onclick="closeMobile()">BAFA</a></li>
+    <li><div class="mob-lang-row">
+      <button class="mob-lang-btn active" id="mob-lang-de" onclick="setLang('de');closeMobile()">DE</button>
+      <button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');closeMobile()">EN</button>
+    </div></li>
+    <li><a href="#smb-contact" onclick="closeMobile()" class="mobile-cta">Kostenlos starten</a></li>
+  </ul></div>
 </div>
 
-<section class="section light" id="leistungen">
-  <div class="eyebrow">Was wir für Sie tun</div>
-  <h2 class="section-title">Alles was ein kleines Unternehmen<br><strong>wirklich braucht.</strong></h2>
-  <p class="section-sub">Kein Overhead. Keine Leistungen die Sie nicht brauchen. Nur das was wirklich Wirkung zeigt.</p>
-  <div class="svc-grid">
-    <div class="svc-card">
-      <div class="svc-icon">📱</div>
-      <div class="svc-title">Social Media</div>
-      <p class="svc-desc">Konsistente Präsenz auf Instagram und Facebook. Content, Grafiken und Veröffentlichung inklusive.</p>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">🎯</div>
-      <div class="svc-title">Meta Ads</div>
-      <p class="svc-desc">Gezielte Anzeigen die neue Kunden bringen. Ohne Aufschlag auf das Werbebudget.</p>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">🔍</div>
-      <div class="svc-title">Lokale SEO</div>
-      <p class="svc-desc">Besser bei Google gefunden werden in Ihrer Stadt. Google Business Profil und On-Page-SEO.</p>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">✍️</div>
-      <div class="svc-title">Copywriting</div>
-      <p class="svc-desc">Texte die überzeugen. Für Website, Social Media und Werbeanzeigen.</p>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">📊</div>
-      <div class="svc-title">Monatliches Reporting</div>
-      <p class="svc-desc">Klare Berichte ohne Fachchinesisch. Sie sehen genau was Ihr Budget bewirkt hat.</p>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">💶</div>
-      <div class="svc-title">BAFA-Beratung</div>
-      <p class="svc-desc">Wir informieren Sie über staatliche Förderung und helfen bei der Antragstellung.</p>
-    </div>
-  </div>
+<!-- HERO -->
+<section class="smb-hero">
+  <span class="smb-hero-eyebrow">Für kleine Unternehmen · 1–20 Mitarbeiter</span>
+  <h1 class="smb-hero-title">Marketing das<br>wächst mit Ihnen.</h1>
+  <p class="smb-hero-sub">Professionelles Performance Marketing ab 199 EUR/Monat — ohne versteckte Kosten, ohne Aufschlag auf Ihr Werbebudget.</p>
+  <a href="#smb-contact" class="smb-hero-cta">Jetzt kostenlos starten</a>
 </section>
 
-<section class="section warm" id="preise">
-  <div class="eyebrow">Unsere Pakete</div>
-  <h2 class="section-title">Transparent.<br><strong>Keine Überraschungen.</strong></h2>
-  <p class="section-sub">Feste Monatspreise. Monatlich kündbar. Werbebudget wird immer ohne Aufschlag weitergeleitet.</p>
-  <div class="pricing-grid">
-    <div class="price-card">
-      <div class="price-name">Starter</div>
-      <div class="price-num">199 <span>EUR/Mo</span></div>
-      <div class="price-divider"></div>
-      <ul class="price-features">
-        <li>Social Media Management (2 Kanäle)</li>
-        <li>8 Posts pro Monat</li>
-        <li>Monatliches Reporting</li>
-        <li>E-Mail Support</li>
-      </ul>
-      <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="price-cta">Jetzt starten</a>
-    </div>
-    <div class="price-card featured">
-      <div class="price-badge">Beliebt</div>
-      <div class="price-name">Growth</div>
-      <div class="price-num">399 <span>EUR/Mo</span></div>
-      <div class="price-divider"></div>
-      <ul class="price-features">
-        <li>Alles aus Starter</li>
-        <li>Meta Ads Management</li>
-        <li>16 Posts pro Monat</li>
-        <li>Lokale SEO Optimierung</li>
-        <li>Monatlicher Strategy Call</li>
-      </ul>
-      <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="price-cta">Jetzt starten</a>
-    </div>
-  </div>
+<!-- HEADLINE SECTION -->
+<section class="smb-headline">
+  <h2>Warum APM Agenta für kleine Unternehmen?</h2>
+  <span class="smb-headline-italic">Transparenz, die man selten findet.</span>
+  <p>Wir berechnen keinen Aufschlag auf Ihr Meta oder Google Ads Budget. Was Sie zahlen, investiert — zu 100% in Ihre Werbung. Unser Honorar ist fix und vorab vereinbart.</p>
 </section>
 
-<div class="cta-band">
-  <h2>Bereit für <strong>echtes Wachstum?</strong></h2>
-  <p>Kostenloser Ersttermin. Kein Druck. Wir schauen gemeinsam was zu Ihrem Unternehmen passt.</p>
-  <a href="https://calendar.app.google/jyoz5gGiLZPqE28t8" target="_blank" class="btn-primary">Kostenloses Gespräch buchen</a>
+<!-- PARALLAX / SCROLL INDICATOR -->
+<div class="smb-parallax">
+  <div class="smb-parallax-inner">
+    <div class="smb-parallax-line"></div>
+    <div class="smb-parallax-dot">↓</div>
+    <div class="smb-parallax-line"></div>
+    <span class="smb-parallax-text">Unsere Pakete</span>
+  </div>
 </div>
 
-<footer>
-  <div class="footer-copy">© 2026 APM AGENTA</div>
-  <div class="footer-links">
+<!-- PACKAGES -->
+<section class="smb-packages">
+  <span class="smb-packages-label">Pakete für kleine Unternehmen</span>
+  <h2>Wählen Sie Ihr Paket</h2>
+  <div class="smb-cards">
+
+    <div class="smb-card">
+      <div class="smb-card-num">01</div>
+      <div class="smb-card-title">APM Start</div>
+      <div class="smb-card-price">199 <span>EUR / Mo</span></div>
+      <div class="smb-card-desc">Für den Einstieg. Sichtbarkeit aufbauen und erste Kunden gewinnen.</div>
+      <div class="smb-card-divider"></div>
+      <ul class="smb-card-features">
+        <li class="smb-card-feature">Social Media Management (2 Kanäle)</li>
+        <li class="smb-card-feature">Meta Ads Setup & Verwaltung</li>
+        <li class="smb-card-feature">Monatliches Reporting</li>
+        <li class="smb-card-feature">Lokale SEO Grundoptimierung</li>
+        <li class="smb-card-feature">0% Aufschlag auf Werbebudget</li>
+      </ul>
+      <a href="#smb-contact" class="smb-card-cta">Paket wählen</a>
+    </div>
+
+    <div class="smb-card featured">
+      <div class="smb-card-badge">Beliebt</div>
+      <div class="smb-card-num">02</div>
+      <div class="smb-card-title">APM Scale Catalyst™</div>
+      <div class="smb-card-price">399 <span>EUR / Mo</span></div>
+      <div class="smb-card-desc">Für Unternehmen die wachsen wollen. Mehr Kanäle, mehr Reichweite.</div>
+      <div class="smb-card-divider"></div>
+      <ul class="smb-card-features">
+        <li class="smb-card-feature">Social Media (4 Kanäle) + Content</li>
+        <li class="smb-card-feature">Meta & Google Ads Management</li>
+        <li class="smb-card-feature">SEO On-Page + Lokale Optimierung</li>
+        <li class="smb-card-feature">Wöchentliches Reporting & Calls</li>
+        <li class="smb-card-feature">E-Mail Marketing Setup</li>
+        <li class="smb-card-feature">0% Aufschlag auf Werbebudget</li>
+      </ul>
+      <a href="#smb-contact" class="smb-card-cta">Paket wählen</a>
+    </div>
+
+    <div class="smb-card">
+      <div class="smb-card-num">03</div>
+      <div class="smb-card-title">APM Full Service</div>
+      <div class="smb-card-price">649 <span>EUR / Mo</span></div>
+      <div class="smb-card-desc">Komplettes Marketing aus einer Hand. Sie konzentrieren sich aufs Geschäft.</div>
+      <div class="smb-card-divider"></div>
+      <ul class="smb-card-features">
+        <li class="smb-card-feature">Alle Kanäle + Video Content</li>
+        <li class="smb-card-feature">Full Paid Media Management</li>
+        <li class="smb-card-feature">SEO + Content Marketing</li>
+        <li class="smb-card-feature">Website-Pflege & CRO</li>
+        <li class="smb-card-feature">Dedizierter Ansprechpartner</li>
+        <li class="smb-card-feature">0% Aufschlag auf Werbebudget</li>
+      </ul>
+      <a href="#smb-contact" class="smb-card-cta">Paket wählen</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FULL-WIDTH BANNER -->
+<div class="smb-banner">
+  <h3>Kein Aufschlag. Kein Kleingedrucktes.<br>Nur Ergebnisse.</h3>
+  <p>Wir glauben dass gute Arbeit für sich spricht. Deshalb sind unsere Preise fix und transparent — ohne versteckte Gebühren.</p>
+  <div class="smb-banner-stats">
+    <div>
+      <div class="smb-banner-stat-num">0%</div>
+      <div class="smb-banner-stat-label">Aufschlag auf Ads</div>
+    </div>
+    <div>
+      <div class="smb-banner-stat-num">24h</div>
+      <div class="smb-banner-stat-label">Reaktionszeit</div>
+    </div>
+    <div>
+      <div class="smb-banner-stat-num">100%</div>
+      <div class="smb-banner-stat-label">Transparenz</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT / LEAD FORM -->
+<section class="smb-contact" id="smb-contact">
+  <h2>Kostenloses Erstgespräch buchen</h2>
+  <span class="smb-contact-sub">Kein Verkaufsgespräch — wir analysieren Ihre Situation und zeigen was möglich ist.</span>
+  <form class="smb-form" action="https://formspree.io/f/xykvekev" method="POST">
+    <input type="text" name="name" placeholder="Ihr Name" required>
+    <input type="email" name="email" placeholder="Ihre E-Mail" required>
+    <button type="submit">Gespräch buchen →</button>
+  </form>
+  <span class="smb-form-note">Keine Verpflichtung · Kostenlos · 30 Minuten</span>
+</section>
+
+<!-- FOOTER -->
+<footer class="smb-footer">
+  <img src="assets/logo.png" alt="APM Agenta">
+  <div class="smb-footer-links">
+    <a href="select.html">← Alle Bereiche</a>
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
-    <a href="select.html">Alle Pakete</a>
+    <a href="agb.html">AGB</a>
   </div>
+  <span class="smb-footer-copy">© 2026 APM AGENTA</span>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
