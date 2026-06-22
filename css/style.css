@@ -675,17 +675,7 @@ footer { background:var(--navy); padding:4.5rem 0 2rem; border-top:1px solid rgb
   margin: 0 auto;
   text-align: center;
 }
-.hero-v2-tag {
-  display: inline-block;
-  font-size: 0.62rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--glacier-dark);
-  border: 1px solid var(--border);
-  padding: 0.4rem 1rem;
-  margin-bottom: 2.5rem;
-}
+
 .hero-v2-headline {
   display: flex;
   flex-direction: column;
