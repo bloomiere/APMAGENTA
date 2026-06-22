@@ -50,10 +50,12 @@ const T = {
     'mob-blog': 'Blog',
     'mob-contact': 'Kontakt',
     /* HERO */
-    'hero-headline': 'APM Agenta entwickelt datenbasierte<br><em>Marketing-Strategien</em><br>die messbare Ergebnisse liefern.',
+    'hero-tag': 'Performance Marketing für KMU',
+    'hero-line1': 'Marketing das',
+    'hero-line2': 'wirklich wirkt.',
     'hero-sub': 'Wir verbinden analytische Präzision mit kreativer Exzellenz. Für kleine und mittlere Unternehmen die professionelles Marketing verdienen. transparent, skalierbar und ohne versteckte Kosten.',
-    'hero-book': 'Strategiegespräch vereinbaren',
-    'hero-services': 'Leistungen entdecken',
+    'hero-book': 'Erstgespräch buchen',
+    'hero-services': 'Leistungen ansehen',
     'tr1': 'Ab pro Monat', 'tr2': 'Aufschlag auf Werbebudget',
     'tr3': 'BAFA-Förderung möglich', 'tr4': 'Antwortzeit',
     /* WHO */
@@ -180,10 +182,12 @@ const T = {
     'mob-blog': 'Blog',
     'mob-contact': 'Contact',
     /* HERO */
-    'hero-headline': 'APM Agenta develops data-driven<br><em>marketing strategies</em><br>that deliver measurable results.',
+    'hero-tag': 'Performance Marketing for SMEs',
+    'hero-line1': 'Marketing that',
+    'hero-line2': 'actually works.',
     'hero-sub': 'We combine analytical precision with creative excellence. For small and medium-sized businesses that deserve professional marketing. transparent, scalable and without hidden costs.',
-    'hero-book': 'Schedule a Strategy Call',
-    'hero-services': 'Explore Services',
+    'hero-book': 'Book Initial Consultation',
+    'hero-services': 'View Services',
     'tr1': 'Starting per month', 'tr2': 'Ad Spend Markup',
     'tr3': 'BAFA Funding Available', 'tr4': 'Response Time',
     /* WHO */
